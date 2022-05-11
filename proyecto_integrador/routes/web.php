@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+
+//nuevo comentario 
 /*
 |--------------------------------------------------------------------------
 | Web Routes
