@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 
-//nuevo comentario 
+//nuevo comentario
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 asdfasdfasdfasdfasd|
 
 */
+//hola
 
 Route::get('/', function () {
     return view('welcome');
