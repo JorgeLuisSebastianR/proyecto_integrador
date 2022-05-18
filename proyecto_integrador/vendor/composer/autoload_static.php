@@ -178,8 +178,8 @@ class ComposerStaticInitb036e3f1439d0d04f767cab52f40e7ac
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
         ),
         'Whoops\\' => 
         array (
@@ -517,6 +517,7 @@ class ComposerStaticInitb036e3f1439d0d04f767cab52f40e7ac
         'App\\Http\\Middleware\\TrustHosts' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustHosts.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Models\\Articulo' => __DIR__ . '/../..' . '/app/Models/Articulo.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
@@ -628,6 +629,7 @@ class ComposerStaticInitb036e3f1439d0d04f767cab52f40e7ac
         'Cron\\HoursField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/HoursField.php',
         'Cron\\MinutesField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/MinutesField.php',
         'Cron\\MonthField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/MonthField.php',
+        'Database\\Factories\\ArticuloFactory' => __DIR__ . '/../..' . '/database/factories/ArticuloFactory.php',
         'Database\\Factories\\UserFactory' => __DIR__ . '/../..' . '/database/factories/UserFactory.php',
         'Database\\Seeders\\DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeders/DatabaseSeeder.php',
         'DeepCopy\\DeepCopy' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',
@@ -4579,6 +4581,7 @@ class ComposerStaticInitb036e3f1439d0d04f767cab52f40e7ac
         'Spatie\\FlareClient\\Enums\\MessageLevels' => __DIR__ . '/..' . '/spatie/flare-client-php/src/Enums/MessageLevels.php',
         'Spatie\\FlareClient\\Flare' => __DIR__ . '/..' . '/spatie/flare-client-php/src/Flare.php',
         'Spatie\\FlareClient\\FlareMiddleware\\AddDocumentationLinks' => __DIR__ . '/..' . '/spatie/flare-client-php/src/FlareMiddleware/AddDocumentationLinks.php',
+        'Spatie\\FlareClient\\FlareMiddleware\\AddEnvironmentInformation' => __DIR__ . '/..' . '/spatie/flare-client-php/src/FlareMiddleware/AddEnvironmentInformation.php',
         'Spatie\\FlareClient\\FlareMiddleware\\AddGitInformation' => __DIR__ . '/..' . '/spatie/flare-client-php/src/FlareMiddleware/AddGitInformation.php',
         'Spatie\\FlareClient\\FlareMiddleware\\AddGlows' => __DIR__ . '/..' . '/spatie/flare-client-php/src/FlareMiddleware/AddGlows.php',
         'Spatie\\FlareClient\\FlareMiddleware\\AddNotifierName' => __DIR__ . '/..' . '/spatie/flare-client-php/src/FlareMiddleware/AddNotifierName.php',
