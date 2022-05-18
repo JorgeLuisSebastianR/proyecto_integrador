@@ -9,7 +9,7 @@ class CampinteriaController extends Controller
 {
     public function index()
     {
-        //
+        return view('campinterias.index');
     }
 
 
