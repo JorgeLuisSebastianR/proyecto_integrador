@@ -25,6 +25,7 @@ return new class extends Migration
     }
 
     //asdfasdfasd
+    //asldjflaksdjlfkajdlfk
 
     /**
      * Reverse the migrations.
