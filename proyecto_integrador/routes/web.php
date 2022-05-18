@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 asdfasdfasdfasdfasd|
 
 */
-//hola compas_
+//hola compas_1
 
 Route::get('/', function () {
     return view('welcome');
