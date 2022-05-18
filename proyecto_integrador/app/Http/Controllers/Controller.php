@@ -9,6 +9,8 @@ use Illuminate\Routing\Controller as BaseController;
 
 
 //aaaaaa
+
+//jsjsjsjs prueva xd 
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
