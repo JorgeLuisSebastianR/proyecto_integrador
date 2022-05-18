@@ -3,12 +3,12 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticuloController;
 
-<<<<<<< HEAD
+
 //nuevo comentario 
 Route :: resources([
 'articulos'=> ArticuloController :: class,
 ]);
-=======
+
 //nuevo comentario
 /*
 |--------------------------------------------------------------------------
@@ -22,7 +22,6 @@ asdfasdfasdfasdfasd|
 
 */
 //hola compas
->>>>>>> b673127b1c4072ebde5fc4850af1b9f6042a3efa
 
 Route::get('/', function () {
     return view('welcome');
