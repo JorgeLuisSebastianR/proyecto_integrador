@@ -8,10 +8,8 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 
 
-//aaaaaa
-
-//jsjsjsjs prueva xd 
+//aaaaaaaaaagggg
 class Controller extends BaseController
-{
+{//zaaaaa
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 }
