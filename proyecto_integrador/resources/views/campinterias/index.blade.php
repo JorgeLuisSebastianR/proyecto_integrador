@@ -8,3 +8,4 @@
             <a class="button is-info" href="/tiendas/create">Agregar</a>
         </div>
 </section>
+</section>
