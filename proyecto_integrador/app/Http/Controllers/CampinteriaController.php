@@ -9,9 +9,9 @@ class CampinteriaController extends Controller
 {
     public function index()
     {
-        return view('campinterias.index');
+      $campinterias = campinteria::all();
+        return view('campinterias.index', compact('campinterias'));
     }
-
 
     public function create()
     {
@@ -37,7 +37,6 @@ class CampinteriaController extends Controller
     {
         //
     }
-
 
     public function destroy(Campinteria $campinteria)
     {
