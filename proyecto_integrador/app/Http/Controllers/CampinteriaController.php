@@ -9,8 +9,7 @@ class CampinteriaController extends Controller
 {
     public function index()
     {
-      $campinterias = campinteria::all();
-        return view('campinterias.index', compact('campinterias'));
+         return view('Carpinterias.index')->with('Carpinterias', Carpinteria::all());
     }
 
     public function create()
@@ -20,7 +19,25 @@ class CampinteriaController extends Controller
 
     public function store(StoreCampinteriaRequest $request)
     {
-        //
+      $request->validate([
+          'Nombre'          => 'required',
+          'Telefono'        => 'required',
+          'Calle'           => 'required',
+          'NumeroExterior'  => 'required',
+          'Colonia'         => 'required',
+          'Municipio'       => 'required'
+      ]);
+
+      Carpinteria::create([
+          'Nombre'          => $request->Nombre,
+          'Telefono'        => $request->Telefono,
+          'Calle'           => $request->Calle,
+          'NumeroExterior'  => $request->NumeroExterior,
+          'Colonia'         => $request->Colonia,
+          'Municipio'       => $request->Municipio
+      ]);
+
+      return redirect()->route('Carpinterias.index');
     }
 
     public function show(Campinteria $campinteria)
