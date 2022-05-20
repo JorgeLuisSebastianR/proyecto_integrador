@@ -9,12 +9,12 @@ class CampinteriaController extends Controller
 {
     public function index()
     {
-         return view('Carpinterias.index')->with('Carpinterias', Carpinteria::all());
+         return view('Campinterias.index')->with('Campinterias', Campinteria::all());
     }
 
     public function create()
     {
-        //
+        return view('Campinterias.create');
     }
 
     public function store(StoreCampinteriaRequest $request)
