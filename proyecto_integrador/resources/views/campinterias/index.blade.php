@@ -52,8 +52,8 @@
                         </td>
                         <td>
                            <form action="{{route('Campinterias.destroy',$Campinteria)}}" method="POST">
-                                <a class="button is-info is-small" href="{{route('Campinteria.show',$Campinteria->id)}}">Ver</a>
-                                <a class="button is-info is-small" href="{{route('Campinteria.edit',$Campinteria->id)}}">Editar</a>
+                                <a class="button is-info is-small" href="{{route('Campinterias.show',$Campinteria->id)}}">Ver</a>
+                                <a class="button is-info is-small" href="{{route('Campinterias.edit',$Campinteria->id)}}">Editar</a>
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="button is-info is-small">Eliminar</button>
