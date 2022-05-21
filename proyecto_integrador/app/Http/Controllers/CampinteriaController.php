@@ -8,7 +8,7 @@ class CampinteriaController extends Controller
 {
     public function index()
     {
-         return view('campinterias.index')->with('campinterias', campinteria::all());
+         return view('campinterias.index')->with('campinterias', Campinteria::all());
     }
 
     public function create()
@@ -18,6 +18,37 @@ class CampinteriaController extends Controller
 
     public function store(StoreCampinteriaRequest $request)
     {
+    $request->validate([
+          'Nombre' => 'required',
+          'Telefono' => 'required',
+          'Calle' => 'required',
+          'NumeroExterior' => 'required',
+          'Colonia' => 'required',
+          'Municipio' => 'required'
+      ]);
+      Campinteria::create([
+          'Nombre' => $request->Nombre,
+          'Telefono' => $request->Telefono,
+          'Calle' => $request->Calle,
+          'NumeroExterior' => $request->NumeroExterior,
+          'Colonia' => $request->Colonia,
+          'Municipio'=> $request->Municipio
+      ]);
+      return redirect()->route('campinterias.index');
+    }
+
+    public function show(Campinteria $campinteria)
+    {
+        return view('campinterias.show',compact('campinteria'));
+    }
+
+    public function edit(Campinteria $campinteria)
+    {
+        //
+    }
+
+    public function update(UpdateCampinteriaRequest $request, Campinteria $campinteria)
+    {
       $request->validate([
           'Nombre'          => 'required',
           'Telefono'        => 'required',
@@ -26,31 +57,8 @@ class CampinteriaController extends Controller
           'Colonia'         => 'required',
           'Municipio'       => 'required'
       ]);
-
-      Campinterias::create([
-          'Nombre'          => $request->Nombre,
-          'Telefono'        => $request->Telefono,
-          'Calle'           => $request->Calle,
-          'NumeroExterior'  => $request->NumeroExterior,
-          'Colonia'         => $request->Colonia,
-          'Municipio'       => $request->Municipio
-      ]);
+      $campinteria->update($request->all());
       return redirect()->route('campinterias.index');
-    }
-
-    public function show(Campinteria $Campinteria)
-    {
-        return view('campinterias.show',compact('Campinteria'));
-    }
-
-    public function edit(Campinteria $Campinteria)
-    {
-        //
-    }
-
-    public function update(UpdateCampinteriaRequest $request, Campinteria $Campinteria)
-    {
-        //
     }
 
     public function destroy(campinteria $campinteria)
