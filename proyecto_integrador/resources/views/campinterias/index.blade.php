@@ -6,7 +6,7 @@
             <p class="title">
                 Sucursales
             </p>
-            <a class="button is-info" href="/Campinteria/create">Agregar</a>
+            <a class="button is-info" href="/campinterias/create">Agregar</a>
         </div>
     </section>
 
@@ -21,6 +21,7 @@
                     <th>NumeroExterior</th>
                     <th>Colonia</th>
                     <th>Municipio</th>
+                    <th>Acciones</th>
                 </tr>
                 </thead>
                 <tfoot>
@@ -31,35 +32,31 @@
                   <th>NumeroExterior</th>
                   <th>Colonia</th>
                   <th>Municipio</th>
+                  <th>Acciones</th>
                 </tr>
                 </tfoot>
                 <tbody>
 
-                @forelse($Campinterias as $Campinteria)
+                @forelse($campinterias as $campinteria)
                     <tr>
-                        <th>{{ $Campinteria->Nombre}}</th>
-                        <td>{{ $Campinteria->Telefono}}</td>
-                        <td>{{ $Campinteria->Calle}}</td>
-                        <td>{{ $Campinteria->NumeroExterior}}</td>
-                        <td>{{ $Campinteria->Colonia}}</td>
-                        <td>{{ $Campinteria->Municipio}}</td>
+                        <th>{{ $campinteria->Nombre}}</th>
+                        <td>{{ $campinteria->Telefono}}</td>
+                        <td>{{ $campinteria->Calle}}</td>
+                        <td>{{ $campinteria->NumeroExterior}}</td>
+                        <td>{{ $campinteria->Colonia}}</td>
+                        <td>{{ $campinteria->Municipio}}</td>
                         <td>
-                            @if ($Campinteria->disponible == 1 )
-                                <p>Disponible</p>
-                            @else
-                                <p>No disponible</p>
-                            @endif
-                        </td>
-                        <td>
-                           <form action="{{route('Campinterias.destroy',$Campinteria)}}" method="POST">
-                                <a class="button is-info is-small" href="{{route('Campinteria.show',$Campinteria->id)}}">Ver</a>
-                                <a class="button is-info is-small" href="{{route('Campinteria.edit',$Campinteria->id)}}">Editar</a>
+                           <form action="{{route('campinterias.destroy',$campinteria->id)}}" method="POST">
+                                <a class="button is-info is-small" href="{{route('campinterias.show',$campinteria->id)}}">Ver</a>
+                                <a class="button is-info is-small" href="{{route('campinterias.edit',$campinteria->id)}}">Editar</a>
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="button is-info is-small">Eliminar</button>
+
+
                             </form>
                         </td>
-                    </tr>
+
                 </tbody>
 
                 @empty

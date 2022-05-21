@@ -7,6 +7,7 @@ use App\Http\Controllers\CampinteriaController;
 Route::resources([
     'campinterias' => CampinteriaController::class,
 ]);
+Route::get('Campinterias/datatable', [CampinteriaController::class,'datatable']);
 Route::get('/', function () {
     return view('welcome');
 });
