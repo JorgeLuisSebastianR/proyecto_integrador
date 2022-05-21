@@ -1,23 +1,24 @@
 <?php
 
 namespace Database\Factories;
-
+use App\Models\Campinteria;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-/**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Campinteria>
- */
+
 class CampinteriaFactory extends Factory
 {
-    /**
-     * Define the model's default state.
-     *
-     * @return array<string, mixed>
-     */
+protected $Campinteria = Campinteria::class;
     public function definition()
     {
         return [
-            //
+
         ];
     }
 }
+/*  barcode
+'Nombre'          =>
+'Telefono'        =>
+'Calle'           =>
+'NumeroExterior'  =>
+'Colonia'         =>
+'Municipio'       =>*/

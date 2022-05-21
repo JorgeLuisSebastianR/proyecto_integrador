@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Models\Campinteria;
@@ -28,7 +27,7 @@ class CampinteriaController extends Controller
           'Municipio'       => 'required'
       ]);
 
-      Carpinteria::create([
+      Campinteria::create([
           'Nombre'          => $request->Nombre,
           'Telefono'        => $request->Telefono,
           'Calle'           => $request->Calle,
@@ -36,13 +35,12 @@ class CampinteriaController extends Controller
           'Colonia'         => $request->Colonia,
           'Municipio'       => $request->Municipio
       ]);
-
-      return redirect()->route('Carpinterias.index');
+      return redirect()->route('Campinteria.index');
     }
 
     public function show(Campinteria $campinteria)
     {
-        //
+        return view('campinterias.show',compact('campinteria'));
     }
 
     public function edit(Campinteria $campinteria)
@@ -57,6 +55,11 @@ class CampinteriaController extends Controller
 
     public function destroy(Campinteria $campinteria)
     {
-        //
+      $campinterias->delete();
+      return rediret()-reote('campinteria.index');
     }
+    public function databable(){
+       $campinterias = campinteria::all();
+       return view('campinterias.datatable',compact('campinterias'));
+   }
 }
