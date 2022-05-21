@@ -46,22 +46,9 @@
                         <td>{{ $campinteria->Colonia}}</td>
                         <td>{{ $campinteria->Municipio}}</td>
                         <td>
-<<<<<<< HEAD
-                            @if ($Campinteria->disponible == 1 )
-                                <p>Disponible</p>
-                            @else
-                                <p>No disponible</p>
-                            @endif
-                        </td>
-                        <td>
-                           <form action="{{route('Campinterias.destroy',$Campinteria)}}" method="POST">
-                                <a class="button is-info is-small" href="{{route('Campinterias.show',$Campinteria->id)}}">Ver</a>
-                                <a class="button is-info is-small" href="{{route('Campinterias.edit',$Campinteria->id)}}">Editar</a>
-=======
                            <form action="{{route('campinterias.destroy',$campinteria->id)}}" method="POST">
                                 <a class="button is-info is-small" href="{{route('campinterias.show',$campinteria->id)}}">Ver</a>
                                 <a class="button is-info is-small" href="{{route('campinterias.edit',$campinteria->id)}}">Editar</a>
->>>>>>> fdf76329a3e3d2229e8c807424b0dc09d6ea53b9
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="button is-info is-small">Eliminar</button>
