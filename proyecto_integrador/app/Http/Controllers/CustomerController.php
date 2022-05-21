@@ -38,11 +38,28 @@ class CustomerController extends Controller
     public function store(StoreCustomerRequest $request)
     {
         $request->validate([
-            'nombre' => 'required'
+            'nombre' => 'required',
+            'apellidoPaterno' => 'required',
+            'apellidoMaterno' => 'required',
+            'telefono' => 'required',
+            'calle' => 'required',
+            'numeroCasa' => 'required',
+            'colonia' => 'required',
+            'municipio' => 'required',
+            'codigoPostal' => 'required'
         ]);
 
         Customer::create([
-            'nombre' => $request->nombre
+            'nombre' => $request->nombre,
+            'apellidoPaterno' => $request->apellidoPaterno,
+            'apellidoMaterno' => $request->apellidoMaterno,
+            'telefono' => $request->telefono,
+            'correoElectronico' =>  $request->correoElectronico,
+            'calle' => $request->calle,
+            'numeroCasa' => $request->numeroCasa,
+            'colonia' => $request->colonia,
+            'municipio' => $request->municipio,
+            'codigoPostal' => $request->codigoPostal
         ]);
 
         return redirect()->route('customers.index');
@@ -80,7 +97,15 @@ class CustomerController extends Controller
     public function update(UpdateCustomerRequest $request, Customer $customer)
     {
         $request->validate([
-            'nombre' => 'required'
+            'nombre' => 'required',
+            'apellidoPaterno' => 'required',
+            'apellidoMaterno' => 'required',
+            'telefono' => 'required',
+            'calle' => 'required',
+            'numeroCasa' => 'required',
+            'colonia' => 'required',
+            'municipio' => 'required',
+            'codigoPostal' => 'required'
         ]);
         $customer->update($request->all());
         return redirect()->route('customers.index');
