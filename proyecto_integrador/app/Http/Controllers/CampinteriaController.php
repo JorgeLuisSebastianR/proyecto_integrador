@@ -27,7 +27,7 @@ class CampinteriaController extends Controller
           'Municipio'       => 'required'
       ]);
 
-      Campinteria::create([
+      Campinterias::create([
           'Nombre'          => $request->Nombre,
           'Telefono'        => $request->Telefono,
           'Calle'           => $request->Calle,
