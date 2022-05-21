@@ -8,12 +8,12 @@ class CampinteriaController extends Controller
 {
     public function index()
     {
-         return view('Campinterias.index')->with('Campinterias', Campinteria::all());
+         return view('campinterias.index')->with('campinterias', campinteria::all());
     }
 
     public function create()
     {
-        return view('Campinterias.create');
+        return view('campinterias.create');
     }
 
     public function store(StoreCampinteriaRequest $request)
@@ -27,7 +27,7 @@ class CampinteriaController extends Controller
           'Municipio'       => 'required'
       ]);
 
-      Campinteria::create([
+      Campinterias::create([
           'Nombre'          => $request->Nombre,
           'Telefono'        => $request->Telefono,
           'Calle'           => $request->Calle,
@@ -35,31 +35,31 @@ class CampinteriaController extends Controller
           'Colonia'         => $request->Colonia,
           'Municipio'       => $request->Municipio
       ]);
-      return redirect()->route('Campinteria.index');
+      return redirect()->route('campinterias.index');
     }
 
-    public function show(Campinteria $campinteria)
+    public function show(Campinteria $Campinteria)
     {
-        return view('campinterias.show',compact('campinteria'));
+        return view('campinterias.show',compact('Campinteria'));
     }
 
-    public function edit(Campinteria $campinteria)
-    {
-        //
-    }
-
-    public function update(UpdateCampinteriaRequest $request, Campinteria $campinteria)
+    public function edit(Campinteria $Campinteria)
     {
         //
     }
 
-    public function destroy(Campinteria $campinteria)
+    public function update(UpdateCampinteriaRequest $request, Campinteria $Campinteria)
     {
-      $campinterias->delete();
-      return rediret()-reote('campinteria.index');
+        //
+    }
+
+    public function destroy(campinteria $campinteria)
+    {
+      $campinteria->delete();
+      return redirect()->route('campinterias.index');
     }
     public function databable(){
-       $campinterias = campinteria::all();
-       return view('campinterias.datatable',compact('campinterias'));
+       $Campinterias = Campinteria::all();
+       return view('campinterias.datatable',compact('Campinterias'));
    }
 }

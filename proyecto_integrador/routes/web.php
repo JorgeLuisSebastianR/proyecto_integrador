@@ -9,6 +9,7 @@ Route::resources([
     'campinterias' => CampinteriaController::class,
     'customers' => CustomerController::class,
 ]);
+Route::get('Campinterias/datatable', [CampinteriaController::class,'datatable']);
 Route::get('/', function () {
     return view('welcome');
 });
