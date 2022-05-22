@@ -19,7 +19,7 @@
             <h3><b>Telefono:</b> {{ $customer->telefono }}</h3><br>
             <h3><b>Correo Electrónico:</b> {{ $customer->correoElectronico }}</h3><br>
             <h3><b>Calle:</b> {{ $customer->calle }}</h3><br>
-            <h3><b>Número de Casa:</b> {{ $customer->númeroCasa }}</h3><br>
+            <h3><b>Número de Casa:</b> {{ $customer->numeroCasa }}</h3><br>
             <h3><b>Colonia:</b> {{ $customer->colonia }}</h3><br>
             <h3><b>Municipio:</b> {{ $customer->municipio }}</h3><br>
             <h3><b>Código Postal:</b> {{ $customer->codigoPostal }}</h3><br><br>
