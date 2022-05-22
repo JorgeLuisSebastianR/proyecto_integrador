@@ -20,6 +20,7 @@ return array(
     'App\\Http\\Middleware\\TrustHosts' => $baseDir . '/app/Http/Middleware/TrustHosts.php',
     'App\\Http\\Middleware\\TrustProxies' => $baseDir . '/app/Http/Middleware/TrustProxies.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
+<<<<<<< HEAD
     'App\\Http\\Requests\\StoreCampinteriaRequest' => $baseDir . '/app/Http/Requests/StoreCampinteriaRequest.php',
     'App\\Http\\Requests\\StorePedidoRequest' => $baseDir . '/app/Http/Requests/StorePedidoRequest.php',
     'App\\Http\\Requests\\UpdateCampinteriaRequest' => $baseDir . '/app/Http/Requests/UpdateCampinteriaRequest.php',
@@ -27,6 +28,13 @@ return array(
     'App\\Models\\Campinteria' => $baseDir . '/app/Models/Campinteria.php',
     'App\\Models\\Customer' => $baseDir . '/app/Models/Customer.php',
     'App\\Models\\Pedido' => $baseDir . '/app/Models/Pedido.php',
+=======
+
+    'App\\Models\\Articulo' => $baseDir . '/app/Models/Articulo.php',
+
+    'App\\Models\\Campinteria' => $baseDir . '/app/Models/Campinteria.php',
+
+>>>>>>> 5627e0f268787269f512a5de094d57387037723b
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
     'App\\Policies\\CampinteriaPolicy' => $baseDir . '/app/Policies/CampinteriaPolicy.php',
     'App\\Policies\\PedidoPolicy' => $baseDir . '/app/Policies/PedidoPolicy.php',
@@ -140,9 +148,18 @@ return array(
     'Cron\\HoursField' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/HoursField.php',
     'Cron\\MinutesField' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/MinutesField.php',
     'Cron\\MonthField' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/MonthField.php',
+    'Database\\Factories\\ArticuloFactory' => $baseDir . '/database/factories/ArticuloFactory.php',
+
     'Database\\Factories\\CampinteriaFactory' => $baseDir . '/database/factories/CampinteriaFactory.php',
+<<<<<<< HEAD
     'Database\\Factories\\CustomerFactory' => $baseDir . '/database/factories/CustomerFactory.php',
+=======
+<<<<<<< HEAD
+>>>>>>> d4fc145181a3d2a60bed5b9cdc5191c52623c8c8
     'Database\\Factories\\PedidoFactory' => $baseDir . '/database/factories/PedidoFactory.php',
+=======
+
+>>>>>>> 5627e0f268787269f512a5de094d57387037723b
     'Database\\Factories\\UserFactory' => $baseDir . '/database/factories/UserFactory.php',
     'Database\\Seeders\\CampinteriaSeeder' => $baseDir . '/database/seeders/CampinteriaSeeder.php',
     'Database\\Seeders\\DatabaseSeeder' => $baseDir . '/database/seeders/DatabaseSeeder.php',

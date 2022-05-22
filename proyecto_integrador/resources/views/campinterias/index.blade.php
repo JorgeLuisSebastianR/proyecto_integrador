@@ -8,6 +8,7 @@
             </p>
             <a class="button is-info" href="/campinterias/create">Agregar</a>
         </div>
+<<<<<<< HEAD
     </section>
 
 <section class="section">
@@ -65,3 +66,7 @@
             </table>
         </div>
     </section>
+=======
+</section>
+</section>
+>>>>>>> d4fc145181a3d2a60bed5b9cdc5191c52623c8c8
