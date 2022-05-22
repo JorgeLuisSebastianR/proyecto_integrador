@@ -11,7 +11,7 @@
     </div>
 </section>
 
-<!-- ....................ME FALTA EDITAR EL INDEX Y.. QUE ES ARTICULOCONTROLLER?...................-->
+<!-- ....................ME FALTA EDITAR EL INDEX Y.. QUE ES ARTICULOCONTROLLER?.jsjsj..................-->
 <section class="section">
 
     <div class="table-container">
