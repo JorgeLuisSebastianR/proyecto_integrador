@@ -42,7 +42,7 @@ class CampinteriaController extends Controller
 
     public function edit(Campinteria $campinteria)
     {
-        //
+          return view('campinterias.edit', compact('campinteria'));
     }
 
     public function update(UpdateCampinteriaRequest $request, Campinteria $campinteria)
