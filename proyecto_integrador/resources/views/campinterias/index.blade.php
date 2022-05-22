@@ -16,7 +16,6 @@
             <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
                 <thead>
                 <tr>
-                    <th>Nombre</th>
                     <th>Telefono</th>
                     <th>Calle</th>
                     <th>NumeroExterior</th>
@@ -25,22 +24,10 @@
                     <th>Acciones</th>
                 </tr>
                 </thead>
-                <tfoot>
-                <tr>
-                  <th>Nombre</th>
-                  <th>Telefono</th>
-                  <th>Calle</th>
-                  <th>NumeroExterior</th>
-                  <th>Colonia</th>
-                  <th>Municipio</th>
-                  <th>Acciones</th>
-                </tr>
-                </tfoot>
                 <tbody>
 
                 @forelse($campinterias as $campinteria)
                     <tr>
-                        <th>{{ $campinteria->Nombre}}</th>
                         <td>{{ $campinteria->Telefono}}</td>
                         <td>{{ $campinteria->Calle}}</td>
                         <td>{{ $campinteria->NumeroExterior}}</td>

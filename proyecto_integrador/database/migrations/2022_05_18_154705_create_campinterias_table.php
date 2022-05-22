@@ -9,7 +9,6 @@ return new class extends Migration
     {
         Schema::create('campinterias', function (Blueprint $table) {
             $table->id();
-            $table->string('Nombre',20);
             $table->string('Telefono',10);
             $table->string('Calle',20);
             $table->string('NumeroExterior',6);

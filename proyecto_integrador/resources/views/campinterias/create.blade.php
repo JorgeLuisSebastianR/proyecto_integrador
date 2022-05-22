@@ -12,10 +12,6 @@
             @csrf
                 <div class="column">
                     <div>
-                        <label for="">Nombre: </label>
-                        <input class="input is-large" type="text" name="Nombre" >
-                    </div>
-                    <div>
                         <label for="">Telefono: </label>
                         <input class="input is-large" type="text" name="Telefono" >
                     </div>
