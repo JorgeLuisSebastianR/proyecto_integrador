@@ -11,6 +11,7 @@ class Articulo extends Model
 
     protected $fillable =[
 'Nombre','Tamaño','Color','Descripcion','Precio'
+
     ];
 }
 

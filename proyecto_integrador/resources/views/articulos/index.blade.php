@@ -20,7 +20,7 @@
                     <th>Calle</th>
                     <th>NumeroExterior</th>
                     <th>Colonia</th>
-                    <th>Municipio</th>
+                    <th>Municipi</th>
                     <th>Acciones</th>
                 </tr>
                 </thead>
