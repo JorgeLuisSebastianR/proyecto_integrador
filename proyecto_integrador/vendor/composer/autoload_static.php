@@ -518,10 +518,18 @@ class ComposerStaticInitb036e3f1439d0d04f767cab52f40e7ac
         'App\\Http\\Middleware\\TrustHosts' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustHosts.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+<<<<<<< HEAD
         'App\\Http\\Requests\\StoreCampinteriaRequest' => __DIR__ . '/../..' . '/app/Http/Requests/StoreCampinteriaRequest.php',
         'App\\Http\\Requests\\UpdateCampinteriaRequest' => __DIR__ . '/../..' . '/app/Http/Requests/UpdateCampinteriaRequest.php',
         'App\\Models\\Campinteria' => __DIR__ . '/../..' . '/app/Models/Campinteria.php',
         'App\\Models\\Pedido' => __DIR__ . '/../..' . '/app/Models/Pedido.php',
+=======
+
+        'App\\Models\\Articulo' => __DIR__ . '/../..' . '/app/Models/Articulo.php',
+
+        'App\\Models\\Campinteria' => __DIR__ . '/../..' . '/app/Models/Campinteria.php',
+
+>>>>>>> 5627e0f268787269f512a5de094d57387037723b
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Policies\\CampinteriaPolicy' => __DIR__ . '/../..' . '/app/Policies/CampinteriaPolicy.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
@@ -634,8 +642,15 @@ class ComposerStaticInitb036e3f1439d0d04f767cab52f40e7ac
         'Cron\\HoursField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/HoursField.php',
         'Cron\\MinutesField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/MinutesField.php',
         'Cron\\MonthField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/MonthField.php',
+
+        'Database\\Factories\\ArticuloFactory' => __DIR__ . '/../..' . '/database/factories/ArticuloFactory.php',
+
         'Database\\Factories\\CampinteriaFactory' => __DIR__ . '/../..' . '/database/factories/CampinteriaFactory.php',
+<<<<<<< HEAD
         'Database\\Factories\\PedidoFactory' => __DIR__ . '/../..' . '/database/factories/PedidoFactory.php',
+=======
+
+>>>>>>> 5627e0f268787269f512a5de094d57387037723b
         'Database\\Factories\\UserFactory' => __DIR__ . '/../..' . '/database/factories/UserFactory.php',
         'Database\\Seeders\\CampinteriaSeeder' => __DIR__ . '/../..' . '/database/seeders/CampinteriaSeeder.php',
         'Database\\Seeders\\DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeders/DatabaseSeeder.php',

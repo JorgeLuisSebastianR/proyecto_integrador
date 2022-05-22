@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Pedido;
-use App\Http\Controllers\Controller;
-use App\Http\Requests\StorePedidoRequest;
-use App\Http\Requests\UpdatePedidoRequest;
+use App\Models\Articulo;
+use App\Http\Requests\StoreArticuloRequest;
+use App\Http\Requests\UpdateArticuloRequest;
 
-class PedidoController extends Controller
+class ArticuloController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +15,9 @@ class PedidoController extends Controller
      */
     public function index()
     {
-        //
+        $articulos=Articulo:: all();
+        return view ('articulos.index', compact('articulos'));
+
     }
 
     /**
@@ -32,29 +33,21 @@ class PedidoController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StorePedidoRequest  $request
+     * @param  \App\Http\Requests\StoreArticuloRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StorePedidoRequest $request)
+    public function store(StoreArticuloRequest $request)
     {
-      $request->validate([
-        'Fecha' => 'required',
-        'Hora'  => 'required'
-      ]);
-
-      Pedido::create([
-        'Fecha' => $request->Fecha,
-        'Hora'  => $request->Hora
-      ])
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Pedido  $pedido
+     * @param  \App\Models\Articulo  $articulo
      * @return \Illuminate\Http\Response
      */
-    public function show(Pedido $pedido)
+    public function show(Articulo $articulo)
     {
         //
     }
@@ -62,10 +55,10 @@ class PedidoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Pedido  $pedido
+     * @param  \App\Models\Articulo  $articulo
      * @return \Illuminate\Http\Response
      */
-    public function edit(Pedido $pedido)
+    public function edit(Articulo $articulo)
     {
         //
     }
@@ -73,11 +66,11 @@ class PedidoController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdatePedidoRequest  $request
-     * @param  \App\Models\Pedido  $pedido
+     * @param  \App\Http\Requests\UpdateArticuloRequest  $request
+     * @param  \App\Models\Articulo  $articulo
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdatePedidoRequest $request, Pedido $pedido)
+    public function update(UpdateArticuloRequest $request, Articulo $articulo)
     {
         //
     }
@@ -85,10 +78,10 @@ class PedidoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Pedido  $pedido
+     * @param  \App\Models\Articulo  $articulo
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Pedido $pedido)
+    public function destroy(Articulo $articulo)
     {
         //
     }
