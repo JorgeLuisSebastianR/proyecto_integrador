@@ -8,8 +8,10 @@ $baseDir = dirname($vendorDir);
 return array(
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
+    'App\\Http\\Controllers\\ArticuloController' => $baseDir . '/app/Http/Controllers/ArticuloController.php',
     'App\\Http\\Controllers\\CampinteriaController' => $baseDir . '/app/Http/Controllers/CampinteriaController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
+    'App\\Http\\Controllers\\CustomerController' => $baseDir . '/app/Http/Controllers/CustomerController.php',
     'App\\Http\\Controllers\\PedidoController' => $baseDir . '/app/Http/Controllers/PedidoController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',
@@ -20,23 +22,22 @@ return array(
     'App\\Http\\Middleware\\TrustHosts' => $baseDir . '/app/Http/Middleware/TrustHosts.php',
     'App\\Http\\Middleware\\TrustProxies' => $baseDir . '/app/Http/Middleware/TrustProxies.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
-<<<<<<< HEAD
+    'App\\Http\\Requests\\StoreArticuloRequest' => $baseDir . '/app/Http/Requests/StoreArticuloRequest.php',
     'App\\Http\\Requests\\StoreCampinteriaRequest' => $baseDir . '/app/Http/Requests/StoreCampinteriaRequest.php',
+    'App\\Http\\Requests\\StoreCustomerRequest' => $baseDir . '/app/Http/Requests/StoreCustomerRequest.php',
     'App\\Http\\Requests\\StorePedidoRequest' => $baseDir . '/app/Http/Requests/StorePedidoRequest.php',
+    'App\\Http\\Requests\\UpdateArticuloRequest' => $baseDir . '/app/Http/Requests/UpdateArticuloRequest.php',
     'App\\Http\\Requests\\UpdateCampinteriaRequest' => $baseDir . '/app/Http/Requests/UpdateCampinteriaRequest.php',
+    'App\\Http\\Requests\\UpdateCustomerRequest' => $baseDir . '/app/Http/Requests/UpdateCustomerRequest.php',
     'App\\Http\\Requests\\UpdatePedidoRequest' => $baseDir . '/app/Http/Requests/UpdatePedidoRequest.php',
+    'App\\Models\\Articulo' => $baseDir . '/app/Models/Articulo.php',
     'App\\Models\\Campinteria' => $baseDir . '/app/Models/Campinteria.php',
     'App\\Models\\Customer' => $baseDir . '/app/Models/Customer.php',
     'App\\Models\\Pedido' => $baseDir . '/app/Models/Pedido.php',
-=======
-
-    'App\\Models\\Articulo' => $baseDir . '/app/Models/Articulo.php',
-
-    'App\\Models\\Campinteria' => $baseDir . '/app/Models/Campinteria.php',
-
->>>>>>> 5627e0f268787269f512a5de094d57387037723b
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
+    'App\\Policies\\ArticuloPolicy' => $baseDir . '/app/Policies/ArticuloPolicy.php',
     'App\\Policies\\CampinteriaPolicy' => $baseDir . '/app/Policies/CampinteriaPolicy.php',
+    'App\\Policies\\CustomerPolicy' => $baseDir . '/app/Policies/CustomerPolicy.php',
     'App\\Policies\\PedidoPolicy' => $baseDir . '/app/Policies/PedidoPolicy.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',
@@ -149,19 +150,13 @@ return array(
     'Cron\\MinutesField' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/MinutesField.php',
     'Cron\\MonthField' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/MonthField.php',
     'Database\\Factories\\ArticuloFactory' => $baseDir . '/database/factories/ArticuloFactory.php',
-
     'Database\\Factories\\CampinteriaFactory' => $baseDir . '/database/factories/CampinteriaFactory.php',
-<<<<<<< HEAD
     'Database\\Factories\\CustomerFactory' => $baseDir . '/database/factories/CustomerFactory.php',
-=======
-<<<<<<< HEAD
->>>>>>> d4fc145181a3d2a60bed5b9cdc5191c52623c8c8
     'Database\\Factories\\PedidoFactory' => $baseDir . '/database/factories/PedidoFactory.php',
-=======
-
->>>>>>> 5627e0f268787269f512a5de094d57387037723b
     'Database\\Factories\\UserFactory' => $baseDir . '/database/factories/UserFactory.php',
+    'Database\\Seeders\\ArticuloSeeder' => $baseDir . '/database/seeders/ArticuloSeeder.php',
     'Database\\Seeders\\CampinteriaSeeder' => $baseDir . '/database/seeders/CampinteriaSeeder.php',
+    'Database\\Seeders\\CustomerSeeder' => $baseDir . '/database/seeders/CustomerSeeder.php',
     'Database\\Seeders\\DatabaseSeeder' => $baseDir . '/database/seeders/DatabaseSeeder.php',
     'Database\\Seeders\\PedidoSeeder' => $baseDir . '/database/seeders/PedidoSeeder.php',
     'DeepCopy\\DeepCopy' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',

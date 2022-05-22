@@ -507,8 +507,10 @@ class ComposerStaticInitb036e3f1439d0d04f767cab52f40e7ac
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Http\\Controllers\\ArticuloController' => __DIR__ . '/../..' . '/app/Http/Controllers/ArticuloController.php',
         'App\\Http\\Controllers\\CampinteriaController' => __DIR__ . '/../..' . '/app/Http/Controllers/CampinteriaController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\CustomerController' => __DIR__ . '/../..' . '/app/Http/Controllers/CustomerController.php',
         'App\\Http\\Controllers\\PedidoController' => __DIR__ . '/../..' . '/app/Http/Controllers/PedidoController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
@@ -519,23 +521,22 @@ class ComposerStaticInitb036e3f1439d0d04f767cab52f40e7ac
         'App\\Http\\Middleware\\TrustHosts' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustHosts.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
-<<<<<<< HEAD
+        'App\\Http\\Requests\\StoreArticuloRequest' => __DIR__ . '/../..' . '/app/Http/Requests/StoreArticuloRequest.php',
         'App\\Http\\Requests\\StoreCampinteriaRequest' => __DIR__ . '/../..' . '/app/Http/Requests/StoreCampinteriaRequest.php',
+        'App\\Http\\Requests\\StoreCustomerRequest' => __DIR__ . '/../..' . '/app/Http/Requests/StoreCustomerRequest.php',
         'App\\Http\\Requests\\StorePedidoRequest' => __DIR__ . '/../..' . '/app/Http/Requests/StorePedidoRequest.php',
+        'App\\Http\\Requests\\UpdateArticuloRequest' => __DIR__ . '/../..' . '/app/Http/Requests/UpdateArticuloRequest.php',
         'App\\Http\\Requests\\UpdateCampinteriaRequest' => __DIR__ . '/../..' . '/app/Http/Requests/UpdateCampinteriaRequest.php',
+        'App\\Http\\Requests\\UpdateCustomerRequest' => __DIR__ . '/../..' . '/app/Http/Requests/UpdateCustomerRequest.php',
         'App\\Http\\Requests\\UpdatePedidoRequest' => __DIR__ . '/../..' . '/app/Http/Requests/UpdatePedidoRequest.php',
+        'App\\Models\\Articulo' => __DIR__ . '/../..' . '/app/Models/Articulo.php',
         'App\\Models\\Campinteria' => __DIR__ . '/../..' . '/app/Models/Campinteria.php',
         'App\\Models\\Customer' => __DIR__ . '/../..' . '/app/Models/Customer.php',
         'App\\Models\\Pedido' => __DIR__ . '/../..' . '/app/Models/Pedido.php',
-=======
-
-        'App\\Models\\Articulo' => __DIR__ . '/../..' . '/app/Models/Articulo.php',
-
-        'App\\Models\\Campinteria' => __DIR__ . '/../..' . '/app/Models/Campinteria.php',
-
->>>>>>> 5627e0f268787269f512a5de094d57387037723b
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
+        'App\\Policies\\ArticuloPolicy' => __DIR__ . '/../..' . '/app/Policies/ArticuloPolicy.php',
         'App\\Policies\\CampinteriaPolicy' => __DIR__ . '/../..' . '/app/Policies/CampinteriaPolicy.php',
+        'App\\Policies\\CustomerPolicy' => __DIR__ . '/../..' . '/app/Policies/CustomerPolicy.php',
         'App\\Policies\\PedidoPolicy' => __DIR__ . '/../..' . '/app/Policies/PedidoPolicy.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
@@ -647,21 +648,14 @@ class ComposerStaticInitb036e3f1439d0d04f767cab52f40e7ac
         'Cron\\HoursField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/HoursField.php',
         'Cron\\MinutesField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/MinutesField.php',
         'Cron\\MonthField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/MonthField.php',
-
         'Database\\Factories\\ArticuloFactory' => __DIR__ . '/../..' . '/database/factories/ArticuloFactory.php',
-
         'Database\\Factories\\CampinteriaFactory' => __DIR__ . '/../..' . '/database/factories/CampinteriaFactory.php',
-<<<<<<< HEAD
         'Database\\Factories\\CustomerFactory' => __DIR__ . '/../..' . '/database/factories/CustomerFactory.php',
-=======
-<<<<<<< HEAD
->>>>>>> d4fc145181a3d2a60bed5b9cdc5191c52623c8c8
         'Database\\Factories\\PedidoFactory' => __DIR__ . '/../..' . '/database/factories/PedidoFactory.php',
-=======
-
->>>>>>> 5627e0f268787269f512a5de094d57387037723b
         'Database\\Factories\\UserFactory' => __DIR__ . '/../..' . '/database/factories/UserFactory.php',
+        'Database\\Seeders\\ArticuloSeeder' => __DIR__ . '/../..' . '/database/seeders/ArticuloSeeder.php',
         'Database\\Seeders\\CampinteriaSeeder' => __DIR__ . '/../..' . '/database/seeders/CampinteriaSeeder.php',
+        'Database\\Seeders\\CustomerSeeder' => __DIR__ . '/../..' . '/database/seeders/CustomerSeeder.php',
         'Database\\Seeders\\DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeders/DatabaseSeeder.php',
         'Database\\Seeders\\PedidoSeeder' => __DIR__ . '/../..' . '/database/seeders/PedidoSeeder.php',
         'DeepCopy\\DeepCopy' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',
