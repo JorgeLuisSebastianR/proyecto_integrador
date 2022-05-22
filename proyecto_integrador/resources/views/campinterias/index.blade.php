@@ -20,7 +20,9 @@
                     <th>Municipio</th>
                     <th>Colonia</th>
                     <th>Calle</th>
+                    <th>Fecha de Creasion</th>
                     <th>Acciones</th>
+
                 </tr>
                 </thead>
                 <tbody>
@@ -29,6 +31,7 @@
                         <td>{{ $campinteria->Municipio}}</td>
                         <td>{{ $campinteria->Colonia}}</td>
                         <td>{{ $campinteria->Calle}}</td>
+                        <td>{{ $campinteria->created_at}}</td>
                         <td>
                            <form action="{{route('campinterias.destroy',$campinteria->id)}}" method="POST">
                                 <a class="button is-info is-small" href="{{route('campinterias.show',$campinteria->id)}}">Ver</a>
