@@ -9,7 +9,6 @@ class Campinteria extends Model
 {
     use HasFactory;
     protected $fillable=[
-      'Nombre',
       'Telefono',
       'Calle',
       'NumeroExterior',
