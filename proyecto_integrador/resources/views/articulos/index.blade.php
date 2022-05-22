@@ -5,7 +5,7 @@
 <section class="hero is-link">
     <div class="hero-body">
         <p class="title">
-            
+
             Agregar Articulo
         </p>
         <a class="button is-info" href="/articulo/create">Agregar </a>
@@ -34,9 +34,9 @@
                         <td>{{ $articulo->Colonia}}</td>
                         <td>{{ $articulo->Municipio}}</td>
                         <td>
-                           <form action="{{route('campinterias.destroy',$campinteria->id)}}" method="POST">
-                                <a class="button is-info is-small" href="{{route('campinterias.show',$campinteria->id)}}">Ver</a>
-                                <a class="button is-info is-small" href="{{route('campinterias.edit',$campinteria->id)}}">Editar</a>
+                           <form action="{{route('articulos.destroy',$articulo->id)}}" method="POST">
+                                <a class="button is-info is-small" href="{{route('articulos.show',$articulos->id)}}">Ver</a>
+                                <a class="button is-info is-small" href="{{route('articulos.edit',$articulos->id)}}">Editar</a>
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="button is-info is-small">Eliminar</button>
