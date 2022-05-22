@@ -25,38 +25,15 @@ class ComposerAutoloaderInitb036e3f1439d0d04f767cab52f40e7ac
         require __DIR__ . '/platform_check.php';
 
         spl_autoload_register(array('ComposerAutoloaderInitb036e3f1439d0d04f767cab52f40e7ac', 'loadClassLoader'), true, true);
-        self::$loader = $loader = new \Composer\Autoload\ClassLoader(\dirname(\dirname(__FILE__)));
+        self::$loader = $loader = new \Composer\Autoload\ClassLoader(\dirname(__DIR__));
         spl_autoload_unregister(array('ComposerAutoloaderInitb036e3f1439d0d04f767cab52f40e7ac', 'loadClassLoader'));
 
-        $useStaticLoader = PHP_VERSION_ID >= 50600 && !defined('HHVM_VERSION') && (!function_exists('zend_loader_file_encoded') || !zend_loader_file_encoded());
-        if ($useStaticLoader) {
-            require __DIR__ . '/autoload_static.php';
-
-            call_user_func(\Composer\Autoload\ComposerStaticInitb036e3f1439d0d04f767cab52f40e7ac::getInitializer($loader));
-        } else {
-            $map = require __DIR__ . '/autoload_namespaces.php';
-            foreach ($map as $namespace => $path) {
-                $loader->set($namespace, $path);
-            }
-
-            $map = require __DIR__ . '/autoload_psr4.php';
-            foreach ($map as $namespace => $path) {
-                $loader->setPsr4($namespace, $path);
-            }
-
-            $classMap = require __DIR__ . '/autoload_classmap.php';
-            if ($classMap) {
-                $loader->addClassMap($classMap);
-            }
-        }
+        require __DIR__ . '/autoload_static.php';
+        call_user_func(\Composer\Autoload\ComposerStaticInitb036e3f1439d0d04f767cab52f40e7ac::getInitializer($loader));
 
         $loader->register(true);
 
-        if ($useStaticLoader) {
-            $includeFiles = Composer\Autoload\ComposerStaticInitb036e3f1439d0d04f767cab52f40e7ac::$files;
-        } else {
-            $includeFiles = require __DIR__ . '/autoload_files.php';
-        }
+        $includeFiles = \Composer\Autoload\ComposerStaticInitb036e3f1439d0d04f767cab52f40e7ac::$files;
         foreach ($includeFiles as $fileIdentifier => $file) {
             composerRequireb036e3f1439d0d04f767cab52f40e7ac($fileIdentifier, $file);
         }

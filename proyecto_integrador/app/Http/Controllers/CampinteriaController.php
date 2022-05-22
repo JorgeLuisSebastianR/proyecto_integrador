@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Models\Campinteria;
@@ -9,23 +8,38 @@ class CampinteriaController extends Controller
 {
     public function index()
     {
-      $campinterias = campinteria::all();
-        return view('campinterias.index', compact('campinterias'));
+         return view('campinterias.index')->with('campinterias', Campinteria::all());
     }
 
     public function create()
     {
-        //
+        return view('campinterias.create');
     }
 
     public function store(StoreCampinteriaRequest $request)
     {
-        //
+    $request->validate([
+          'Nombre' => 'required',
+          'Telefono' => 'required',
+          'Calle' => 'required',
+          'NumeroExterior' => 'required',
+          'Colonia' => 'required',
+          'Municipio' => 'required'
+      ]);
+      Campinteria::create([
+          'Nombre' => $request->Nombre,
+          'Telefono' => $request->Telefono,
+          'Calle' => $request->Calle,
+          'NumeroExterior' => $request->NumeroExterior,
+          'Colonia' => $request->Colonia,
+          'Municipio'=> $request->Municipio
+      ]);
+      return redirect()->route('campinterias.index');
     }
 
     public function show(Campinteria $campinteria)
     {
-        //
+        return view('campinterias.show',compact('campinteria'));
     }
 
     public function edit(Campinteria $campinteria)
@@ -35,11 +49,25 @@ class CampinteriaController extends Controller
 
     public function update(UpdateCampinteriaRequest $request, Campinteria $campinteria)
     {
-        //
+      $request->validate([
+          'Nombre'          => 'required',
+          'Telefono'        => 'required',
+          'Calle'           => 'required',
+          'NumeroExterior'  => 'required',
+          'Colonia'         => 'required',
+          'Municipio'       => 'required'
+      ]);
+      $campinteria->update($request->all());
+      return redirect()->route('campinterias.index');
     }
 
-    public function destroy(Campinteria $campinteria)
+    public function destroy(campinteria $campinteria)
     {
-        //
+      $campinteria->delete();
+      return redirect()->route('campinterias.index');
     }
+    public function databable(){
+       $Campinterias = Campinteria::all();
+       return view('campinterias.datatable',compact('Campinterias'));
+   }
 }
