@@ -26,13 +26,13 @@
                 </thead>
                 <tbody>
 
-                @forelse($campinterias as $campinteria)
+                @forelse($articulos as $articulo)
                     <tr>
-                        <td>{{ $campinteria->Telefono}}</td>
-                        <td>{{ $campinteria->Calle}}</td>
-                        <td>{{ $campinteria->NumeroExterior}}</td>
-                        <td>{{ $campinteria->Colonia}}</td>
-                        <td>{{ $campinteria->Municipio}}</td>
+                        <td>{{ $articulo->Telefono}}</td>
+                        <td>{{ $articulo->Calle}}</td>
+                        <td>{{ $articulo->NumeroExterior}}</td>
+                        <td>{{ $articulo->Colonia}}</td>
+                        <td>{{ $articulo->Municipio}}</td>
                         <td>
                            <form action="{{route('campinterias.destroy',$campinteria->id)}}" method="POST">
                                 <a class="button is-info is-small" href="{{route('campinterias.show',$campinteria->id)}}">Ver</a>
