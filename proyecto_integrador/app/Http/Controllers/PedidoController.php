@@ -42,12 +42,12 @@ class PedidoController extends Controller
     public function edit(Pedido $pedido)
     {
         request->validate)([
-          'Fecha' => 'required';
+          'Fecha' => 'required',
           'Hora'  => 'required'
         ]);
     }
 
-    public function update(UpdatePedidoRequest $request, Pedido $pedido)
+      public function update(UpdatePedidoRequest $request, Pedido $pedido)
     {
         //
     }

@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Madera extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+      'Nombre',
+      'Color',
+      'Pulgada',
+      'Cantidad'
+    ];
 }

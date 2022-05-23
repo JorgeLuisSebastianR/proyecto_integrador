@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('maderas', function (Blueprint $table) {
             $table->id();
+            $table->String('Nombre', 10);
+            $table->String('Color', 15);
+            $table->String('Pulgada', 30);
+            $table->Integer('Canditidad');
             $table->timestamps();
         });
     }

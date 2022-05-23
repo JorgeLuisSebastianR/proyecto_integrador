@@ -21,13 +21,17 @@ class MaderaController extends Controller
   public function store(StoreMaderaRequest $request)
   {
     $request->validate([
-      'Fecha' => 'required',
-      'Hora'  => 'required'
+      'Nombre'    => 'required',
+      'Color'     => 'required',
+      'Pulgada'   => 'required',
+      'Cantidad'  => 'required'
     ]);
 
     Madera::create([
-      'Fecha' => $request->Fecha,
-      'Hora'  => $request->Hora
+      'Nombre'    => $request->Nombre,
+      'Color'     => $request->Color,
+      'Pulgada'   => $request->Pulgada,
+      'Cantidad'  => $request->Canditidad
     ]);
 
     return redirect()->route('Maderas.index');
@@ -35,20 +39,22 @@ class MaderaController extends Controller
 
   public function show(Madera $madera)
   {
-    return view('maderas.show',compact('madera'));
+    return view('maderas.show', compact('madera'));
   }
 
   public function edit(Madera $madera)
   {
       request->validate)([
-        'Fecha' => 'required';
-        'Hora'  => 'required'
+        'Nombre'    => 'required',
+        'Color'     => 'required',
+        'Pulgada'   => 'required',
+        'Cantidad'  => 'required'
       ]);
   }
 
   public function update(UpdateMaderaRequest $request, Madera $madera)
   {
-      //
+
   }
 
   public function destroy(Madera $madera)
