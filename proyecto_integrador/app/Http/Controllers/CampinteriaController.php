@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Campinteria;
 use App\Http\Requests\StoreCampinteriaRequest;
 use App\Http\Requests\UpdateCampinteriaRequest;
+use Barryvdh\DomPDF\Facade as PDF;
 class CampinteriaController extends Controller
 {
     public function index()
@@ -19,18 +20,18 @@ class CampinteriaController extends Controller
     public function store(StoreCampinteriaRequest $request)
     {
     $request->validate([
-          'Telefono' => 'required',
-          'Calle' => 'required',
-          'NumeroExterior' => 'required',
-          'Colonia' => 'required',
-          'Municipio' => 'required'
+          'Telefono'        => 'required',
+          'Calle'           => 'required',
+          'NumeroExterior'  => 'required',
+          'Colonia'         => 'required',
+          'Municipio'       => 'required'
       ]);
       Campinteria::create([
-          'Telefono' => $request->Telefono,
-          'Calle' => $request->Calle,
-          'NumeroExterior' => $request->NumeroExterior,
-          'Colonia' => $request->Colonia,
-          'Municipio'=> $request->Municipio
+          'Telefono'        => $request->Telefono,
+          'Calle'           => $request->Calle,
+          'NumeroExterior'  => $request->NumeroExterior,
+          'Colonia'         => $request->Colonia,
+          'Municipio'       => $request->Municipio
       ]);
       return redirect()->route('campinterias.index');
     }
@@ -57,14 +58,18 @@ class CampinteriaController extends Controller
       $campinteria->update($request->all());
       return redirect()->route('campinterias.index');
     }
-
     public function destroy(campinteria $campinteria)
     {
       $campinteria->delete();
       return redirect()->route('campinterias.index');
     }
     public function databable(){
-       $Campinterias = Campinteria::all();
-       return view('campinterias.datatable',compact('Campinterias'));
+       $campinterias = Campinteria::all();
+       return view('campinterias.datatable',compact('campinterias'));
+   }
+   public function exportToPDF(){
+     $campinterias = Campinteria::get();
+     $pdf = PDF::loadView('campinterias.exportToPDF', compact('campinteria'));
+     return $pdf->download('listadoCampinterias.pdf');
    }
 }

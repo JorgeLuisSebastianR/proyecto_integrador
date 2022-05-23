@@ -50,10 +50,10 @@
     </left>
 <!--codigo a para boton PDF -->
     <p align="right">
-        <button href="" class="button is-danger is-outlined">
+        <a href="{{ route('campinterias.pdf')}}" class="button is-danger is-outlined">
         <span>Descargar PDF</span>
         <span class="icon is-small">
           <i class="fas fa-times"></i>
         </span>
-      </button>
+      </a>
    </p>
