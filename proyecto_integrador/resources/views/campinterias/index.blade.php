@@ -48,12 +48,12 @@
             </table>
         </div>
     </left>
-
+<!--codigo a para boton PDF -->
     <p align="right">
- <button class="button is-danger is-outlined">
+        <button href="" class="button is-danger is-outlined">
         <span>Descargar PDF</span>
         <span class="icon is-small">
           <i class="fas fa-times"></i>
         </span>
       </button>
-      </p>
+   </p>

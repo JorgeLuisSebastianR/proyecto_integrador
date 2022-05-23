@@ -16,23 +16,23 @@
             <div class="column">
                 <div>
                     <label for="">Telefono: </label>
-                    <input class="input is-large" type="text" name="Telefono" >
+                    <input class="input is-large" type="text" value="{{$campinteria->Telefono}}" name="Telefono" >
                 </div>
                 <div>
                     <label for="">Calle: </label>
-                    <input class="input is-large" type="text" name="Calle" >
+                    <input class="input is-large" type="text" value="{{$campinteria->Calle}}" name="Calle" >
                 </div>
                 <div>
                     <label for="">Número exterior: </label>
-                    <input class="input is-large" type="text" name="NumeroExterior" >
+                    <input class="input is-large" type="text" value="{{$campinteria->NumeroExterior}}" name="NumeroExterior" >
                 </div>
                 <div>
                     <label for="">Colonia: </label>
-                    <input class="input is-large" type="text" name="Colonia" >
+                    <input class="input is-large" type="text" value="{{$campinteria->Colonia}}" name="Colonia" >
                 </div>
                 <div>
                     <label for="">Municipio: </label>
-                    <input class="input is-large" type="text" name="Municipio" >
+                    <input class="input is-large" type="text" value="{{$campinteria->Municipio}}" name="Municipio" >
                 </div>
              </div>
         <div>
