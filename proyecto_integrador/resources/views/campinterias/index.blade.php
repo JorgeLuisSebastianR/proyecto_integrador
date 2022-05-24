@@ -10,6 +10,16 @@
         </div>
 
     </section>
+<!--creasion de boton PDF-->
+    <br>
+    <p align="right">
+        <a href="{{ route('campinterias.pdf')}}" class="button is-danger is-outlined">
+        <span>Descargar PDF</span>
+        <span class="icon is-small">
+          <i class="fas fa-times"></i>
+        </span>
+      </a>
+    </p>
 
 <section class="section">
         <div class="table-container">
@@ -49,11 +59,3 @@
         </div>
     </left>
 <!--codigo a para boton PDF -->
-    <p align="right">
-        <a href="{{ route('campinterias.pdf')}}" class="button is-danger is-outlined">
-        <span>Descargar PDF</span>
-        <span class="icon is-small">
-          <i class="fas fa-times"></i>
-        </span>
-      </a>
-   </p>
