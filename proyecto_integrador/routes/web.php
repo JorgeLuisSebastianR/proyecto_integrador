@@ -13,10 +13,7 @@ Route::resources([
     'customers' => CustomerController::class,
 ]);
 
-<<<<<<< HEAD
 //Route::get('Campinterias/datatable', [CampinteriaController::class,'datatable']);
-=======
->>>>>>> db1f63914e6a2f4e1e348d0f1ba4c5b07eb94a39
 Route::get('/', function () {
     return view('welcome');
 });

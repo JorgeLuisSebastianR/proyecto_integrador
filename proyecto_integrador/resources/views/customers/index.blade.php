@@ -7,8 +7,19 @@
             <font size="8">
                 <b>Listado de Clientes </b><br />
             </font>
-        <a class="button is-link is-medium" href="/customers/create">Nuevo cliente</a>
         </center>
+        <left>
+        <a class="button is-link is-medium" href="/customers/create">Nuevo cliente</a>
+        <nav class="level">
+                <p class="control">
+                    <input class="input" type="text" placeholder="Escribe aquí para buscar">
+                </p>
+                <p class="control">
+                    <button class="button">Buscar</button>
+                </p>
+        </nav>
+        </left>
+            
     </div>
 </section>
 
@@ -57,7 +68,7 @@
             @empty
             <font size="5">
                 <div class="notification is-warning is-small is-with"><br>
-                    <button class="delete"></button><center>
+                    <center>
                         Aún no cuenta con clientes almacenados, puede registrar un nuevo cliente <a href="/customers/create">aquí</a>.</center><br>
                 </div>
             </font><br><br><br><br>
