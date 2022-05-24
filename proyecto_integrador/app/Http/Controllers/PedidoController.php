@@ -9,32 +9,16 @@ use App\Http\Requests\UpdatePedidoRequest;
 
 class PedidoController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        //
+      return view('pedidos.index')->with('pedidos', Pedido::all());
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        //
+      return view('Pedidos.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StorePedidoRequest  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(StorePedidoRequest $request)
     {
       $request->validate([
@@ -45,51 +29,32 @@ class PedidoController extends Controller
       Pedido::create([
         'Fecha' => $request->Fecha,
         'Hora'  => $request->Hora
-      ])
+      ]);
+
+      return redirect()->route('Pedidos.index');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Pedido  $pedido
-     * @return \Illuminate\Http\Response
-     */
     public function show(Pedido $pedido)
     {
-        //
+      return view('pedidos.show',compact('pedido'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Pedido  $pedido
-     * @return \Illuminate\Http\Response
-     */
     public function edit(Pedido $pedido)
     {
-        //
+        request->validate)([
+          'Fecha' => 'required',
+          'Hora'  => 'required'
+        ]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdatePedidoRequest  $request
-     * @param  \App\Models\Pedido  $pedido
-     * @return \Illuminate\Http\Response
-     */
-    public function update(UpdatePedidoRequest $request, Pedido $pedido)
+      public function update(UpdatePedidoRequest $request, Pedido $pedido)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Pedido  $pedido
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(Pedido $pedido)
     {
-        //
+      $pedido->delete();
+      return redirect()->route('pedidos.index');
     }
 }
