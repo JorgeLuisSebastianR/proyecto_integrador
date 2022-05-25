@@ -91,5 +91,6 @@ class CampinteriaController extends Controller
      $campinterias = Campinteria::get();
      $pdf = PDF::loadView('campinterias.exportToPDF', compact('campinterias'));
      return $pdf->download('listadoCampinterias.pdf');
+     
    }
 }
