@@ -9,7 +9,25 @@
 </section>
 
 <section class="">
-  <form class="" action="index.html" method="post">
+  <form action="{{ route('maderas.store') }}" method="POST">
+    @csrf
+
+    <div class="culumn">
+
+      <div class="">
+
+      </div>
+
+      <div class="">
+
+      </div>
+
+      <div class="">
+
+      </div>
+
+
+    </div>
 
   </form>
 </section>
