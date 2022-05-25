@@ -8,22 +8,21 @@
                 <b>Listado de Clientes </b><br />
             </font>
         </center>
-        <left>
-        <a class="button is-link is-medium" href="/customers/create">Nuevo cliente</a>
-        <nav class="level">
-                <p class="control">
-                    <input class="input" type="text" placeholder="Escribe aquí para buscar">
-                </p>
-                <p class="control">
-                    <button class="button">Buscar</button>
-                </p>
-        </nav>
-        </left>
-            
     </div>
 </section>
 
 <section class="section">
+
+    <div>
+    <p align="right">
+        <a href="" class="button is-danger is-outlined">
+        <span>Descargar PDF</span>
+        <span class="icon is-small">
+          <i class="fas fa-times"></i>
+        </span>
+</a>
+   </p>
+    </div><br><br>
 
     <div class="table-container">
 
