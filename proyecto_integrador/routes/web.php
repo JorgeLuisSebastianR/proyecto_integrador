@@ -1,12 +1,13 @@
 <?php
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticuloController;
+use App\Http\Controllers\CampinteriaController;
+use App\Http\Controllers\CustomerController;
+
 
 Route :: resources([
 'articulos'=> ArticuloController :: class,
 ]);
-use App\Http\Controllers\CampinteriaController;
-use App\Http\Controllers\CustomerController;
 
 Route::resources([
     'campinterias' => CampinteriaController::class,
@@ -19,5 +20,7 @@ Route::get('/', function () {
 });
 
 //Route::resource('campinterias', 'CampinteriaController');
-Route::get('campinterias-pdf', 'CampinteriaController@exportToPDF')->name('campinterias.pdf');
-Route::get('customers-pdf', 'CustomerController@exportToPDF')->name('customers.pdf');
+// Route::get('campinterias-pdf', ['CampinteriaController@exportToPDF'])->name('campinterias-pdf');
+Route::get('campinteria-pdf', [CampinteriaController::class, 'exportToPDF'])->name('campinteria-pdf');
+
+// Route::get('customers-pdf', ['CustomerController@exportToPDF'])->name('customers.pdf');
