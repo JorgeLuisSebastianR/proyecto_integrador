@@ -21,3 +21,7 @@ Route::get('/', function () {
 //Route::resource('campinterias', 'CampinteriaController');
 Route::get('campinterias-pdf', 'CampinteriaController@exportToPDF')->name('campinterias.pdf');
 Route::get('customers-pdf', 'CustomerController@exportToPDF')->name('customers.pdf');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
