@@ -15,7 +15,7 @@ class MaderaController extends Controller
 
   public function create()
   {
-    return view('Maderas.create');
+    return view('maderas.create');
   }
 
   public function store(StoreMaderaRequest $request)
@@ -34,7 +34,7 @@ class MaderaController extends Controller
       'Cantidad'  => $request->Canditidad
     ]);
 
-    return redirect()->route('Maderas.index');
+    return redirect()->route('maderas.index');
   }
 
   public function show(Madera $madera)
@@ -44,22 +44,31 @@ class MaderaController extends Controller
 
   public function edit(Madera $madera)
   {
-      request->validate)([
-        'Nombre'    => 'required',
-        'Color'     => 'required',
-        'Pulgada'   => 'required',
-        'Cantidad'  => 'required'
-      ]);
+    return view('maderas.edit', compact('madera'));
   }
 
   public function update(UpdateMaderaRequest $request, Madera $madera)
   {
-
+    $request->validate([
+      'Nombre'    => 'required',
+      'Color'     => 'required',
+      'Pulgada'   => 'required',
+      'Cantidad'  => 'required'
+    ]);
+    $madera->update($request->all());
+    return redirect()->route('maderas.index');
   }
 
-  public function destroy(Madera $madera)
+  public function destroy(madera $madera)
   {
     $madera->delete();
     return redirect()->route('maderas.index');
   }
+
+  public function databable(){
+    $Maderas = Madera::all();
+    return view('maderas.datatable',compact('Maderas'));
+}
+
+
 }

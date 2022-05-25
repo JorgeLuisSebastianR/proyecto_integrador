@@ -1,19 +1,31 @@
 <?php
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticuloController;
+use App\Http\Controllers\MaderaController;
 use App\Http\Controllers\CampinteriaController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\HerramientaController;
+<<<<<<< HEAD
+
+=======
+>>>>>>> c1e6b2f8ac38af5473eaf942a68e79649bbea83c
 
 Route :: resources([
-'articulos'=> ArticuloController :: class,
+
 ]);
 
 Route::resources([
     'campinterias' => CampinteriaController::class,
     'customers' => CustomerController::class,
-    'herramientas' => HerramientaController::class,
+    'articulos'=> ArticuloController :: class,
+    'maderas'=> MaderaController :: class,
 ]);
+
+
+
+
+
+
 
 //Route::get('Campinterias/datatable', [CampinteriaController::class,'datatable']);
 Route::get('/', function () {
@@ -21,9 +33,13 @@ Route::get('/', function () {
 });
 
 //Route::resource('campinterias', 'CampinteriaController');
+<<<<<<< HEAD
+=======
+
+>>>>>>> 61ab57939fdaf7293e3e521984102e2651152f69
 Route::get('campinterias-pdf', 'CampinteriaController@exportToPDF')->name('campinterias.pdf');
 Route::get('customers-pdf', 'CustomerController@exportToPDF')->name('customers.pdf');
 
-Auth::routes();
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
