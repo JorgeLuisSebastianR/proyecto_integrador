@@ -15,10 +15,10 @@ return new class extends Migration
     {
         Schema::create('herramientas', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre');
-            $table->string('marca');
-            $table->string('modelo');
-            $table->string('descripcion');
+            $table->string('nombre',25);
+            $table->string('marca',20);
+            $table->string('modelo',30);
+            $table->string('descripcion')->nullable();
             $table->text('cantidad');
             $table->timestamps();
         });
