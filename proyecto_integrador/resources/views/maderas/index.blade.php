@@ -21,6 +21,8 @@
                     <th>Color</th>
                     <th>Pulgadas</th>
                     <th>Cantidad</th>
+                    <th>Fecha</th>
+                    <th>Acciones</th>
 
                 </tr>
                 </thead>
@@ -29,8 +31,9 @@
                     <tr>
                         <td>{{ $madera->Nombre}}</td>
                         <td>{{ $madera->Color}}</td>
-                        <td>{{ $madera->Pulgadas}}</td>
-                        <td>{{ $maderas->created_at}}</td>
+                        <td>{{ $madera->Pulgada}}</td>
+                        <td>{{ $madera->Cantidad}}</td>
+                        <td>{{ $madera->created_at}}</td>
                         <td>
                            <form action="{{route('maderas.destroy',$madera->id)}}" method="POST">
                                 <a class="button is-success is-small" href="{{route('maderas.show',$madera->id)}}">Ver</a>

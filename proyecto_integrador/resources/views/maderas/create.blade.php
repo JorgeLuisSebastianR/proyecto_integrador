@@ -26,7 +26,7 @@
 
       <div class="">
         <label for="">Pulgadas: </label>
-        <input class="input is-large" type="text" name="Pulgadas">
+        <input class="input is-large" type="text" name="Pulgada">
       </div>
 
       <div class="">
@@ -39,9 +39,7 @@
           <input class="button is-light is-large" type="reset" value="Restablecer">
           <input class="button is-info is-large" type="submit" value="Guardar">
       </div>
-
     </div>
-
   </form>
 </section>
 
