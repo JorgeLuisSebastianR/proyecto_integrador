@@ -5,6 +5,7 @@ use App\Http\Controllers\MaderaController;
 use App\Http\Controllers\CampinteriaController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\HerramientaController;
+use App\Http\Controllers\PedidoController;
 
 
 Route :: resources([

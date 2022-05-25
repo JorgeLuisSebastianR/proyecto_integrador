@@ -21,20 +21,20 @@ class CampinteriaController extends Controller
     public function store(StoreCampinteriaRequest $request)
     {
     $request->validate([
-          'Nombre' => 'required',
-          'Telefono' => 'required',
-          'Calle' => 'required',
-          'NumeroExterior' => 'required',
-          'Colonia' => 'required',
-          'Municipio' => 'required'
+          'Nombre'          => 'required',
+          'Telefono'        => 'required',
+          'Calle'           => 'required',
+          'NumeroExterior'  => 'required',
+          'Colonia'         => 'required',
+          'Municipio'       => 'required'
       ]);
       Campinteria::create([
-          'Nombre' => $request->Nombre,
-          'Telefono' => $request->Telefono,
-          'Calle' => $request->Calle,
-          'NumeroExterior' => $request->NumeroExterior,
-          'Colonia' => $request->Colonia,
-          'Municipio'=> $request->Municipio
+          'Nombre'          => $request->Nombre,
+          'Telefono'        => $request->Telefono,
+          'Calle'           => $request->Calle,
+          'NumeroExterior'  => $request->NumeroExterior,
+          'Colonia'         => $request->Colonia,
+          'Municipio'       => $request->Municipio
           /*'Telefono'        => 'required',
           'Calle'           => 'required',
           'NumeroExterior'  => 'required',
@@ -91,6 +91,6 @@ class CampinteriaController extends Controller
      $campinterias = Campinteria::get();
      $pdf = PDF::loadView('campinterias.exportToPDF', compact('campinterias'));
      return $pdf->download('listadoCampinterias.pdf');
-     
+
    }
 }

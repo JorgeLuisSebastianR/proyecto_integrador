@@ -1,9 +1,11 @@
+//njnj
+
 @extends('layout.layout')
 @section('content')
 <section class="hero is-link">
     <div class="hero-body">
         <p class="title">
-            Carpinteria Diamante Azul
+            pedidos
         </p>
     </div>
 </section>
@@ -20,15 +22,11 @@
     <div class="columns is-mobile is-centered">
         <justify>
         <div class="column is-half-width">
-            <h3><b>Telefono:</b>          {{ $campinteria->Telefono}}</h3><br>
-            <h3><b>Calle:</b>             {{ $campinteria->Calle}}</h3><br>
-            <h3><b>Numero Exterior:</b>   {{ $campinteria->NumeroExterior}}</h3><br>
-            <h3><b>Colonia:</b>           {{ $campinteria->Colonia}}</h3><br>
-            <h3><b>Municipio:</b>         {{ $campinteria->Municipio}}</h3><br>
-            <h3><b>fecha de resgitro:</b> {{ $campinteria->created_at}}</h3><br>
+            <h3><b>Fecha:</b>   {{ $pedido->Fecha}}</h3><br>
+            <h3><b>Hora:</b>    {{ $pedido->Hora}}</h3><br>
             <center>
-            <a href="/campinterias" class="button is-medium is-primary">Regresar</a>
-              <a href="{{ route('campinterias.edit', $campinteria->id) }}" class="button is-medium is-info">Editar</a>
+            <a href="/pedidos" class="button is-medium is-primary">Regresar</a>
+              <a href="{{ route('pedidos.edit', $pedido->id) }}" class="button is-medium is-info">Editar</a>
             </center>
         </div>
         </justify>
