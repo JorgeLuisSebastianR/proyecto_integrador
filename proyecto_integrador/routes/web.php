@@ -20,3 +20,4 @@ Route::get('/', function () {
 
 //Route::resource('campinterias', 'CampinteriaController');
 Route::get('campinterias-pdf', 'CampinteriaController@exportToPDF')->name('campinterias.pdf');
+Route::get('customers-pdf', 'CustomerController@exportToPDF')->name('customers.pdf');

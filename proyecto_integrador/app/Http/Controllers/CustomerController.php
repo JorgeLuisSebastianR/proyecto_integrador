@@ -6,6 +6,7 @@ use App\Models\Customer;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreCustomerRequest;
 use App\Http\Requests\UpdateCustomerRequest;
+use Barryvdh\DomPDF\Facade as PDF;
 
 class CustomerController extends Controller
 {
@@ -121,5 +122,11 @@ class CustomerController extends Controller
     {
         $customer->delete();
         return redirect()->route('customers.index');
+    }
+
+    public function exportToPDF(){
+        $customers = Customer::get();
+        $pdf = PDF::loadView('customers.exportToPDF', compact('customers'));
+        return $pdf->download('ListadoClientes.pdf');
     }
 }
