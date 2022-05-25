@@ -8,19 +8,19 @@
 
             Agregar Articulo
         </p>
-        <a class="button is-info" href="/articulo/create">Agregar </a>
+        <a class="button is-info" href="/articulos/create">Agregar </a>
     </div>
 </section>
+
+<!--ddddddddddd-->
+
 <section class="section">
         <div class="table-container">
             <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
                 <thead>
                 <tr>
-                    <th>Telefono</th>
-                    <th>Calle</th>
-                    <th>NumeroExterior</th>
-                    <th>Colonia</th>
-                    <th>Municipi</th>
+                    <th>Nombre</th>
+                    <th>Precio de venta</th>
                     <th>Acciones</th>
                 </tr>
                 </thead>
@@ -28,18 +28,16 @@
 
                 @forelse($articulos as $articulo)
                     <tr>
-                        <td>{{ $articulo->Telefono}}</td>
-                        <td>{{ $articulo->Calle}}</td>
-                        <td>{{ $articulo->NumeroExterior}}</td>
-                        <td>{{ $articulo->Colonia}}</td>
-                        <td>{{ $articulo->Municipio}}</td>
+                        <td>{{ $articulo->Nombre}}</td>
+                        <td>{{ $articulo->Precio}}</td>
+                       
                         <td>
                            <form action="{{route('articulos.destroy',$articulo->id)}}" method="POST">
-                                <a class="button is-info is-small" href="{{route('articulos.show',$articulos->id)}}">Ver</a>
-                                <a class="button is-info is-small" href="{{route('articulos.edit',$articulos->id)}}">Editar</a>
+                                <a class="button is-success is-small" href="{{route('articulos.show',$articulo->id)}}">Ver</a>
+                                <a class="button is-info is-small" href="{{route('articulos.edit',$articulo->id)}}">Editar</a>
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="button is-info is-small">Eliminar</button>
+                                <button type="submit" class="button is-danger is-small">Eliminar</button>
 
 
                             </form>

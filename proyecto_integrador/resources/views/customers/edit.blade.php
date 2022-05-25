@@ -60,6 +60,7 @@
                     <label for="">Código Postal<font color="red">*</font>: </label>
                     <input class="input is-large" type="text" value=" {{ $customer->codigoPostal }}" name="codigoPostal" id="">
                 </div>
+                
             </div>
 
         </div>
