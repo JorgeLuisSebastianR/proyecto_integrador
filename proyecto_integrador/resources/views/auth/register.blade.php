@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@extends('layout.layout')
 
 @section('content')
 <div class="container">
@@ -25,7 +26,7 @@
                             </div>
                         </div>
 
-                        <div class="row mb-3">
+                        <div class="row mb-3"> 
                             <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
 
                             <div class="col-md-6">
@@ -74,4 +75,5 @@
         </div>
     </div>
 </div>
+
 @endsection

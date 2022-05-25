@@ -1,16 +1,18 @@
 <?php
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticuloController;
+use App\Http\Controllers\CampinteriaController;
+use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\HerramientaController;
 
 Route :: resources([
 'articulos'=> ArticuloController :: class,
 ]);
-use App\Http\Controllers\CampinteriaController;
-use App\Http\Controllers\CustomerController;
 
 Route::resources([
     'campinterias' => CampinteriaController::class,
     'customers' => CustomerController::class,
+    'herramientas' => HerramientaController::class,
 ]);
 
 //Route::get('Campinterias/datatable', [CampinteriaController::class,'datatable']);
