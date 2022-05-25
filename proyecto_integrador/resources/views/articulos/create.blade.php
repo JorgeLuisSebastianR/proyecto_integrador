@@ -1,3 +1,4 @@
+<!--codigo para botón crear-->
 @extends('layout.layout')
 @section('content')
     <section class="hero is-link">

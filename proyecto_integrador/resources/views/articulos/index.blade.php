@@ -1,3 +1,4 @@
+<!--codigo para pagina principal -->
 @extends('layout.layout')
 @section('content')
 

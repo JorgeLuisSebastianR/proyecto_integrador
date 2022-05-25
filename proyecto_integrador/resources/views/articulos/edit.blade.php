@@ -1,3 +1,4 @@
+<!--codigo para botón editar-->
 @extends('layout.layout')
 @section('content')
 

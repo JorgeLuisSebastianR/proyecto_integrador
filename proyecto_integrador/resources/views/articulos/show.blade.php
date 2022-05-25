@@ -1,4 +1,4 @@
-
+<!--codigo para botón ver-->
 
 @extends('layout.layout')
 @section('content')
