@@ -10,9 +10,10 @@
         </div>
     </section>
 
+
     <br>
     <p align="right">
-        <a href="{{ route('campinteria-pdf') }}" class="button is-danger is-outlined">
+        <a href="{{ route('') }}" class="button is-danger is-outlined">
         <span>Descargar PDF</span>
         <span class="icon is-small">
           <i class="fas fa-times"></i>
