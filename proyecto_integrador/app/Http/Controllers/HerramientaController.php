@@ -25,7 +25,7 @@ class HerramientaController extends Controller
      */
     public function create()
     {
-        //
+        return view('herramientas.create');
     }
 
     /**
@@ -36,7 +36,22 @@ class HerramientaController extends Controller
      */
     public function store(StoreHerramientaRequest $request)
     {
-        //
+        $request->validate([
+            'nombre'    => 'required',
+            'marca'     => 'required',
+            'modelo'    => 'required',
+            'cantidad'  => 'required',
+        ]);
+
+        Herramienta::create([
+            'nombre'        => $request->nombre,
+            'marca'         => $request->marca,
+            'modelo'        => $request->modelo,
+            'descripcion'   => $request->descripcion,
+            'cantidad'      => $request->cantidad
+        ]);
+
+        return redirect()->route('herramientas.index');
     }
 
     /**
@@ -47,7 +62,7 @@ class HerramientaController extends Controller
      */
     public function show(Herramienta $herramienta)
     {
-        //
+        return view('herramientas.show', compact('herramienta'));   
     }
 
     /**
@@ -58,7 +73,7 @@ class HerramientaController extends Controller
      */
     public function edit(Herramienta $herramienta)
     {
-        //
+        return view('herramientas.edit', compact('herramienta'));
     }
 
     /**
@@ -70,7 +85,14 @@ class HerramientaController extends Controller
      */
     public function update(UpdateHerramientaRequest $request, Herramienta $herramienta)
     {
-        //
+        $request->validate([ 
+            'nombre' => 'required',
+            'marca'     => 'required',
+            'modelo'     => 'required',
+            'cantidad' => 'required'
+        ]);
+        $herramienta->update($request->all());
+        return redirect()->route('herramientas.index');
     }
 
     /**
@@ -81,6 +103,7 @@ class HerramientaController extends Controller
      */
     public function destroy(Herramienta $herramienta)
     {
-        //
+        $herramienta->delete();
+        return redirect()->route('herramientas.index');
     }
 }
