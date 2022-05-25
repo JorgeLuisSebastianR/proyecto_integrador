@@ -6,15 +6,17 @@ use App\Http\Controllers\CampinteriaController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\HerramientaController;
 
+
 Route :: resources([
 
 ]);
 
 Route::resources([
-    'campinterias' => CampinteriaController::class,
-    'customers' => CustomerController::class,
-    'articulos'=> ArticuloController :: class,
-    'maderas'=> MaderaController :: class,
+    'campinterias'  => CampinteriaController::class,
+    'customers'     => CustomerController::class,
+    'articulos'     => ArticuloController::class,
+    'maderas'       => MaderaController::class,
+    'pedidos'       => PedidoController::class
 ]);
 
 

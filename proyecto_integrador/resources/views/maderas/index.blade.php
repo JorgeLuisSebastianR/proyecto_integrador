@@ -11,6 +11,16 @@
 
     </section>
 
+    <br>
+    <p align="right">
+        <a  class="button is-danger is-outlined">
+        <span>Descargar PDF</span>
+        <span class="icon is-small">
+          <i class="fas fa-times"></i>
+        </span>
+      </a>
+    </p>
+
 <section class="section">
         <div class="table-container">
             <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
@@ -50,12 +60,3 @@
             </table>
         </div>
     </left>
-<!--codigo a para boton PDF -->
-    <p align="right">
-        <button href="" class="button is-danger is-outlined">
-        <span>Descargar PDF</span>
-        <span class="icon is-small">
-          <i class="fas fa-times"></i>
-        </span>
-      </button>
-   </p>
