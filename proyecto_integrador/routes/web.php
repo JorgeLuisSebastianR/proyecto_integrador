@@ -17,3 +17,6 @@ Route::resources([
 Route::get('/', function () {
     return view('welcome');
 });
+
+//Route::resource('campinterias', 'CampinteriaController');
+Route::get('campinterias-pdf', 'CampinteriaController@exportToPDF')->name('campinterias.pdf');
