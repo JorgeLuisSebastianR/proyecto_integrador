@@ -44,17 +44,17 @@ class MaderaController extends Controller
 
   public function edit(Madera $madera)
   {
-      request->validate)([
-        'Nombre'    => 'required',
-        'Color'     => 'required',
-        'Pulgada'   => 'required',
-        'Cantidad'  => 'required'
-      ]);
+    return view('maderas.edit', compact('madera'));
   }
 
   public function update(UpdateMaderaRequest $request, Madera $madera)
   {
-
+    $request->validate([
+      'Nombre'    => 'required',
+      'Color'     => 'required',
+      'Pulgada'   => 'required',
+      'Cantidad'  => 'required'
+    ]);
   }
 
   public function destroy(Madera $madera)
