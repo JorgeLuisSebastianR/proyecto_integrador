@@ -7,8 +7,6 @@ use App\Http\Controllers\MaderaController;
 Route :: resources([
 
 ]);
-use App\Http\Controllers\CampinteriaController;
-use App\Http\Controllers\CustomerController;
 
 Route::resources([
     'campinterias' => CampinteriaController::class,
