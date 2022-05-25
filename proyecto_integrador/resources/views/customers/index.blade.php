@@ -7,12 +7,16 @@
             <font size="8">
                 <b>Listado de Clientes </b><br />
             </font>
-        <a class="button is-link is-medium" href="/customers/create">Nuevo cliente</a>
         </center>
+        <a class="button is-info" href="/customers/create">Agregar</a>
     </div>
 </section>
-
+    
 <section class="section">
+
+    <div>
+        <a href="{{ route('customers.pdf') }}" class="button is-danger is-outlined">Descargar PDF</a>
+    </div><br><br>
 
     <div class="table-container">
 
@@ -57,7 +61,7 @@
             @empty
             <font size="5">
                 <div class="notification is-warning is-small is-with"><br>
-                    <button class="delete"></button><center>
+                    <center>
                         Aún no cuenta con clientes almacenados, puede registrar un nuevo cliente <a href="/customers/create">aquí</a>.</center><br>
                 </div>
             </font><br><br><br><br>

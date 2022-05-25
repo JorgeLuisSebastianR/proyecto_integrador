@@ -10,6 +10,16 @@
         </div>
 
     </section>
+<!--creasion de boton PDF-->
+    <br>
+    <p align="right">
+        <a href="{{ route('campinterias.pdf')}}" class="button is-danger is-outlined">
+        <span>Descargar PDF</span>
+        <span class="icon is-small">
+          <i class="fas fa-times"></i>
+        </span>
+      </a>
+    </p>
 
 <section class="section">
         <div class="table-container">
@@ -34,11 +44,11 @@
                         <td>{{ $campinteria->created_at}}</td>
                         <td>
                            <form action="{{route('campinterias.destroy',$campinteria->id)}}" method="POST">
-                                <a class="button is-info is-small" href="{{route('campinterias.show',$campinteria->id)}}">Ver</a>
+                                <a class="button is-success is-small" href="{{route('campinterias.show',$campinteria->id)}}">Ver</a>
                                 <a class="button is-info is-small" href="{{route('campinterias.edit',$campinteria->id)}}">Editar</a>
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="button is-info is-small">Eliminar</button>
+                                <button type="submit" class="button is-danger is-small">Eliminar</button>
                             </form>
                         </td>
                 </tbody>
@@ -47,6 +57,5 @@
                 @endforelse
             </table>
         </div>
-    </section>
-</section>
-</section>
+    </left>
+<!--codigo a para boton PDF -->
