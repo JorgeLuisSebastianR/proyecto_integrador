@@ -46,7 +46,7 @@ class PedidoController extends Controller
 
       public function update(UpdatePedidoRequest $request, Pedido $pedido)
     {
-      request->validate)([
+      request->validate([
         'Fecha' => 'required',
         'Hora'  => 'required'
       ]);

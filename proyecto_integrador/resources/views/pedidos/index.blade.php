@@ -13,7 +13,7 @@
 
     <br>
     <p align="right">
-        <a href="{{ route('') }}" class="button is-danger is-outlined">
+        <a  class="button is-danger is-outlined">
         <span>Descargar PDF</span>
         <span class="icon is-small">
           <i class="fas fa-times"></i>
