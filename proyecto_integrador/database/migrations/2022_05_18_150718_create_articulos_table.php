@@ -21,10 +21,6 @@ return new class extends Migration
             $table->decimal('Precio', 8, 2, true)->default(0.00);
             $table->text('Descripcion',50)->nullable();
             $table->string('Tipo', 20) ;
-<<<<<<< HEAD
-=======
-
->>>>>>> e0672415994de9b4480557de20a387fbcf1d4b3e
             $table->timestamps();
         });
     }
