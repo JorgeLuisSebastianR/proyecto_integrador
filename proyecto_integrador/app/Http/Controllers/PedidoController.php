@@ -41,7 +41,7 @@ class PedidoController extends Controller
 
     public function edit(Pedido $pedido)
     {
-        //
+      return view('pedidos.edit', compact('pedido'));
     }
 
       public function update(UpdatePedidoRequest $request, Pedido $pedido)

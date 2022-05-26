@@ -12,11 +12,11 @@
             @csrf
                 <div class="column">
                     <div>
-                        <label for="">Fecha: </label>
+                        <label for="">Fecha de entra: </label>
                         <input class="column is-one-quarter" type="date" name="Fecha" >
                     </div>
                     <div>
-                        <label for="">Hora: </label>
+                        <label for="">Hora de entrega: </label>
                         <input class="column is-one-quarter" type="time" name="Hora" >
                     </div>
                  </div>

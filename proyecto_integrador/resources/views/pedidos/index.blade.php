@@ -28,7 +28,7 @@
                 <thead>
                 <tr>
                     <th>Fecha</th>
-                    <th>Hora programada</th>
+                   
                     <th>Hora de registro</th>
                     <th>Acciones</th>
                 </tr>
@@ -38,7 +38,7 @@
                   <tr>
                       <th>Fecha</th>
                       <th>Hora</th>
-                      <th>Hora de registro</th>
+                    
                     <th>Acciones</th>
                   </tr>
                 </tfoot>
@@ -47,7 +47,7 @@
                 @forelse($pedidos as $pedido)
                     <tr>
                         <td>{{ $pedido->Fecha}}</td>
-                        <td>{{ $pedido->Hora}}</td>
+                     <!--comulma para mostrar la hora de registro-->
                         <td>{{ $pedido->created_at}}</td>
                         <td>
                            <form action="{{route('pedidos.destroy',$pedido->id)}}" method="POST">
