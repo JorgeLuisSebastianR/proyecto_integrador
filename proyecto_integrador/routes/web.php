@@ -7,9 +7,12 @@ use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\HerramientaController;
 use App\Http\Controllers\PedidoController;
 
+<<<<<<< HEAD
+=======
 Route :: resources([
 
 ]);
+>>>>>>> 6ccd72f952973329b6e0341f08e41333384c6bb6
 
 Route::resources([
     'campinterias' => CampinteriaController::class,
