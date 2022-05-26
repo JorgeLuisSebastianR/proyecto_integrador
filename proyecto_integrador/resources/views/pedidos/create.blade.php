@@ -8,7 +8,7 @@
         </div>
     </section>
     <section class="section">
-        <form action="{{ route('campinterias.store') }}" method="POST">
+        <form action="{{ route('pedidos.store') }}" method="POST">
             @csrf
                 <div class="column">
                     <div>
