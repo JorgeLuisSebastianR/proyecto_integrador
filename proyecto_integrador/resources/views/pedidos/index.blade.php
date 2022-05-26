@@ -4,12 +4,22 @@
     <section class="hero is-link">
         <div class="hero-body">
             <p class="title">
-                Sucursales
+                pedidos
             </p>
-            <a class="button is-info" href="/campinterias/create">Agregar</a>
+            <a class="button is-info" href="/pedidos/create">Agregar</a>
         </div>
-
     </section>
+
+
+    <br>
+    <p align="right">
+        <a  class="button is-danger is-outlined">
+        <span>Descargar PDF</span>
+        <span class="icon is-small">
+          <i class="fas fa-times"></i>
+        </span>
+      </a>
+    </p>
 
 <section class="section">
         <div class="table-container">
@@ -17,20 +27,16 @@
                 <thead>
                 <tr>
 
-                    <th>Municipio</th>
-                    <th>Colonia</th>
-                    <th>Calle</th>
-                    <th>Fecha de Creasion</th>
-                    <th>Acciones</th>
+                    <th>Fecha</th>
+                    <th>Hora</th>
 
                 </tr>
                 </thead>
                 <tbody>
-                @forelse($campinterias as $campinteria)
+                @forelse($pedidos as $pedido)
                     <tr>
-                        <td>{{ $campinteria->Municipio}}</td>
-                        <td>{{ $campinteria->Colonia}}</td>
-                        <td>{{ $campinteria->Calle}}</td>
+                        <td>{{ $pedido->Fecha}}</td>
+                        <td>{{ $pedido->Hora}}</td>
                         <td>{{ $campinteria->created_at}}</td>
                         <td>
                            <form action="{{route('campinterias.destroy',$campinteria->id)}}" method="POST">
@@ -48,12 +54,3 @@
             </table>
         </div>
     </left>
-<!--codigo a para boton PDF -->
-    <p align="right">
-        <button href="" class="button is-danger is-outlined">
-        <span>Descargar PDF</span>
-        <span class="icon is-small">
-          <i class="fas fa-times"></i>
-        </span>
-      </button>
-   </p>

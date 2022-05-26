@@ -1,5 +1,5 @@
 <?php
-
+//dsfsfd
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -9,7 +9,7 @@ class Pedido extends Model
 {
     use HasFactory;
 
-    protected $fillable[
+    protected $fillable=[
       'Fecha',
       'Hora'
     ];
