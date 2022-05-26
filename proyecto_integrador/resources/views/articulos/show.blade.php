@@ -8,7 +8,7 @@
         <div class="column is-half-width">
             <center><br>
             <font size="8">
-            <b>Información general de Articulo:</b>
+            <b>Información general de:</b> {{ $articulo->Nombre }} <br><br>
             </font>
             </center>
         </div>

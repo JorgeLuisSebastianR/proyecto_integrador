@@ -8,14 +8,14 @@
                 <b>Listado de Herramientas </b><br />
             </font>
         </center>
-        <a class="button is-info" href="/herramientas/create">Agregar</a>
+        <a class="button is-info" href="/herramientas/create">Agregar nueva herramienta</a>
     </div>
 </section>
     
 <section class="section">
 
-    <div>
-        <a href="{{ route('customers.pdf') }}" class="button is-danger is-outlined">Descargar PDF</a>
+    <div align="right">
+        <a href="#" class="button is-danger is-outlined">Descargar PDF</a>
     </div><br><br>
 
     <div class="table-container">
@@ -27,6 +27,7 @@
                     <th>Marca</th>
                     <th>Modelo</th>
                     <th>Cantidad</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
             <tfoot>
@@ -35,6 +36,7 @@
                     <th>Marca</th>
                     <th>Modelo</th>
                     <th>Cantidad</th>
+                    <th>Acciones</th>
                 </tr>
             </tfoot>
             <tbody>

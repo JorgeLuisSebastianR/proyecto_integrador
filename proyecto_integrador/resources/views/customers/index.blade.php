@@ -8,14 +8,14 @@
                 <b>Listado de Clientes </b><br />
             </font>
         </center>
-        <a class="button is-info" href="/customers/create">Agregar</a>
+        <a class="button is-info" href="/customers/create">Agregar nuevo cliente</a>
     </div>
 </section>
     
 <section class="section">
 
-    <div>
-        <a href="{{ route('customers.pdf') }}" class="button is-danger is-outlined">Descargar PDF</a>
+    <div align="right">
+        <a href="#" class="button is-danger is-outlined">Descargar PDF</a>
     </div><br><br>
 
     <div class="table-container">

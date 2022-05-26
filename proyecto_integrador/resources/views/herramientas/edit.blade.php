@@ -1,7 +1,7 @@
 @extends('layout.layout')
 @section('content')
 
-<section class="hero is-success">
+<section class="hero is-danger">
     <div class="hero-body">
         <center>
         <p class="title">
@@ -27,7 +27,7 @@
                     <input class="input is-large" type="text" value=" {{ $herramienta->marca }}" name="marca" id="">
                 </div>
                 <div>
-                    <label for=""><b>Modelo<font color="red">*</font>: </b></label>
+                    <label for=""><b>Modelo: </b></label>
                     <input class="input is-large" type="text" value=" {{ $herramienta->modelo }}" name="modelo" id="">
                 </div>
                 <div>

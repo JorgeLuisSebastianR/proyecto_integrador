@@ -39,7 +39,6 @@ class HerramientaController extends Controller
         $request->validate([
             'nombre'    => 'required',
             'marca'     => 'required',
-            'modelo'    => 'required',
             'cantidad'  => 'required',
         ]);
 
@@ -88,7 +87,6 @@ class HerramientaController extends Controller
         $request->validate([ 
             'nombre' => 'required',
             'marca'     => 'required',
-            'modelo'     => 'required',
             'cantidad' => 'required'
         ]);
         $herramienta->update($request->all());

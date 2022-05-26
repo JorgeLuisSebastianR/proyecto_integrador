@@ -20,9 +20,8 @@ return new class extends Migration
             $table->decimal('Tamaño', 8, 2, true);
             $table->text('Color',20);
             $table->decimal('Precio', 8, 2, true)->default(0.00);
-            $table->text('Descripcion',50);
+            $table->text('Descripcion',50)->nullable();
             $table->string('Tipo', 20) ;
-            
             $table->timestamps();
         });
     }

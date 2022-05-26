@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('nombre',25);
             $table->string('marca',20);
-            $table->string('modelo',30);
+            $table->string('modelo',30)->nullable();
             $table->string('descripcion')->nullable();
             $table->text('cantidad');
             $table->timestamps();
