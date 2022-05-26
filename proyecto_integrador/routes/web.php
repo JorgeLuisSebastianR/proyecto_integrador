@@ -7,7 +7,6 @@ use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\HerramientaController;
 use App\Http\Controllers\PedidoController;
 
-
 Route :: resources([
 
 ]);
@@ -20,16 +19,17 @@ Route::resources([
     'pedidos'       => PedidoController::class
 ]);
 
-
-//Route::get('Campinterias/datatable', [CampinteriaController::class,'datatable']);
 Route::get('/', function () {
     return view('welcome');
 });
+/*crear una ruta*/
+/*paso 2
+Route::get('campinteria/pdf', [App\Http\Controllers\CampinteriaController::class, 'pdf'])->name('campinteria.pdf');
+/*fin paso 2]*/
 
-//Route::resource('campinterias', 'CampinteriaController');
-
+/*
 Route::get('campinterias-pdf', 'CampinteriaController@exportToPDF')->name('campinterias.pdf');
-Route::get('customers-pdf', 'CustomerController@exportToPDF')->name('customers.pdf');
+Route::get('customers-pdf', 'CustomerController@exportToPDF')->name('customers.pdf');*/
 
 
 // Route::get('campinterias-pdf', ['CampinteriaController@exportToPDF'])->name('campinterias-pdf');
