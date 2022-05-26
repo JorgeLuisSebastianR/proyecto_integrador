@@ -4,7 +4,7 @@
     <section class="hero is-link">
         <div class="hero-body">
             <p class="title">
-                pedidoss
+                Pedidos
             </p>
             <a class="button is-info" href="/pedidos/create">Agregar</a>
         </div>
@@ -27,7 +27,9 @@
                 <thead>
                 <tr>
                     <th>Fecha</th>
-                    <th>Hora</th>
+                    <th>Hora programada</th>
+                    <th>Hora de registro</th>
+                    <th>Acciones</th>
                 </tr>
                 </thead>
 
@@ -35,6 +37,8 @@
                   <tr>
                       <th>Fecha</th>
                       <th>Hora</th>
+                      <th>Hora de registro</th>
+                    <th>Acciones</th>
                   </tr>
                 </tfoot>
 

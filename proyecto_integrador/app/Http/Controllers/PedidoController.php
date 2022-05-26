@@ -16,7 +16,7 @@ class PedidoController extends Controller
 
     public function create()
     {
-      return view('Pedidos.create');
+      return view('pedidos.create');
     }
 
     public function store(StorePedidoRequest $request)
@@ -31,7 +31,7 @@ class PedidoController extends Controller
         'Hora'  => $request->Hora
       ]);
 
-      return redirect()->route('Pedidos.index');
+      return redirect()->route('pedidos.index');
     }
 
     public function show(Pedido $pedido)
@@ -46,20 +46,22 @@ class PedidoController extends Controller
 
       public function update(UpdatePedidoRequest $request, Pedido $pedido)
     {
-      request->validate([
+      $request->validate([
         'Fecha' => 'required',
         'Hora'  => 'required'
       ]);
+      $pedido->update($request->all());
+      return redirect()->route('pedidos.index');
     }
 
-    public function destroy(Pedido $pedido)
+    public function destroy(pedido $pedido)
     {
       $pedido->delete();
       return redirect()->route('pedidos.index');
     }
 
     public function databable(){
-      $pedidos = Pedido::all();
-      return view('pedidos.databable', compact('pedidos'));
+      $Pedidos = Pedido::all();
+      return view('pedidos.databable', compact('Pedidos'));
     }
 }

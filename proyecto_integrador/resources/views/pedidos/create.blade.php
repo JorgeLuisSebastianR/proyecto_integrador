@@ -3,7 +3,7 @@
     <section class="hero is-link">
         <div class="hero-body">
             <p class="title">
-                Formulario para registrar pedidos
+                Formulario para ajustar fecha de entrega del pedido
             </p>
         </div>
     </section>
@@ -13,11 +13,11 @@
                 <div class="column">
                     <div>
                         <label for="">Fecha: </label>
-                        <input class="input is-large" type="text" name="Telefono" >
+                        <input class="column is-one-quarter" type="date" name="Fecha" >
                     </div>
                     <div>
                         <label for="">Hora: </label>
-                        <input class="input is-large" type="text" name="Calle" >
+                        <input class="column is-one-quarter" type="time" name="Hora" >
                     </div>
                  </div>
             <div>
