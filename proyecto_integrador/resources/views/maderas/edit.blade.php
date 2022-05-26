@@ -3,6 +3,7 @@
 <section class="hero is-success">
     <div class="hero-body">
         <center>
+            
         <p class="title">
             <b>Formulario para editar maderas
         </p>
