@@ -6,6 +6,7 @@
             <p class="title">
                 Sucursales
             </p>
+            <a href="/modulos/" class="button is-danger">Regresar</a>
             <a class="button is-info" href="/campinterias/create">Agregar</a>
         </div>
 

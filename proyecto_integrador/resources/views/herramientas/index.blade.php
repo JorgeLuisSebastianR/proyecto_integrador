@@ -8,6 +8,7 @@
                 <b>Listado de Herramientas </b><br />
             </font>
         </center>
+        <a href="/modulos/" class="button is-white is-outlined">Regresar</a>
         <a class="button is-info" href="/herramientas/create">Agregar nueva herramienta</a>
     </div>
 </section>

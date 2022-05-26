@@ -8,6 +8,7 @@
                 <b>Listado de Clientes </b><br />
             </font>
         </center>
+        <a href="/modulos/" class="button is-danger">Regresar</a>
         <a class="button is-info" href="/customers/create">Agregar nuevo cliente</a>
     </div>
 </section>
