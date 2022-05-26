@@ -5,6 +5,7 @@ use App\Http\Controllers\MaderaController;
 use App\Http\Controllers\CampinteriaController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\HerramientaController;
+use App\Http\Controllers\PedidoController;
 use App\Http\Controllers\ModuloController;
 
 
@@ -14,6 +15,7 @@ Route::resources([
     'articulos'=> ArticuloController :: class,
     'maderas'=> MaderaController :: class,
     'herramientas'=> HerramientaController :: class,
+    'pedidos' => PedidoController :: class,
     'modulos' => ModuloController :: class,
 ]);
 // transform
