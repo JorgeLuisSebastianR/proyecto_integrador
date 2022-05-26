@@ -16,6 +16,7 @@ Route::resources([
     'herramientas'=> HerramientaController :: class,
     'modulos' => ModuloController :: class,
 ]);
+// transform
 
 Route::get('/', function () {
     return view('welcome');
