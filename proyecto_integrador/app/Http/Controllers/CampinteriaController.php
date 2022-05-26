@@ -21,6 +21,7 @@ class CampinteriaController extends Controller
     public function store(StoreCampinteriaRequest $request)
     {
     $request->validate([
+<<<<<<< HEAD
           'Telefono' => 'required',
           'Calle' => 'required',
           'NumeroExterior' => 'required',
@@ -28,6 +29,29 @@ class CampinteriaController extends Controller
           'Municipio' => 'required'
       ]);
       Campinteria::create([
+=======
+          'Nombre'          => 'required',
+          'Telefono'        => 'required',
+          'Calle'           => 'required',
+          'NumeroExterior'  => 'required',
+          'Colonia'         => 'required',
+          'Municipio'       => 'required'
+      ]);
+      Campinteria::create([
+          'Nombre'          => $request->Nombre,
+          'Telefono'        => $request->Telefono,
+          'Calle'           => $request->Calle,
+          'NumeroExterior'  => $request->NumeroExterior,
+          'Colonia'         => $request->Colonia,
+          'Municipio'       => $request->Municipio
+          /*'Telefono'        => 'required',
+          'Calle'           => 'required',
+          'NumeroExterior'  => 'required',
+          'Colonia'         => 'required',
+          'Municipio'       => 'required'*/
+      ]);
+      Campinteria::create([
+>>>>>>> f7ea1b9225ec58f87a8ea2b6425f0fa3d2f16d49
           'Telefono'        => $request->Telefono,
           'Calle'           => $request->Calle,
           'NumeroExterior'  => $request->NumeroExterior,

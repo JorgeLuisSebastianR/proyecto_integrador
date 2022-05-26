@@ -1,5 +1,5 @@
 <?php
-
+//gfgfgf
 namespace App\Http\Controllers;
 
 use App\Models\Pedido;
@@ -41,20 +41,25 @@ class PedidoController extends Controller
 
     public function edit(Pedido $pedido)
     {
-        request->validate)([
-          'Fecha' => 'required',
-          'Hora'  => 'required'
-        ]);
+        //
     }
 
       public function update(UpdatePedidoRequest $request, Pedido $pedido)
     {
-        //
+      request->validate([
+        'Fecha' => 'required',
+        'Hora'  => 'required'
+      ]);
     }
 
     public function destroy(Pedido $pedido)
     {
       $pedido->delete();
       return redirect()->route('pedidos.index');
+    }
+
+    public function databable(){
+      $pedidos = Pedido::all();
+      return view('pedidos.databable', compact('pedidos'));
     }
 }
