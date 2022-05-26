@@ -15,14 +15,13 @@ return new class extends Migration
     {
         Schema::create('articulos', function (Blueprint $table) {
             $table->id();
-
             $table->text('Nombre',20);
             $table->decimal('Tamaño', 8, 2, true);
             $table->text('Color',20);
             $table->decimal('Precio', 8, 2, true)->default(0.00);
             $table->text('Descripcion',50);
             $table->string('Tipo', 20) ;
-            
+
             $table->timestamps();
         });
     }
