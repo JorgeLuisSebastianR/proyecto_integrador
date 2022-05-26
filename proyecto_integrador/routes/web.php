@@ -5,13 +5,8 @@ use App\Http\Controllers\MaderaController;
 use App\Http\Controllers\CampinteriaController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\HerramientaController;
+use App\Http\Controllers\ModuloController;
 
-<<<<<<< HEAD
-=======
-Route :: resources([
-
-]);
->>>>>>> 6ccd72f952973329b6e0341f08e41333384c6bb6
 
 Route::resources([
     'campinterias' => CampinteriaController::class,
@@ -19,6 +14,7 @@ Route::resources([
     'articulos'=> ArticuloController :: class,
     'maderas'=> MaderaController :: class,
     'herramientas'=> HerramientaController :: class,
+    'modulos' => ModuloController :: class,
 ]);
 
 Route::get('/', function () {
