@@ -1,24 +1,26 @@
 @extends('layout.layout')
 @section('content')
 
-<section class="hero is-success">
-    <div class="hero-body">
-        <center>
-            <font size="8">
-                <b>Listado de Clientes </b><br />
+<section class="hero  is-dark">
+  <div class="hero-body">
+      <center>
+      <font size="8">
+        <figure class="image is-128x128">
+            <img src="{{ asset('assets/images/diamante.png') }}">
+        </figure>
+            </figure>
+                <b>Diamante Azúl</b><br />
             </font>
-        </center>
-        <a class="button is-info" href="/customers/create">Agregar nuevo cliente</a>
-    </div>
+    <p class="subtitle" size="5">
+      <i>Carpintería</i>
+    </p>
+    </center>
+  </div>
 </section>
     
 <section class="section">
-
-    <div align="right">
-        <a href="#" class="button is-danger is-outlined">Descargar PDF</a>
-    </div><br><br>
-
-    <div class="table-container">
+<br><br>
+    <div class="table-container" align="center">
 
         <table class="">
             <thead>
@@ -29,10 +31,19 @@
                     <th></th>
                     <th></th>
                     <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
                 </tr>
             </thead>
             <tfoot>
                 <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
                     <th></th>
                     <th></th>
                     <th></th>
@@ -52,45 +63,49 @@
                         <a class="button is-warning" href="/maderas/">Registrar Madera</a>
                         </center>
                     </td>
-                    <th></th>
+                    <td><font color="white">-------</font></td>
                     <td>
                         <center>
                         <figure class="image is-128x128">
                             <img src="{{ asset('assets/images/articulo.png') }}">
                         </figure>
-                        <a class="button is-info" href="/articulos/">Registrar Artículo</a>
+                        <a class="button is-warning" href="/articulos/">Registrar Artículo</a>
                         </center>
                     </td>
+                    <td><font color="white">-------</font></td>
                     <td>
                         <center>
                         <figure class="image is-128x128">
                             <img src="{{ asset('assets/images/cliente.png') }}">
                         </figure>
-                        <a class="button is-success" href="/customers/">Registrar Cliente</a>
+                        <a class="button is-warning" href="/customers/">Registrar Cliente</a>
                         </center>
                     </td>
+                    <td><font color="white">-------</font></td>
                     <td>
                         <center>
                         <figure class="image is-128x128">
                             <img src="{{ asset('assets/images/herramienta.png') }}">
                         </figure>
-                        <a class="button is-danger" href="/herramientas/">Registrar Herramienta</a>
+                        <a class="button is-warning" href="/herramientas/">Registrar Herramienta</a>
                         </center>
                     </td>
+                    <td><font color="white">-------</font></td>
                     <td>
                         <center>
                         <figure class="image is-128x128">
                             <img src="{{ asset('assets/images/pedido.png') }}">
                         </figure>
-                        <a class="button is-info" href="/pedidos/">Registrar Pedido</a>
+                        <a class="button is-warning" href="/pedidos/">Registrar Pedido</a>
                         </center>
                     </td>
+                    <td><font color="white">-------</font></td>
                     <td>
                         <center>
                         <figure class="image is-128x128">
                             <img src="{{ asset('assets/images/sucursal.png') }}">
                         </figure>
-                        <a class="button is-info" href="/campinterias/">Registrar Sucursal</a>
+                        <a class="button is-warning" href="/campinterias/">Registrar Sucursal</a>
                         </center>
                     </td>
                 </tr>
