@@ -29,7 +29,7 @@
                     <th>Municipio</th>
                     <th>Colonia</th>
                     <th>Calle</th>
-                    <th>Fecha de Creasion</th>
+                    <th>Fecha de creación</th>
                     <th>Acciones</th>
 
                 </tr>
