@@ -19,6 +19,7 @@ Route::resources([
     'pedidos' => PedidoController :: class,
     'modulos' => ModuloController :: class,
 ]);
+// transform
 
 Route::get('/', function () {
     return view('welcome');
