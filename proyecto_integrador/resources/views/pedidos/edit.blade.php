@@ -16,11 +16,11 @@
             <div class="column">
                 <div>
                     <label for="">Fecha: </label>
-                    <input class="input is-large" type="text" value="{{$campinteria->Telefono}}" name="Fecha" >
+                    <input class="column is-one-quarter" type="date" value="{{$pedido->Fecha}}" name="Fecha" >
                 </div>
                 <div>
                     <label for="">Hora: </label>
-                    <input class="input is-large" type="text" value="{{$campinteria->Calle}}" name="Hora" >
+                    <input class="column is-one-quarter" type="time" value="{{$pedido->Hora}}" name="Hora" >
                 </div>
              </div>
         <div>
