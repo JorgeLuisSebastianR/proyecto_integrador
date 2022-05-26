@@ -5,18 +5,20 @@ use App\Http\Controllers\MaderaController;
 use App\Http\Controllers\CampinteriaController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\HerramientaController;
-use App\Http\Controllers\PedidoController;
 
+<<<<<<< HEAD
+=======
 Route :: resources([
 
 ]);
+>>>>>>> cde28b14b479b8e1baa7c93c6bb097717950568b
 
 Route::resources([
-    'campinterias'  => CampinteriaController::class,
-    'customers'     => CustomerController::class,
-    'articulos'     => ArticuloController::class,
-    'maderas'       => MaderaController::class,
-    'pedidos'       => PedidoController::class
+    'campinterias' => CampinteriaController::class,
+    'customers' => CustomerController::class,
+    'articulos'=> ArticuloController :: class,
+    'maderas'=> MaderaController :: class,
+    'herramientas'=> HerramientaController :: class,
 ]);
 
 Route::get('/', function () {
@@ -27,9 +29,15 @@ Route::get('/', function () {
 Route::get('campinteria/pdf', [App\Http\Controllers\CampinteriaController::class, 'pdf'])->name('campinteria.pdf');
 /*fin paso 2]*/
 
+<<<<<<< HEAD
+//Route::resource('campinterias', 'CampinteriaController');
+//Route::get('campinterias-pdf', 'CampinteriaController@exportToPDF')->name('campinterias.pdf');
+//Route::get('customers-pdf', 'CustomerController@exportToPDF')->name('customers.pdf');
+=======
 /*
 Route::get('campinterias-pdf', 'CampinteriaController@exportToPDF')->name('campinterias.pdf');
 Route::get('customers-pdf', 'CustomerController@exportToPDF')->name('customers.pdf');*/
+>>>>>>> cde28b14b479b8e1baa7c93c6bb097717950568b
 
 
 // Route::get('campinterias-pdf', ['CampinteriaController@exportToPDF'])->name('campinterias-pdf');
@@ -39,4 +47,4 @@ Route::get('campinteria-pdf', [CampinteriaController::class, 'exportToPDF'])->na
 
 
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

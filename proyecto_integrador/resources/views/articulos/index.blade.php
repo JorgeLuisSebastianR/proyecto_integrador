@@ -5,17 +5,20 @@
 
 <section class="hero is-link">
     <div class="hero-body">
-        <p class="title">
-
-            Agregar Articulo
-        </p>
-        <a class="button is-info" href="/articulos/create">Agregar </a>
+        <center>
+            <font size="8">
+                <b>Listado de Artículos </b><br />
+            </font>
+        </center>
+        <a class="button is-info" href="/articulos/create">Agregar nuevo artículo</a>
     </div>
 </section>
 
-<!--ddddddddddd-->
-
 <section class="section">
+    
+<div align="right">
+        <a href="#" class="button is-danger is-outlined">Descargar PDF</a>
+</div><br><br>
         <div class="table-container">
             <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
                 <thead>
@@ -25,6 +28,13 @@
                     <th>Acciones</th>
                 </tr>
                 </thead>
+                <tfoot>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Precio de venta</th>
+                    <th>Acciones</th>
+                </tr>
+                </tfoot>
                 <tbody>
 
                 @forelse($articulos as $articulo)
@@ -47,7 +57,12 @@
                 </tbody>
 
                 @empty
-                    <h3>No hay datos en la base de datos</h3>
+                    <font size="5">
+                        <div class="notification is-warning is-small is-with"><br>
+                            <center>
+                                Aún no cuenta con artículos almacenados, puede registrar un nuevo artículo <a href="/articulos/create">aquí</a>.</center><br>
+                        </div>
+                    </font><br><br><br><br>
                 @endforelse
             </table>
         </div>

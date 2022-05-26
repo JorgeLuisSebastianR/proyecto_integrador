@@ -1,27 +1,23 @@
 @extends('layout.layout')
 @section('content')
 
-    <section class="hero is-link">
+    <section class="hero is-warning">
         <div class="hero-body">
-            <p class="title">
-                Maderas
-            </p>
-            <a class="button is-info" href="/maderas/create">Agregar</a>
+        <center>
+            <font size="8">
+                <b>Listado de Madera </b><br />
+            </font>
+        </center>
+            <a class="button is-info" href="/maderas/create">Agregar nueva madera</a>
         </div>
 
     </section>
 
-    <br>
-    <p align="right">
-        <a  class="button is-danger is-outlined">
-        <span>Descargar PDF</span>
-        <span class="icon is-small">
-          <i class="fas fa-times"></i>
-        </span>
-      </a>
-    </p>
 
 <section class="section">
+<div align="right">
+        <a href="#" class="button is-danger is-outlined">Descargar PDF</a>
+    </div><br><br>
         <div class="table-container">
             <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
                 <thead>
@@ -31,11 +27,21 @@
                     <th>Color</th>
                     <th>Pulgadas</th>
                     <th>Cantidad</th>
-                    <th>Fecha</th>
                     <th>Acciones</th>
 
                 </tr>
                 </thead>
+                <tfoot>
+                <tr>
+
+                    <th>Nombre</th>
+                    <th>Color</th>
+                    <th>Pulgadas</th>
+                    <th>Cantidad</th>
+                    <th>Acciones</th>
+
+                </tr>
+                </tfoot>
                 <tbody>
                 @forelse($maderas as $madera)
                     <tr>
@@ -55,8 +61,15 @@
                         </td>
                 </tbody>
                 @empty
-                    <h3>No hay datos en la base de datos</h3>
+                <font size="5">
+                <div class="notification is-warning is-small is-with"><br>
+                    <center>
+                        Aún no cuenta con madera almacenada, puede registrar una nueva madera <a href="/maderas/create">aquí</a>.</center><br>
+                </div>
+            </font><br><br><br><br>
                 @endforelse
             </table>
         </div>
     </left>
+<!--codigo a para boton PDF -->
+

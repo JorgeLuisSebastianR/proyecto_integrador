@@ -25,7 +25,6 @@ class ArticuloController extends Controller
           'Tamaño' => 'required',
           'Color' => 'required',
           'Precio' => 'required',
-          'Descripcion' => 'required',
           'Tipo' => 'required'
           
       ]);
@@ -57,7 +56,6 @@ class ArticuloController extends Controller
       $request->validate([
           'Nombre'        => 'required',
           'Tamaño'           => 'required',
-          'Descripcion'  => 'required',
           'Color'         => 'required',
           'Precio'       => 'required',
           'Tipo' => 'required'

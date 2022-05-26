@@ -26,7 +26,7 @@
                     <input class="input is-large" type="text" name="marca" id="">
                 </div>
                 <div>
-                    <label for=""><b>Modelo<font color="red">*</font>: </b></label>
+                    <label for=""><b>Modelo: </b></label>
                     <input class="input is-large" type="text" name="modelo" id="">
                 </div>
                 <div>
