@@ -26,13 +26,8 @@
       </div>
 
       <div class="">
-<<<<<<< HEAD
         <label for=""><b>Pulgadas<font color="red">*</font>: </b></label>
         <input class="input is-large" type="text" name="Pulgadas">
-=======
-        <label for="">Pulgadas: </label>
-        <input class="input is-large" type="text" name="Pulgada">
->>>>>>> 934b724692bcdf9b84022e881a31eac93bab0077
       </div>
 
       <div class="">
@@ -48,10 +43,6 @@
           <input class="button is-info is-large" type="submit" value="Guardar">
         </div>
       </div>
-<<<<<<< HEAD
-=======
-    </div>
->>>>>>> 934b724692bcdf9b84022e881a31eac93bab0077
   </form>
 </section>
 

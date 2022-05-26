@@ -16,7 +16,7 @@
 
 <section class="section">
     
-<div>
+<div align="right">
         <a href="#" class="button is-danger is-outlined">Descargar PDF</a>
 </div><br><br>
         <div class="table-container">

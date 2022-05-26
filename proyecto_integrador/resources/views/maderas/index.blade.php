@@ -13,15 +13,6 @@
 
     </section>
 
-    <br>
-    <p align="right">
-        <a  class="button is-danger is-outlined">
-        <span>Descargar PDF</span>
-        <span class="icon is-small">
-          <i class="fas fa-times"></i>
-        </span>
-      </a>
-    </p>
 
 <section class="section">
 <div align="right">
@@ -36,10 +27,6 @@
                     <th>Color</th>
                     <th>Pulgadas</th>
                     <th>Cantidad</th>
-<<<<<<< HEAD
-=======
-                    <th>Fecha</th>
->>>>>>> 934b724692bcdf9b84022e881a31eac93bab0077
                     <th>Acciones</th>
 
                 </tr>
@@ -84,8 +71,5 @@
             </table>
         </div>
     </left>
-<<<<<<< HEAD
 <!--codigo a para boton PDF -->
 
-=======
->>>>>>> 934b724692bcdf9b84022e881a31eac93bab0077
