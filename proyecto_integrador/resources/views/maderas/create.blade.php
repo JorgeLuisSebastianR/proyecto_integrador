@@ -11,7 +11,7 @@
 <section class="section">
   <form action="{{ route('maderas.store') }}" method="POST">
     @csrf
-    
+
 
     <div class="culumn">
 
@@ -27,7 +27,7 @@
 
       <div class="">
         <label for=""><b>Pulgadas<font color="red">*</font>: </b></label>
-        <input class="input is-large" type="text" name="Pulgadas">
+        <input class="input is-large" type="text" name="Pulgada">
       </div>
 
       <div class="">

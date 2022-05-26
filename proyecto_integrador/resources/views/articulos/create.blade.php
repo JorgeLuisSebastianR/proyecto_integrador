@@ -47,7 +47,7 @@
                             <option value="Rustico">Rustico</option> 
                         </select>
                     </div>
-                   
+                   <!--Apartado para botones guardar, cancelar y limpiar -->
                  </div>
             </div>
             <div class="is-flex is-justify-content-space-around">

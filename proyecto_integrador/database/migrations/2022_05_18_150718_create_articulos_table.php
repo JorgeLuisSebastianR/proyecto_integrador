@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('articulos', function (Blueprint $table) {
             $table->id();
-
             $table->text('Nombre',20);
             $table->decimal('Tamaño', 8, 2, true);
             $table->text('Color',20);

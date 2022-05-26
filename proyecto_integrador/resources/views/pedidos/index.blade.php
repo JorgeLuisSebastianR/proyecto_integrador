@@ -4,7 +4,7 @@
     <section class="hero is-link">
         <div class="hero-body">
             <p class="title">
-                pedidos
+                pedidoss
             </p>
             <a class="button is-info" href="/pedidos/create">Agregar</a>
         </div>
@@ -26,22 +26,28 @@
             <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
                 <thead>
                 <tr>
-
                     <th>Fecha</th>
                     <th>Hora</th>
-
                 </tr>
                 </thead>
+
+                <tfoot>
+                  <tr>
+                      <th>Fecha</th>
+                      <th>Hora</th>
+                  </tr>
+                </tfoot>
+
                 <tbody>
                 @forelse($pedidos as $pedido)
                     <tr>
                         <td>{{ $pedido->Fecha}}</td>
                         <td>{{ $pedido->Hora}}</td>
-                        <td>{{ $campinteria->created_at}}</td>
+                        <td>{{ $pedido->created_at}}</td>
                         <td>
-                           <form action="{{route('campinterias.destroy',$campinteria->id)}}" method="POST">
-                                <a class="button is-success is-small" href="{{route('campinterias.show',$campinteria->id)}}">Ver</a>
-                                <a class="button is-info is-small" href="{{route('campinterias.edit',$campinteria->id)}}">Editar</a>
+                           <form action="{{route('pedidos.destroy',$pedido->id)}}" method="POST">
+                                <a class="button is-success is-small" href="{{route('pedidos.show',$pedido->id)}}">Ver</a>
+                                <a class="button is-info is-small" href="{{route('pedidos.edit',$pedido->id)}}">Editar</a>
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="button is-danger is-small">Eliminar</button>
