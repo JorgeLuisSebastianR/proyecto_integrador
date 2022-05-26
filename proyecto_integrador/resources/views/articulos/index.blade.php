@@ -10,6 +10,7 @@
                 <b>Listado de Artículos </b><br />
             </font>
         </center>
+        <a href="/modulos/" class="button is-danger">Regresar</a>
         <a class="button is-info" href="/articulos/create">Agregar nuevo artículo</a>
     </div>
 </section>

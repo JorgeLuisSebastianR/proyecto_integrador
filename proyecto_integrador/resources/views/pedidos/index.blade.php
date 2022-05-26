@@ -6,6 +6,7 @@
             <p class="title">
                 Pedidos
             </p>
+            <a href="/modulos/" class="button is-danger">Regresar</a>
             <a class="button is-info" href="/pedidos/create">Agregar</a>
         </div>
     </section>

@@ -5,9 +5,13 @@
         <div class="hero-body">
         <center>
             <font size="8">
+            <figure class="image is-32x32" width="full" height="full">
+            <img src="{{ asset('assets/images/madera.png') }}">
+            </figure>
                 <b>Listado de Madera </b><br />
             </font>
         </center>
+            <a href="/modulos/" class="button is-danger">Regresar</a>
             <a class="button is-info" href="/maderas/create">Agregar nueva madera</a>
         </div>
 
