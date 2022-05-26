@@ -24,7 +24,7 @@
                 </div>
                 <div>
                     <label for="">Pulgadas: </label>
-                    <input class="input is-large" type="text" value="{{$madera->Pulgadas}}" name="Pulgadas" >
+                    <input class="input is-large" type="text" value="{{$madera->Pulgada}}" name="Pulgada" >
                 </div>
                 <div>
                     <label for="">Cantidad: </label>

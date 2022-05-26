@@ -21,7 +21,6 @@ class CampinteriaController extends Controller
     public function store(StoreCampinteriaRequest $request)
     {
     $request->validate([
-          'Nombre' => 'required',
           'Telefono' => 'required',
           'Calle' => 'required',
           'NumeroExterior' => 'required',
@@ -29,24 +28,16 @@ class CampinteriaController extends Controller
           'Municipio' => 'required'
       ]);
       Campinteria::create([
-          'Nombre' => $request->Nombre,
-          'Telefono' => $request->Telefono,
-          'Calle' => $request->Calle,
-          'NumeroExterior' => $request->NumeroExterior,
-          'Colonia' => $request->Colonia,
-          'Municipio'=> $request->Municipio
-          /*'Telefono'        => 'required',
-          'Calle'           => 'required',
-          'NumeroExterior'  => 'required',
-          'Colonia'         => 'required',
-          'Municipio'       => 'required'*/
-      ]);
-      Campinteria::create([
           'Telefono'        => $request->Telefono,
           'Calle'           => $request->Calle,
           'NumeroExterior'  => $request->NumeroExterior,
           'Colonia'         => $request->Colonia,
           'Municipio'       => $request->Municipio
+          /*'Telefono'        => 'required',
+          'Calle'           => 'required',
+          'NumeroExterior'  => 'required',
+          'Colonia'         => 'required',
+          'Municipio'       => 'required'*/
       ]);
       return redirect()->route('campinterias.index');
     }
@@ -58,13 +49,12 @@ class CampinteriaController extends Controller
 
     public function edit(Campinteria $campinteria)
     {
-        //
+        return view('campinterias.edit',compact('campinteria'));
     }
 
     public function update(UpdateCampinteriaRequest $request, Campinteria $campinteria)
     {
       $request->validate([
-          'Nombre'          => 'required',
           'Telefono'        => 'required',
           'Calle'           => 'required',
           'NumeroExterior'  => 'required',
@@ -91,6 +81,6 @@ class CampinteriaController extends Controller
      $campinterias = Campinteria::get();
      $pdf = PDF::loadView('campinterias.exportToPDF', compact('campinterias'));
      return $pdf->download('listadoCampinterias.pdf');
-     
+
    }
 }

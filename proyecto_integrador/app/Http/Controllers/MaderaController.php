@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Madera;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreMaderaRequest;
 use App\Http\Requests\UpdateMaderaRequest;
 
@@ -31,7 +32,7 @@ class MaderaController extends Controller
       'Nombre'    => $request->Nombre,
       'Color'     => $request->Color,
       'Pulgada'   => $request->Pulgada,
-      'Cantidad'  => $request->Canditidad
+      'Cantidad'  => $request->Cantidad
     ]);
 
     return redirect()->route('maderas.index');

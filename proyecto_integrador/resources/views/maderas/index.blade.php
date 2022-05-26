@@ -13,6 +13,16 @@
 
     </section>
 
+    <br>
+    <p align="right">
+        <a  class="button is-danger is-outlined">
+        <span>Descargar PDF</span>
+        <span class="icon is-small">
+          <i class="fas fa-times"></i>
+        </span>
+      </a>
+    </p>
+
 <section class="section">
 <div align="right">
         <a href="#" class="button is-danger is-outlined">Descargar PDF</a>
@@ -26,6 +36,10 @@
                     <th>Color</th>
                     <th>Pulgadas</th>
                     <th>Cantidad</th>
+<<<<<<< HEAD
+=======
+                    <th>Fecha</th>
+>>>>>>> 934b724692bcdf9b84022e881a31eac93bab0077
                     <th>Acciones</th>
 
                 </tr>
@@ -46,8 +60,9 @@
                     <tr>
                         <td>{{ $madera->Nombre}}</td>
                         <td>{{ $madera->Color}}</td>
-                        <td>{{ $madera->Pulgadas}}</td>
-                        <td>{{ $maderas->created_at}}</td>
+                        <td>{{ $madera->Pulgada}}</td>
+                        <td>{{ $madera->Cantidad}}</td>
+                        <td>{{ $madera->created_at}}</td>
                         <td>
                            <form action="{{route('maderas.destroy',$madera->id)}}" method="POST">
                                 <a class="button is-success is-small" href="{{route('maderas.show',$madera->id)}}">Ver</a>
@@ -69,5 +84,8 @@
             </table>
         </div>
     </left>
+<<<<<<< HEAD
 <!--codigo a para boton PDF -->
 
+=======
+>>>>>>> 934b724692bcdf9b84022e881a31eac93bab0077

@@ -18,7 +18,7 @@ return new class extends Migration
             $table->String('Nombre', 10);
             $table->String('Color', 15);
             $table->String('Pulgada', 30);
-            $table->Integer('Canditidad');
+            $table->Integer('Cantidad');
             $table->timestamps();
         });
     }
