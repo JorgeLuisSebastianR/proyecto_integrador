@@ -10,6 +10,7 @@ use App\Http\Controllers\ModuloController;
 
 
 Route::resources([
+    ////
     'campinterias' => CampinteriaController::class,
     'customers' => CustomerController::class,
     'articulos'=> ArticuloController :: class,
