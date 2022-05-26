@@ -17,6 +17,12 @@ return new class extends Migration
             $table->id();
             $table->date('Fecha');
             $table->time('Hora');
+            // Clave forànea de sucursal
+            $table->unsignedBigInteger('idSucursal');
+            $table->foreign('idSucursal')->references('id')->on('campinterias');
+            // Clave forànea de Sucursal Carpinterìa
+            $table->unsignedBigInteger('idCustomer');
+            $table->foreign('idCustomer')->references('id')->on('customers');
             $table->timestamps();
         });
     }

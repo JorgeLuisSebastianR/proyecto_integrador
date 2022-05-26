@@ -13,17 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('herramientas', function (Blueprint $table) {
+        Schema::create('pedido_articulo', function (Blueprint $table) {
             $table->id();
-            $table->String('nombre',25);
-            $table->String('marca',20);
-            $table->String('modelo',30)->nullable();
-            $table->String('descripcion')->nullable();
-            $table->text('cantidad');
             // Clave forànea de Sucursal Carpinterìa
-            $table->unsignedBigInteger('idSucursal');
-            $table->foreign('idSucursal')->references('id')->on('campinterias');
-
+            $table->unsignedBigInteger('idPedido');
+            $table->foreign('idPedido')->references('id')->on('pedidos');
+            // Clave forànea de Sucursal Carpinterìa
+            $table->unsignedBigInteger('idArticulo');
+            $table->foreign('idArticulo')->references('id')->on('articulos');
             $table->timestamps();
         });
     }
@@ -35,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('herramientas');
+        Schema::dropIfExists('pedido_articulo');
     }
 };
