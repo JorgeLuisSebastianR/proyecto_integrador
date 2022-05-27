@@ -26,19 +26,19 @@
         <div class="table-container">
             <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
                 <thead>
-                <tr>
+                <tr align="center">
                     <th>Fecha</th>
-                   
                     <th>Hora de registro</th>
+                      <th>articulo</th>
                     <th>Acciones</th>
                 </tr>
                 </thead>
 
                 <tfoot>
-                  <tr>
+                  <tr align="center">
                       <th>Fecha</th>
                       <th>Hora</th>
-                    
+                      <th>articulo</th>
                     <th>Acciones</th>
                   </tr>
                 </tfoot>
@@ -49,7 +49,11 @@
                         <td>{{ $pedido->Fecha}}</td>
                      <!--comulma para mostrar la hora de registro-->
                         <td>{{ $pedido->created_at}}</td>
-                        <td>
+                        <td align="center">
+                        <form action="{{route('pedidos.create',$pedido->id)}}" method="POST">
+                                <a class="button is-success is-small" href="{{route('pedidos.show',$pedido->id)}}">Agregar</a>  
+                        </td>
+                        <td align="center">
                            <form action="{{route('pedidos.destroy',$pedido->id)}}" method="POST">
                                 <a class="button is-success is-small" href="{{route('pedidos.show',$pedido->id)}}">Ver</a>
                                 <a class="button is-info is-small" href="{{route('pedidos.edit',$pedido->id)}}">Editar</a>
