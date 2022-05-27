@@ -26,3 +26,7 @@ Route::get('/', function () {
 });
 
 Route::get('campinteria-pdf', [CampinteriaController::class, 'exportToPDF'])->name('campinteria-pdf');
+Route::get('exportToPDF', [CustomerController::class, 'exportToPDF'])->name('exportToPDF');
+Route::get('exportToPDF', [ArticuloController::class, 'exportToPDF'])->name('exportToPDF');
+Route::get('exportToPDF', [MaderaController::class, 'exportToPDF'])->name('exportToPDF');
+Route::get('exportToPDF', [HerramientaController::class, 'exportToPDF'])->name('exportToPDF');

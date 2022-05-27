@@ -1,13 +1,14 @@
 @extends('layout.layout')
 @section('content')
 
-    <section class="hero is-warning">
+    <section class="hero is-black">
         <div class="hero-body">
         <center>
             <font size="8">
-            <img src="{{ asset('assets/images/madera.png') }}">
-            </figure>
+            <figure class="image is-64x64">
+                <img src="{{ asset('assets/images/madera1.png') }}">
                 <b>Listado de Madera </b><br />
+            </figure>
             </font>
         </center>
             <a href="/modulos/" class="button is-danger">Regresar</a>
@@ -19,7 +20,7 @@
 
 <section class="section">
 <div align="right">
-        <a href="#" class="button is-danger is-outlined">Descargar PDF</a>
+        <a href="{{ route('exportToPDF') }}" class="button is-danger is-outlined">Descargar PDF</a>
     </div><br><br>
         <div class="table-container">
             <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
@@ -52,7 +53,6 @@
                         <td>{{ $madera->Color}}</td>
                         <td>{{ $madera->Pulgada}}</td>
                         <td>{{ $madera->Cantidad}}</td>
-                        <td>{{ $madera->created_at}}</td>
                         <td>
                            <form action="{{route('maderas.destroy',$madera->id)}}" method="POST">
                                 <a class="button is-success is-small" href="{{route('maderas.show',$madera->id)}}">Ver</a>

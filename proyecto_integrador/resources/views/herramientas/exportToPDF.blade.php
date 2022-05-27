@@ -8,7 +8,7 @@
 </head>
   <body>
         <div align="center">
-            <h2>Reporte de Clientes</h2>
+            <h2>Reporte de Herramientas</h2>
             <p><b>Diamante Azúl</b></p>
         </div>
         <br>
@@ -18,27 +18,27 @@
                             <tr>
                                 <th scope="col">#</th>
                                 <th scope="col">Nombre</th>
-                                <th scope="col">Teléfono</th>
-                                <th scope="col">Correo Electrónico</th>
-                                <th scope="col">Dirección</th>
-                                <th scope="col">CP</th>
+                                <th scope="col">Marca</th>
+                                <th scope="col">Modelo</th>
+                                <th scope="col">Descripción</th>
+                                <th scope="col">Cantidad</th>
                             </tr>
                         </thead>
 
                         <tbody>
-                            @forelse ($customers as $customer)
+                            @forelse ($herramientas as $herramienta)
                                 <tr>
-                                    <td>{{ $customer->id }}</td>
-                                    <td>{{ $customer->nombre }} {{ $customer->apellidoPaterno }} {{ $customer->apellidoMaterno }}</td>
-                                    <td>{{ $customer->telefono }}</td>
-                                    <td>{{ $customer->correoElectronico }}</td>
-                                    <td>C. {{ $customer->calle }} No. {{ $customer->numeroCasa }}, {{ $customer->colonia }}, {{ $customer->municipio }}.</td>
-                                    <td>{{ $customer->codigoPostal }}</td>
+                                    <td>{{ $herramienta->id }}</td>
+                                    <td>{{ $herramienta->nombre }}</td>
+                                    <td>{{ $herramienta->marca }}</td>
+                                    <td>{{ $herramienta->modelo }}</td>
+                                    <td>{{ $herramienta->descripcion }}</td>
+                                    <td>{{ $herramienta->cantidad }}</td>
                                 </tr>
                                 @empty
                                 <br><br><br><br><br><br>
                                 <div>
-                                    Parece que aún no se cuenta con clientes registrados.
+                                    Parece que aún no se cuenta con herramientas registradas.
                                 </div>
                             @endforelse
                             </tbody>

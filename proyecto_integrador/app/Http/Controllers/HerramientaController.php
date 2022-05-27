@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Herramienta;
 use App\Http\Requests\StoreHerramientaRequest;
 use App\Http\Requests\UpdateHerramientaRequest;
+use PDF;
 
 class HerramientaController extends Controller
 {
@@ -103,5 +104,13 @@ class HerramientaController extends Controller
     {
         $herramienta->delete();
         return redirect()->route('herramientas.index');
+    }
+
+    public function exportToPDF()
+    {
+        $herramientas = Herramienta::all();
+        view()->share('herramientas.exportToPDF', $herramientas);
+        $pdf = PDF::loadView('herramientas.exportToPDF', ['herramientas' => $herramientas]);
+        return $pdf->download('Reporte de Herramientas.pdf');
     }
 }

@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 use App\Models\Campinteria;
 use App\Http\Requests\StoreCampinteriaRequest;
 use App\Http\Requests\UpdateCampinteriaRequest;
-use Barryvdh\DomPDF\Facade as PDF;
 
 class CampinteriaController extends Controller
 {
@@ -79,10 +78,4 @@ class CampinteriaController extends Controller
        return view('campinterias.datatable',compact('campinterias'));
    }
 
-   public function exportToPDF(){
-     $campinterias = Campinteria::get();
-     $pdf = PDF::loadView('campinterias.exportToPDF', compact('campinterias'));
-     return $pdf->download('listadoCampinterias.pdf');
-
-   }
 }

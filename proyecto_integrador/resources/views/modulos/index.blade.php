@@ -4,12 +4,12 @@
 <section class="hero  is-black">
   <div class="hero-body">
     <!-- <center> -->
-      <font size="6">
+        <font size="6" style="monospace">
                 <!-- <figure class="image is-64x64"> -->
             <!-- <img src="{{ asset('assets/images/diamante.png') }}"> -->
         <!-- </figure> -->
-        Diamante Azúl<br />
-            </font>
+            Diamante Azúl<br />
+</font>
             
     <p class="subtitle" size="5">
       <i>Carpintería</i>

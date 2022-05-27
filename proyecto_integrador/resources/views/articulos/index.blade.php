@@ -18,7 +18,7 @@
 <section class="section">
     
 <div align="right">
-        <a href="#" class="button is-danger is-outlined">Descargar PDF</a>
+        <a href="{{ route('exportToPDF') }}" class="button is-danger is-outlined">Descargar PDF</a>
 </div><br><br>
         <div class="table-container">
             <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
