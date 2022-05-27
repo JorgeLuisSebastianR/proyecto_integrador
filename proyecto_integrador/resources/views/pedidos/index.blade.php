@@ -28,8 +28,8 @@
                 <thead>
                 <tr>
                     <th>Fecha</th>
-                   
                     <th>Hora de registro</th>
+                      <th>articulo</th>
                     <th>Acciones</th>
                 </tr>
                 </thead>
@@ -38,7 +38,7 @@
                   <tr>
                       <th>Fecha</th>
                       <th>Hora</th>
-                    
+                      <th>articulo</th>
                     <th>Acciones</th>
                   </tr>
                 </tfoot>
