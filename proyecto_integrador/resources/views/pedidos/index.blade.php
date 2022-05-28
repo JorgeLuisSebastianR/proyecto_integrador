@@ -1,35 +1,31 @@
 @extends('layout.layout')
 @section('content')
 
-    <section class="hero is-link">
-        <div class="hero-body">
-            <p class="title">
-                Pedidos
-            </p>
-            <a href="/modulos/" class="button is-danger">Regresar</a>
-            <a class="button is-info" href="/pedidos/create">Agregar</a>
-        </div>
-    </section>
-
-
-    <br>
-    <p align="right">
-        <a  class="button is-danger is-outlined">
-        <span>Descargar PDF</span>
-        <span class="icon is-small">
-          <i class="fas fa-times"></i>
-        </span>
-      </a>
-    </p>
+<section class="hero is-black">
+    <div class="hero-body">
+        <center>
+            <font size="6">
+                Listado de Pedidos
+            </font>
+        </center>
+        <a href="/modulos/" class="button is-danger">Regresar</a>
+        <a class="button is-info" href="/pedidos/create">Agregar un nuevo pedido</a>
+    </div>
+</section>
 
 <section class="section">
+
+    <div align="right">
+        <a href="#" class="button is-danger is-outlined">Descargar Reporte en PDF (aún no jala xd)</a>
+    </div><br><br>
+
         <div class="table-container">
             <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
                 <thead>
                 <tr align="center">
                     <th>Fecha</th>
                     <th>Hora de registro</th>
-                      <th>articulo</th>
+                      <th>Artículo</th>
                     <th>Acciones</th>
                 </tr>
                 </thead>
@@ -37,22 +33,20 @@
                 <tfoot>
                   <tr align="center">
                       <th>Fecha</th>
-                      <th>Hora</th>
-                      <th>articulo</th>
+                      <th>Hora de registro</th>
+                      <th>Artículo</th>
                     <th>Acciones</th>
                   </tr>
                 </tfoot>
 
                 <tbody>
                 @forelse($pedidos as $pedido)
-                    <tr>
+                    <tr align="center">
                         <td>{{ $pedido->Fecha}}</td>
                      <!--comulma para mostrar la hora de registro-->
-                        <td>{{ $pedido->created_at}}</td>
+                        <td>{{ $pedido->Hora }}</td>
                         <td align="center">
-                        <form action="{{route('pedidos.create',$pedido->id)}}" method="POST">
-                                <a class="button is-success is-small" href="{{route('pedidos.show',$pedido->id)}}">Agregar</a>  
-                        </td>
+                        <a class="button is-success is-small" href="/pedido_articulos/index">Agregar</a>
                         <td align="center">
                            <form action="{{route('pedidos.destroy',$pedido->id)}}" method="POST">
                                 <a class="button is-success is-small" href="{{route('pedidos.show',$pedido->id)}}">Ver</a>
@@ -64,7 +58,11 @@
                         </td>
                 </tbody>
                 @empty
-                    <h3>No hay datos en la base de datos</h3>
+                    <font size="5">
+                        <div class="notification is-warning is-small is-with"><br>
+                            <center>Aún no cuenta con pedidos almacenadas, puede registrar un nuevo pedido <a href="/pedidos/create">aquí</a>.</center><br>
+                        </div>
+                    </font><br><br><br><br>
                 @endforelse
             </table>
         </div>

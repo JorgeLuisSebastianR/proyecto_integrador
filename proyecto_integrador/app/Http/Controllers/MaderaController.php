@@ -6,6 +6,7 @@ use App\Models\Madera;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreMaderaRequest;
 use App\Http\Requests\UpdateMaderaRequest;
+use PDF;
 
 class MaderaController extends Controller
 {
@@ -71,5 +72,12 @@ class MaderaController extends Controller
     return view('maderas.datatable',compact('Maderas'));
 }
 
+  public function exportToPDFMaderas()
+    {
+        $maderas = Madera::all();
+        view()->share('maderas.exportToPDFMaderas', $maderas);
+        $pdf = PDF::loadView('maderas.exportToPDFMaderas', ['maderas' => $maderas]);
+        return $pdf->download('Reporte de Madera.pdf');
+    }
 
 }

@@ -1,10 +1,10 @@
 @extends('layout.layout')
 @section('content')
-    <section class="hero is-link">
+    <section class="hero is-black">
         <div class="hero-body">
-            <p class="title">
-                Formulario para ajustar fecha de entrega del pedido
-            </p>
+        <font size="6">
+            Formulario para ajustar fecha de entrega del pedido
+    </font>
         </div>
     </section>
     <section class="section">

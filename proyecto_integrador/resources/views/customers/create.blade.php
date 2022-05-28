@@ -1,12 +1,12 @@
 @extends('layout.layout')
 @section('content')
 
-<section class="hero is-success">
+<section class="hero is-black">
     <div class="hero-body">
         <center>
-        <p class="title">
-            Formulario para registrar un nuevo cliente
-        </p>
+        <font size="6">
+         Formulario para registrar un nuevo cliente
+    </font>
         </center>
     </div>
 </section>
@@ -71,4 +71,3 @@
         </div>
     </form>
 </section>
-//hola

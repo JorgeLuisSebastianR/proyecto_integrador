@@ -15,4 +15,8 @@ class Madera extends Model
       'Pulgada',
       'Cantidad'
     ];
+    public function Articulo()
+    {
+        return $this->belongsTo(Articulo::class);
+    }
 }

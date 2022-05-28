@@ -1,14 +1,11 @@
 @extends('layout.layout')
 @section('content')
-<section class="hero is-success">
+<section class="hero is-black">
     <div class="hero-body">
         <center>
-            
-
-        
-        <p class="title">
-            <b>Formulario para editar maderas
-        </p>
+        <font size="6">
+            Formulario para editar la madera: {{$madera->Nombre}}
+            </font>
         </center>
     </div>
 </section>

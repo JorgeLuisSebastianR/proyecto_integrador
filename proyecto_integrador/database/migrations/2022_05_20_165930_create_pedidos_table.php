@@ -15,14 +15,15 @@ return new class extends Migration
     {
         Schema::create('pedidos', function (Blueprint $table) {
             $table->id();
-            $table->date('Fecha');
-            $table->time('Hora');
             // Clave forànea de sucursal
             $table->unsignedBigInteger('idSucursal');
-            $table->foreign('idSucursal')->references('id')->on('campinterias');
+            $table->foreign('idSucursal')->references('id')->on('sucursals');
             // Clave forànea de Sucursal Carpinterìa
             $table->unsignedBigInteger('idCustomer');
             $table->foreign('idCustomer')->references('id')->on('customers');
+            //
+            $table->date('Fecha');
+            $table->time('Hora');
             $table->timestamps();
         });
     }

@@ -1,22 +1,24 @@
 @extends('layout.layout')
 @section('content')
 
-<section class="hero is-danger">
+<section class="hero is-black">
     <div class="hero-body">
         <center>
-        <p class="title">
-            Formulario para registrar una nueva herramienta
-        </p>
+        <font size="6">
+                Formulario para registrar una nueva herramienta
+            </font>
         </center>
     </div>
 </section>
 
 <section class="section">
     <form action="{{ route('herramientas.store') }}" method="post">
-        @csrf
-        <div class="columns">
-
-            <div class="column">
+      @csrf
+          <div class="column">
+              <div>
+                  <label for=""><b>Sucursal<font color="red">*</font>: </b></label>
+                  <input class="input is-large" type="text" name="idSucursal" id="" value="1">
+              </div>
                 <div>
                     <label for=""><b>Nombre<font color="red">*</font>: </b></label>
                     <input class="input is-large" type="text" name="nombre" id="">

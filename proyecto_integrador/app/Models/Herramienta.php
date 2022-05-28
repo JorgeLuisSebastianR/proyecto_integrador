@@ -10,10 +10,15 @@ class Herramienta extends Model
     use HasFactory;
 
     protected $fillable = [
+      'idSucursal',
         'nombre',
         'marca',
         'modelo',
         'descripcion',
         'cantidad'
     ];
+    public function Sucursal()
+    {
+        return $this->belongsTo(Sucursal::class);
+    }
 }

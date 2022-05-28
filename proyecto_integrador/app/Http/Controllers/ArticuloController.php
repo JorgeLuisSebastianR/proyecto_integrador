@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Articulo;
 use App\Http\Requests\StoreArticuloRequest;
 use App\Http\Requests\UpdateArticuloRequest;
+use PDF;
 
 class ArticuloController extends Controller
 {
@@ -74,4 +75,12 @@ class ArticuloController extends Controller
        $Articulos = Articulo::all();
        return view('articulos.datatable',compact('Articulos'));
    }
+
+   public function exportToPDFArticulos()
+    {
+        $articulos = Articulo::all();
+        view()->share('articulos.exportToPDFArticulos', $articulos);
+        $pdf = PDF::loadView('articulos.exportToPDFArticulos', ['articulos' => $articulos]);
+        return $pdf->download('Reporte de Articulos.pdf');
+    }
 }

@@ -6,7 +6,7 @@ use App\Models\Customer;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreCustomerRequest;
 use App\Http\Requests\UpdateCustomerRequest;
-use Barryvdh\DomPDF\Facade as PDF;
+use PDF;
 
 class CustomerController extends Controller
 {
@@ -129,4 +129,12 @@ class CustomerController extends Controller
         $pdf = PDF::loadView('customers.exportToPDF', compact('customers'));
         return $pdf->download('ListadoClientes.pdf');
     }*/
+
+    public function exportToPDFCustomers()
+    {
+        $customers = Customer::all();
+        view()->share('customers.exportToPDFCustomers', $customers);
+        $pdf = PDF::loadView('customers.exportToPDFCustomers', ['customers' => $customers]);
+        return $pdf->download('Reporte de Clientes.pdf');
+    }
 }

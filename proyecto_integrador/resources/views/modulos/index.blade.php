@@ -3,21 +3,24 @@
 
 <section class="hero  is-black">
   <div class="hero-body">
-    <!-- <center> -->
-      <font size="6">
-                <!-- <figure class="image is-64x64"> -->
-            <!-- <img src="{{ asset('assets/images/diamante.png') }}"> -->
-        <!-- </figure> -->
-        Diamante Azúl<br />
-            </font>
-            
-    <p class="subtitle" size="5">
-      <i>Carpintería</i>
-    </p>
-    <!-- </center> -->
+    <div class="columns">
+        <div class="column is-1">
+<figure class="image is-64x64">
+            <img src="{{ asset('assets/images/diamante.png') }}">
+        </figure>
+        </div>
+        <div class="column">
+        <font size="6" style="monospace">
+            Diamante Azúl<br />
+        </font>     
+        <p class="subtitle" size="5">
+        <i>Carpintería</i>
+        </p>
+        </div>
+        
   </div>
 </section>
-    
+      
 <section class="section">
 <br>
     <div class="table-container" align="center">
@@ -82,7 +85,7 @@
                         </center>
                     </td>
                 </tr>
-                <tr><td><font color="white">------<br><br><br></font></td></tr>
+                <tr><td><font color="white">------<br><br><br><br></font></td></tr><br>
                 <tr>
                     <td>
                         <center>
@@ -107,12 +110,22 @@
                         <figure class="image is-64x64">
                             <img src="{{ asset('assets/images/sucursal1.png') }}">
                         </figure><br>
-                        <a class="button is-dark is-small" href="/campinterias/">Registrar Sucursal</a>
+                        <a class="button is-dark is-small" href="/sucursals/">Registrar Sucursal</a>
                         </center>
                     </td>
                 </tr>
             </tbody>
-
         </table>
     </div>
-</section>
+</section><br>
+
+<div>
+<footer class="footer is-black">
+  <div class="content has-text-centered">
+    <p>
+      <strong>ISODA Project</strong> by <a href="https://www.facebook.com/profile.php?id=100076417281253">Emmanuel, </a><a href="https://www.facebook.com/profile.php?id=100011540110017">Jorge Luis, </a><a href="https://www.facebook.com/rodriguez.antonio.5688">Marco Antonio, </a>and <a href="https://www.facebook.com/profile.php?id=100014550668234">Oscar</a>.
+      <br> Copyright © 2022 Fuerza G®
+    </p>
+  </div>
+</footer>
+</div>

@@ -20,15 +20,15 @@
     <div class="columns is-mobile is-centered">
         <justify>
         <div class="column is-half-width">
-            <h3><b>Teléfono:</b>          {{ $campinteria->Telefono}}</h3><br>
-            <h3><b>Calle:</b>             {{ $campinteria->Calle}}</h3><br>
-            <h3><b>Número Exterior:</b>   {{ $campinteria->NumeroExterior}}</h3><br>
-            <h3><b>Colonia:</b>           {{ $campinteria->Colonia}}</h3><br>
-            <h3><b>Municipio:</b>         {{ $campinteria->Municipio}}</h3><br>
-            <h3><b>Fecha de registro:</b> {{ $campinteria->created_at}}</h3><br>
+            <h3><b>Teléfono:</b>          {{ $sucursal->Telefono}}</h3><br>
+            <h3><b>Calle:</b>             {{ $sucursal->Calle}}</h3><br>
+            <h3><b>Número Exterior:</b>   {{ $sucursal->NumeroExterior}}</h3><br>
+            <h3><b>Colonia:</b>           {{ $sucursal->Colonia}}</h3><br>
+            <h3><b>Municipio:</b>         {{ $sucursal->Municipio}}</h3><br>
+            <h3><b>Fecha de registro:</b> {{ $sucursal->created_at}}</h3><br>
             <center>
-            <a href="/campinterias" class="button is-medium is-primary">Regresar</a>
-              <a href="{{ route('campinterias.edit', $campinteria->id) }}" class="button is-medium is-info">Editar</a>
+            <a href="/sucursals" class="button is-medium is-primary">Regresar</a>
+              <a href="{{ route('sucursals.edit', $sucursal->id) }}" class="button is-medium is-info">Editar</a>
             </center>
         </div>
         </justify>

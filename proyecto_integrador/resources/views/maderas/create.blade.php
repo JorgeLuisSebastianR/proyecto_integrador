@@ -1,10 +1,10 @@
 @extends('layout.layout')
 @section('content')
-<section class="hero is-warning">
+<section class="hero is-black">
   <div class="hero-body">
-    <p class="title" align="center">
-        Formulario para registrar una nueva madera
-    </p>
+    <font size="6">
+            Formulario para registrar una nueva madera
+    </font>
   </div>
 </section>
 

@@ -21,4 +21,8 @@ class Customer extends Model
         'municipio',
         'codigoPostal'
     ];
+    public function Pedido()
+    {
+        return $this->belongsTo(Pedido::class);
+    }
 }
