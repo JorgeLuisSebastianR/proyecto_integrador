@@ -1,33 +1,32 @@
 @extends('layout.layout')
 @section('content')
 
-<section class="hero  is-black">
+<!-- <section class="hero  is-black">
   <div class="hero-body">
     <div class="columns">
         <div class="column is-4"><br>
         <a href="/modulos/" class="button is-danger">Regresar</a>
             <a class="button is-info" href="/maderas/create">Agregar nueva madera</a><br>
         </div>
-        <div class="column is-1">
+        <div class="column is-1" align="right">
         <figure class="image is-64x64">
-                <img src="{{ asset('assets/images/madera1.png') }}">
+                <img src="{{ asset('assets/images/madera2.png') }}">
             </figure>
             </div>
-        <div class="column">
-        <font size="6" style="monospace">
-           <b> Madera</b>
+        <div class="column" align="justify center">
+        <font size="6" style="monospace">Madera
         </font>     
         </div>
         
   </div>
-</section>
+</section> -->
 
-<!-- <section class="hero is-black">
+<<section class="hero is-black">
         <div class="hero-body">
         <center>
              <figure class="image is-64x64">
                 <img src="{{ asset('assets/images/madera1.png') }}">
-            </figure> 
+            </figure>
             <font size="6">
             Listado de Madera
             </font>
@@ -36,7 +35,7 @@
             <a class="button is-info" href="/maderas/create">Agregar nueva madera</a>
         </div>
 
-    </section> -->
+    </section>
 
 
 <section class="section">
