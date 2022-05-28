@@ -76,11 +76,11 @@ class ArticuloController extends Controller
        return view('articulos.datatable',compact('Articulos'));
    }
 
-   public function exportToPDF()
+   public function exportToPDFArticulos()
     {
         $articulos = Articulo::all();
-        view()->share('articulos.exportToPDF', $articulos);
-        $pdf = PDF::loadView('articulos.exportToPDF', ['articulos' => $articulos]);
+        view()->share('articulos.exportToPDFArticulos', $articulos);
+        $pdf = PDF::loadView('articulos.exportToPDFArticulos', ['articulos' => $articulos]);
         return $pdf->download('Reporte de Articulos.pdf');
     }
 }

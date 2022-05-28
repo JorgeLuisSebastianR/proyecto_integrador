@@ -1,11 +1,11 @@
 <!--codigo para botón crear-->
 @extends('layout.layout')
 @section('content')
-    <section class="hero is-link">
+    <section class="hero is-black">
         <div class="hero-body">
-            <p class="title" align="center">
-                Formulario para registrar una nuevo artículo
-            </p>
+        <font size="6">
+            Formulario para registrar un nuevo artículo
+    </font>
         </div>
     </section>
     <section class="section">

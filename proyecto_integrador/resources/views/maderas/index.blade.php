@@ -1,26 +1,47 @@
 @extends('layout.layout')
 @section('content')
 
-    <section class="hero is-black">
+<section class="hero  is-black">
+  <div class="hero-body">
+    <div class="columns">
+        <div class="column is-4"><br>
+        <a href="/modulos/" class="button is-danger">Regresar</a>
+            <a class="button is-info" href="/maderas/create">Agregar nueva madera</a><br>
+        </div>
+        <div class="column is-1">
+        <figure class="image is-64x64">
+                <img src="{{ asset('assets/images/madera1.png') }}">
+            </figure>
+            </div>
+        <div class="column">
+        <font size="6" style="monospace">
+           <b> Madera</b>
+        </font>     
+        </div>
+        
+  </div>
+</section>
+
+<!-- <section class="hero is-black">
         <div class="hero-body">
         <center>
-            <font size="8">
-            <figure class="image is-64x64">
+             <figure class="image is-64x64">
                 <img src="{{ asset('assets/images/madera1.png') }}">
-                <b>Listado de Madera </b><br />
-            </figure>
+            </figure> 
+            <font size="6">
+            Listado de Madera
             </font>
         </center>
             <a href="/modulos/" class="button is-danger">Regresar</a>
             <a class="button is-info" href="/maderas/create">Agregar nueva madera</a>
         </div>
 
-    </section>
+    </section> -->
 
 
 <section class="section">
 <div align="right">
-        <a href="{{ route('exportToPDF') }}" class="button is-danger is-outlined">Descargar PDF</a>
+        <a href="{{ route('exportToPDFMaderas') }}" class="button is-danger is-outlined">Descargar Reporte en PDF</a>
     </div><br><br>
         <div class="table-container">
             <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">

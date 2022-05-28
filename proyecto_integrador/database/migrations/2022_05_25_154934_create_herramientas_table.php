@@ -23,7 +23,7 @@ return new class extends Migration
             $table->String('marca',20);
             $table->String('modelo',30)->nullable();
             $table->String('descripcion')->nullable();
-            $table->text('cantidad');
+            $table->integer('cantidad');
             $table->timestamps();
         });
     }

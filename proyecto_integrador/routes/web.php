@@ -26,7 +26,7 @@ Route::get('/', function () {
 });
 
 Route::get('campinteria-pdf', [CampinteriaController::class, 'exportToPDF'])->name('campinteria-pdf');
-Route::get('exportToPDF', [CustomerController::class, 'exportToPDF'])->name('exportToPDF');
-Route::get('exportToPDF', [ArticuloController::class, 'exportToPDF'])->name('exportToPDF');
-Route::get('exportToPDF', [MaderaController::class, 'exportToPDF'])->name('exportToPDF');
-Route::get('exportToPDF', [HerramientaController::class, 'exportToPDF'])->name('exportToPDF');
+Route::get('exportToPDFCustomers', [CustomerController::class, 'exportToPDFCustomers'])->name('exportToPDFCustomers');
+Route::get('exportToPDFArticulos', [ArticuloController::class, 'exportToPDFArticulos'])->name('exportToPDFArticulos');
+Route::get('exportToPDFMaderas', [MaderaController::class, 'exportToPDFMaderas'])->name('exportToPDFMaderas');
+Route::get('exportToPDFHerramientas', [HerramientaController::class, 'exportToPDFHerramientas'])->name('exportToPDFHerramientas');

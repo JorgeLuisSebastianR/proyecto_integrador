@@ -3,11 +3,11 @@
 @section('content')
 
 
-<section class="hero is-link">
+<section class="hero is-black">
     <div class="hero-body">
         <center>
-            <font size="8">
-                <b>Listado de Artículos </b><br />
+            <font size="6">
+                Listado de Artículos
             </font>
         </center>
         <a href="/modulos/" class="button is-danger">Regresar</a>
@@ -18,7 +18,7 @@
 <section class="section">
     
 <div align="right">
-        <a href="{{ route('exportToPDF') }}" class="button is-danger is-outlined">Descargar PDF</a>
+        <a href="{{ route('exportToPDFArticulos') }}" class="button is-danger is-outlined">Descargar Reporte en PDF</a>
 </div><br><br>
         <div class="table-container">
             <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">

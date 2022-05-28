@@ -106,11 +106,11 @@ class HerramientaController extends Controller
         return redirect()->route('herramientas.index');
     }
 
-    public function exportToPDF()
+    public function exportToPDFHerramientas()
     {
         $herramientas = Herramienta::all();
-        view()->share('herramientas.exportToPDF', $herramientas);
-        $pdf = PDF::loadView('herramientas.exportToPDF', ['herramientas' => $herramientas]);
+        view()->share('herramientas.exportToPDFHerramientas', $herramientas);
+        $pdf = PDF::loadView('herramientas.exportToPDFHerramientas', ['herramientas' => $herramientas]);
         return $pdf->download('Reporte de Herramientas.pdf');
     }
 }

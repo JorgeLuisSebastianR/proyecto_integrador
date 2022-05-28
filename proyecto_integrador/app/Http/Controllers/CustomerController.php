@@ -130,11 +130,11 @@ class CustomerController extends Controller
         return $pdf->download('ListadoClientes.pdf');
     }*/
 
-    public function exportToPDF()
+    public function exportToPDFCustomers()
     {
         $customers = Customer::all();
-        view()->share('customers.exportToPDF', $customers);
-        $pdf = PDF::loadView('customers.exportToPDF', ['customers' => $customers]);
+        view()->share('customers.exportToPDFCustomers', $customers);
+        $pdf = PDF::loadView('customers.exportToPDFCustomers', ['customers' => $customers]);
         return $pdf->download('Reporte de Clientes.pdf');
     }
 }

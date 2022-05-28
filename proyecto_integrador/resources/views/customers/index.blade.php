@@ -1,11 +1,11 @@
 @extends('layout.layout')
 @section('content')
 
-<section class="hero is-success">
+<section class="hero is-black">
     <div class="hero-body">
         <center>
-            <font size="8">
-                <b>Listado de Clientes </b><br />
+            <font size="6">
+                Listado de Clientes
             </font>
         </center>
         <a href="/modulos/" class="button is-danger">Regresar</a>
@@ -16,7 +16,7 @@
 <section class="section">
 
     <div align="right">
-        <a href="{{ route('exportToPDF') }}" class="button is-danger is-outlined">Descargar PDF</a>
+        <a href="{{ route('exportToPDFCustomers') }}" class="button is-danger is-outlined">Descargar Reporte en PDF</a>
     </div><br><br>
 
     <div class="table-container">

@@ -1,11 +1,13 @@
 @extends('layout.layout')
 @section('content')
 
-    <section class="hero is-link">
+    <section class="hero is-black">
         <div class="hero-body">
-            <p class="title">
-                Sucursales
-            </p>
+        <center>
+            <font size="6">
+                Sucursales Carpintería "Diamante Azúl"
+            </font>
+        </center>
             <a href="/modulos/" class="button is-danger">Regresar</a>
             <a class="button is-info" href="/campinterias/create">Agregar</a>
         </div>

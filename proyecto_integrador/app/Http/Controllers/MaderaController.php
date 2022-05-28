@@ -72,11 +72,11 @@ class MaderaController extends Controller
     return view('maderas.datatable',compact('Maderas'));
 }
 
-  public function exportToPDF()
+  public function exportToPDFMaderas()
     {
         $maderas = Madera::all();
-        view()->share('maderas.exportToPDF', $maderas);
-        $pdf = PDF::loadView('maderas.exportToPDF', ['maderas' => $maderas]);
+        view()->share('maderas.exportToPDFMaderas', $maderas);
+        $pdf = PDF::loadView('maderas.exportToPDFMaderas', ['maderas' => $maderas]);
         return $pdf->download('Reporte de Madera.pdf');
     }
 

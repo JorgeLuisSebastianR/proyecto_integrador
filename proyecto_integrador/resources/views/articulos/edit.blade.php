@@ -2,12 +2,12 @@
 @extends('layout.layout')
 @section('content')
 
-<section class="hero is-link">
+<section class="hero is-black">
     <div class="hero-body">
         <center>
-        <p class="title">
-            <b>Formulario para editar la iformación de: </b>{{ $articulo->Nombre }}
-         </p>
+         <font size="6">
+         Formulario para editar la iformación de: {{ $articulo->Nombre }}
+    </font>
         </center>
     </div>
 </section>

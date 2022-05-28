@@ -1,12 +1,12 @@
 @extends('layout.layout')
 @section('content')
 
-<section class="hero is-danger">
+<section class="hero is-black">
     <div class="hero-body">
         <center>
-        <p class="title">
-            <b>Formulario para editar la iformación de: </b> {{ $herramienta->nombre }} {{ $herramienta->marca }}
-        </p>
+        <font size="6">
+                Formulario para editar la información de: {{ $herramienta->nombre }} {{ $herramienta->marca }}
+            </font>
         </center>
     </div>
 </section>
@@ -32,7 +32,7 @@
                 </div>
                 <div>
                     <label for=""><b>Descripción: </b></label>
-                    <textarea class="input is-large" value=" {{ $herramienta->descripcion }}" name="descripcion" id=""rows="5"></textarea>
+                    <textarea class="input is-large" value="{{ $herramienta->descripcion }}" name="descripcion" id=""rows="5"></textarea>
                 </div>
                 <div>
                     <label for=""><b>Cantidad<font color="red">*</font>: </b></label>

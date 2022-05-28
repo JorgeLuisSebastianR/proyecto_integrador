@@ -6,7 +6,7 @@
         <div class="column is-half-width">
             <center><br>
             <font size="8">
-            <b>Informacición general de madera:</b>
+            <b>Informacición general de madera:</b> {{ $madera->Nombre }}<br><br>
             </font>
             </center>
         </div>
@@ -17,7 +17,7 @@
             <h3><b>Nombre:</b> {{ $madera->Nombre }} </h3><br>
             <h3><b>Color:</b> {{ $madera->Color }}</h3><br>
             <h3><b>Pulgada:</b> {{ $madera->Pulgada }}</h3><br>
-            <h3><b>Cantidad:</b> {{ $madera->Cantidad }}</h3><br>
+            <h3><b>Cantidad:</b> {{ $madera->Cantidad }}</h3><br><br>
             
             
             <center>

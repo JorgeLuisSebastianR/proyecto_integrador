@@ -3,21 +3,24 @@
 
 <section class="hero  is-black">
   <div class="hero-body">
-    <!-- <center> -->
+    <div class="columns">
+        <div class="column is-1">
+<figure class="image is-64x64">
+            <img src="{{ asset('assets/images/diamante.png') }}">
+        </figure>
+        </div>
+        <div class="column">
         <font size="6" style="monospace">
-                <!-- <figure class="image is-64x64"> -->
-            <!-- <img src="{{ asset('assets/images/diamante.png') }}"> -->
-        <!-- </figure> -->
             Diamante Azúl<br />
-</font>
-            
-    <p class="subtitle" size="5">
-      <i>Carpintería</i>
-    </p>
-    <!-- </center> -->
+        </font>     
+        <p class="subtitle" size="5">
+        <i>Carpintería</i>
+        </p>
+        </div>
+        
   </div>
 </section>
-    
+      
 <section class="section">
 <br>
     <div class="table-container" align="center">
