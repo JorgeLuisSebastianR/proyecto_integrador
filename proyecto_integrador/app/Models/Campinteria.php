@@ -15,4 +15,12 @@ class Campinteria extends Model
       'Colonia',
       'Municipio'
     ];
+    public function Herramientas()
+   {
+       return $this->hasMany(Herramienta::class);
+   }
+   public function Pedidos()
+  {
+      return $this->hasMany(Pedido::class);
+  }
 }

@@ -21,6 +21,7 @@ return new class extends Migration
             // Clave forànea de Sucursal Carpinterìa
             $table->unsignedBigInteger('idArticulo');
             $table->foreign('idArticulo')->references('id')->on('articulos');
+            //
             $table->timestamps();
         });
     }

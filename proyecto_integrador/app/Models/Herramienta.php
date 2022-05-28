@@ -16,4 +16,8 @@ class Herramienta extends Model
         'descripcion',
         'cantidad'
     ];
+    public function Campinteria()
+    {
+        return $this->belongsTo(Campinteria::class);
+    }
 }
