@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             // Clave forànea de Sucursal Carpinterìa
             $table->unsignedBigInteger('idSucursal');
-            $table->foreign('idSucursal')->references('id')->on('campinterias');
+            $table->foreign('idSucursal')->references('id')->on('sucursals');
             //
             $table->String('nombre',25);
             $table->String('marca',20);

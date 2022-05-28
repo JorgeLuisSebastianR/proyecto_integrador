@@ -110,7 +110,7 @@
                         <figure class="image is-64x64">
                             <img src="{{ asset('assets/images/sucursal1.png') }}">
                         </figure><br>
-                        <a class="button is-dark is-small" href="/campinterias/">Registrar Sucursal</a>
+                        <a class="button is-dark is-small" href="/sucursals/">Registrar Sucursal</a>
                         </center>
                     </td>
                 </tr>

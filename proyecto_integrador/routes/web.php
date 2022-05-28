@@ -1,5 +1,6 @@
 <?php
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SucursalController;
 use App\Http\Controllers\ArticuloController;
 use App\Http\Controllers\MaderaController;
 use App\Http\Controllers\CampinteriaController;
@@ -11,7 +12,7 @@ use App\Http\Controllers\ModuloController;
 
 Route::resources([
     ////
-    'campinterias' => CampinteriaController::class,
+    'sucursals' => SucursalController::class,
     'customers' => CustomerController::class,
     'articulos'=> ArticuloController :: class,
     'maderas'=> MaderaController :: class,

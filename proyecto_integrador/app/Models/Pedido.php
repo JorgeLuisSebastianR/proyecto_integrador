@@ -13,9 +13,9 @@ class Pedido extends Model
       'Hora'
     ];
 
-    public function Campinteria()
+    public function Sucursal()
     {
-        return $this->belongsTo(Campinteria::class);
+        return $this->belongsTo(Sucursal::class);
     }
     public function Customer()
     {

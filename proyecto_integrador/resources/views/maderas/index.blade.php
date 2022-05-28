@@ -1,6 +1,5 @@
 @extends('layout.layout')
 @section('content')
-
 <!-- <section class="hero  is-black">
   <div class="hero-body">
     <div class="columns">
@@ -20,13 +19,9 @@
         
   </div>
 </section> -->
-
-<<section class="hero is-black">
+<section class="hero is-black">
         <div class="hero-body">
         <center>
-             <figure class="image is-64x64">
-                <img src="{{ asset('assets/images/madera1.png') }}">
-            </figure>
             <font size="6">
             Listado de Madera
             </font>
