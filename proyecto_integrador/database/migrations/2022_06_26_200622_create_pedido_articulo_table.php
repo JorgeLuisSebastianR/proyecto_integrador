@@ -22,6 +22,7 @@ return new class extends Migration
             $table->unsignedBigInteger('idArticulo');
             $table->foreign('idArticulo')->references('id')->on('articulos');
             //
+            $table->Integer('Cantidad');
             $table->timestamps();
         });
     }

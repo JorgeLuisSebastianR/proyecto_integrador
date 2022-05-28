@@ -38,12 +38,14 @@ class HerramientaController extends Controller
     public function store(StoreHerramientaRequest $request)
     {
         $request->validate([
+          'idSucursal'  => 'required',
             'nombre'    => 'required',
             'marca'     => 'required',
             'cantidad'  => 'required',
         ]);
 
         Herramienta::create([
+          'idSucursal'      => $request->idSucursal,
             'nombre'        => $request->nombre,
             'marca'         => $request->marca,
             'modelo'        => $request->modelo,
@@ -62,7 +64,7 @@ class HerramientaController extends Controller
      */
     public function show(Herramienta $herramienta)
     {
-        return view('herramientas.show', compact('herramienta'));   
+        return view('herramientas.show', compact('herramienta'));
     }
 
     /**
@@ -85,10 +87,11 @@ class HerramientaController extends Controller
      */
     public function update(UpdateHerramientaRequest $request, Herramienta $herramienta)
     {
-        $request->validate([ 
-            'nombre' => 'required',
-            'marca'     => 'required',
-            'cantidad' => 'required'
+        $request->validate([
+            'idSucursal'  => 'required',
+            'nombre'      => 'required',
+            'marca'       => 'required',
+            'cantidad'    => 'required'
         ]);
         $herramienta->update($request->all());
         return redirect()->route('herramientas.index');

@@ -8,7 +8,7 @@
         </div>
     </section>
     <section class="section">
-        <form action="{{ route('campinterias.store') }}" method="POST">
+        <form action="{{ route('sucursals.store') }}" method="POST">
             @csrf
                 <div class="column">
                     <div>
@@ -34,7 +34,7 @@
                  </div>
             <div>
             <div class="is-flex is-justify-content-space-around">
-                <a href="{{ url('campinterias/') }}" class="button is-danger is-large">X Cancelar</a>
+                <a href="{{ url('sucursals/') }}" class="button is-danger is-large">X Cancelar</a>
                 <input class="button is-light is-large" type="reset" value="Restablecer">
                 <input class="button is-info is-large" type="submit" value="Guardar">
             </div>

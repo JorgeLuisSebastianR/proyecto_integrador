@@ -18,6 +18,10 @@
         <div class="columns">
 
             <div class="column">
+              <div>
+                  <label for=""><b>Sucursal<font color="red">*</font>: </b></label>
+                  <input class="input is-large" type="text" value=" {{ $herramienta->idSucursal }}" name="idSucursal" id="">
+              </div>
                 <div>
                     <label for=""><b>Nombre<font color="red">*</font>: </b></label>
                     <input class="input is-large" type="text" value=" {{ $herramienta->nombre }}" name="nombre" id="">
@@ -32,14 +36,14 @@
                 </div>
                 <div>
                     <label for=""><b>Descripción: </b></label>
-                    <textarea class="input is-large" value=" {{ $herramienta->descripcion }}" name="descripcion" id=""rows="5"></textarea>
+                    <input class="input is-large" type="text" value=" {{ $herramienta->descripcion }}" name="descripcion" id="">
                 </div>
                 <div>
                     <label for=""><b>Cantidad<font color="red">*</font>: </b></label>
                     <input class="input is-large" type="number" value="{{ $herramienta->cantidad }}" name="cantidad" step="1" min="1" id="">
                 </div>
             </div>
-            
+
         </div>
             <div class="is-flex is-justify-content-space-around">
                 <a href="{{ url('herramientas/') }}" class="button is-danger is-large">X Cancelar</a>

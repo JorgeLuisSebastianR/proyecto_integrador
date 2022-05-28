@@ -50,9 +50,7 @@
                      <!--comulma para mostrar la hora de registro-->
                         <td>{{ $pedido->created_at}}</td>
                         <td align="center">
-                        <form action="{{route('pedidos.create',$pedido->id)}}" method="POST">
-                                <a class="button is-success is-small" href="{{route('pedidos.show',$pedido->id)}}">Agregar</a>  
-                        </td>
+                        <a class="button is-success is-small" href="/pedido_articulos/index">Agregar</a>
                         <td align="center">
                            <form action="{{route('pedidos.destroy',$pedido->id)}}" method="POST">
                                 <a class="button is-success is-small" href="{{route('pedidos.show',$pedido->id)}}">Ver</a>

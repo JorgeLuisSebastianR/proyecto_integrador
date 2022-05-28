@@ -10,14 +10,14 @@
         <!-- </figure> -->
             Diamante Azúl<br />
 </font>
-            
+
     <p class="subtitle" size="5">
       <i>Carpintería</i>
     </p>
     <!-- </center> -->
   </div>
 </section>
-    
+
 <section class="section">
 <br>
     <div class="table-container" align="center">
@@ -107,7 +107,7 @@
                         <figure class="image is-64x64">
                             <img src="{{ asset('assets/images/sucursal1.png') }}">
                         </figure><br>
-                        <a class="button is-dark is-small" href="/campinterias/">Registrar Sucursal</a>
+                        <a class="button is-dark is-small" href="/sucursals/">Registrar Sucursal</a>
                         </center>
                     </td>
                 </tr>
