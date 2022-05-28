@@ -85,7 +85,7 @@
                         </center>
                     </td>
                 </tr>
-                <tr><td><font color="white">------<br><br><br></font></td></tr>
+                <tr><td><font color="white">------<br><br><br><br></font></td></tr><br>
                 <tr>
                     <td>
                         <center>
@@ -115,7 +115,17 @@
                     </td>
                 </tr>
             </tbody>
-
         </table>
     </div>
-</section>
+</section><br>
+
+<div>
+<footer class="footer is-black">
+  <div class="content has-text-centered">
+    <p>
+      <strong>ISODA Project</strong> by <a href="https://www.facebook.com/profile.php?id=100076417281253">Emmanuel, </a><a href="https://www.facebook.com/profile.php?id=100011540110017">Jorge Luis, </a><a href="https://www.facebook.com/rodriguez.antonio.5688">Marco Antonio, </a>and <a href="https://www.facebook.com/profile.php?id=100014550668234">Oscar</a>.
+      <br> Copyright © 2022 Fuerza G®
+    </p>
+  </div>
+</footer>
+</div>
