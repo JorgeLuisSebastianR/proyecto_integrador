@@ -8,6 +8,7 @@ use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\HerramientaController;
 use App\Http\Controllers\PedidoController;
 use App\Http\Controllers\ModuloController;
+use App\Http\Controllers\PedidoArticuloController;
 
 
 Route::resources([
@@ -19,6 +20,7 @@ Route::resources([
     'herramientas'=> HerramientaController :: class,
     'pedidos' => PedidoController :: class,
     'modulos' => ModuloController :: class,
+    'pedido_articulos' => PedidoArticuloController :: class,
 ]);
 // transforasdfamasdfadf
 
