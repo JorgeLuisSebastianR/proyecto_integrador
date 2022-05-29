@@ -12,7 +12,7 @@ class PedidoArticuloController extends Controller
 
     public function index()
     {
-        //
+          return view('pedidoarticulos.index');
     }
 
     public function create()
