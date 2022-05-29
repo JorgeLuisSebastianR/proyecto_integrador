@@ -66,3 +66,4 @@ class PedidoController extends Controller
       return view('pedidos.databable', compact('Pedidos'));
     }
 }
+//....
