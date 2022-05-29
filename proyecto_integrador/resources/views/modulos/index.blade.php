@@ -124,7 +124,7 @@
   <div class="content has-text-centered">
     <p>
       <strong>ISODA Project</strong> by <a href="https://www.facebook.com/profile.php?id=100076417281253">Emmanuel, </a><a href="https://www.facebook.com/profile.php?id=100011540110017">Jorge Luis, </a><a href="https://www.facebook.com/rodriguez.antonio.5688">Marco Antonio, </a>and <a href="https://www.facebook.com/profile.php?id=100014550668234">Oscar</a>.
-      <br> Copyright © 2022 Fuerza G®
+      <br> Copyright © 2022 Fuerza G®<br>
     </p>
   </div>
 </footer>
