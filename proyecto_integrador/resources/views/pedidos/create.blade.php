@@ -17,11 +17,7 @@
                       <label for="">Sucursal: </label><br>
                       <input class="column is-one-quarter" type="number" name="idSucursal" >
                   </div>
-
-                <div>
-                    <label for="">Cliente: </label><br>
-                
-                </div>
+                  
                 <div>
                     <label for="">Cliente: </label>
                     <input class="column is-one-quarter" type="number" name="idCustomer" >
