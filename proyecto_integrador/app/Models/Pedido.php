@@ -9,6 +9,8 @@ class Pedido extends Model
 {
     use HasFactory;
     protected $fillable=[
+      'idSucursal',
+      'idCustomer',
       'Fecha',
       'Hora'
     ];

@@ -24,7 +24,7 @@
                 <thead>
                 <tr align="center">
                   <th>Cliente</th>
-                    <th>Fecha</th>
+                    <th>Fecha de entra</th>
                     <th>Hora de registro</th>
                       <th>Artículo</th>
                     <th>Acciones</th>
@@ -34,7 +34,7 @@
                 <tfoot>
                   <tr align="center">
                     <th>Cliente</th>
-                      <th>Fecha</th>
+                      <th>Fecha de entra</th>
                       <th>Hora de registro</th>
                       <th>Artículo</th>
                     <th>Acciones</th>

@@ -7,17 +7,20 @@
     </font>
         </div>
     </section>
+
     <section class="section">
+
         <form action="{{ route('pedidos.store') }}" method="POST">
             @csrf
-
                 <div class="column">
-                <label for="">Cliente: </label><br>
-
-                <div class="select" >
-                    <select name="idCustomer" style="width:310px">
-                        <option></option>
-                    </select>
+                  <div>
+                      <label for="">Sucursal: </label><br>
+                      <input class="column is-one-quarter" type="number" name="idSucursal" >
+                  </div>
+                  
+                <div>
+                    <label for="">Cliente: </label>
+                    <input class="column is-one-quarter" type="number" name="idCustomer" >
                 </div>
 
                     <div>
