@@ -6,6 +6,7 @@ use App\Models\Pedido;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StorePedidoRequest;
 use App\Http\Requests\UpdatePedidoRequest;
+use DB;
 
 class PedidoController extends Controller
 {

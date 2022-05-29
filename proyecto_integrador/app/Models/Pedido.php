@@ -19,7 +19,7 @@ class Pedido extends Model
     }
     public function Customer()
     {
-        return $this->hasOne(Customer::class);
+        return $this->belongsTo(Customer::class,'idCustomer');
     }
     public function PedidoArticulos()
    {
