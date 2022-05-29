@@ -21,9 +21,9 @@ class Pedido extends Model
     {
         return $this->hasOne(Customer::class);
     }
-    public function pedido_articulos()
+    public function PedidoArticulos()
    {
-       return $this->hasMany(pedido_articulo::class);
+       return $this->hasMany(PedidoArticulo::class);
    }
 
 }

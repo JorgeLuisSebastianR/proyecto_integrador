@@ -12,9 +12,9 @@ class Articulo extends Model
     protected $fillable =[
 'Nombre','Tamaño','Color','Descripcion','Precio','Tipo'
     ];
-    public function pedido_articulos()
+    public function PedidoArticulos()
    {
-       return $this->hasMany(pedido_articulo::class);
+       return $this->hasMany(PedidoArticulo::class);
    }
     public function Madera()
     {

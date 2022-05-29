@@ -6,14 +6,10 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+
     public function up()
     {
-        Schema::create('pedido_articulo', function (Blueprint $table) {
+        Schema::create('pedido_articulos', function (Blueprint $table) {
             $table->id();
             // Clave forànea de Sucursal Carpinterìa
             $table->unsignedBigInteger('idPedido');
@@ -21,19 +17,12 @@ return new class extends Migration
             // Clave forànea de Sucursal Carpinterìa
             $table->unsignedBigInteger('idArticulo');
             $table->foreign('idArticulo')->references('id')->on('articulos');
-            //
-            $table->Integer('Cantidad');
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
-        Schema::dropIfExists('pedido_articulo');
+        Schema::dropIfExists('pedido_articulos');
     }
 };
