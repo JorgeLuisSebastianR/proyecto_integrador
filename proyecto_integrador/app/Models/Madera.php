@@ -17,6 +17,6 @@ class Madera extends Model
     ];
     public function Articulo()
     {
-        return $this->hasOne(Articulo::class);
+        return $this->hasOne(Articulo::class,'id');
     }
 }

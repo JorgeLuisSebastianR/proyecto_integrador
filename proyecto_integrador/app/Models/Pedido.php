@@ -17,7 +17,7 @@ class Pedido extends Model
 
     public function Sucursal()
     {
-        return $this->hasMany(Sucursal::class);
+        return $this->hasMany(Sucursal::class,'id');
     }
     public function Customer()
     {
@@ -25,7 +25,7 @@ class Pedido extends Model
     }
     public function PedidoArticulos()
    {
-       return $this->hasMany(PedidoArticulo::class);
+       return $this->hasMany(PedidoArticulo::class,'id');
    }
 
 }

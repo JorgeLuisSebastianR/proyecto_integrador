@@ -14,10 +14,10 @@ class Articulo extends Model
     ];
     public function PedidoArticulos()
    {
-       return $this->hasMany(PedidoArticulo::class);
+       return $this->hasMany(PedidoArticulo::class,'id');
    }
     public function Madera()
     {
-        return $this->belongsTo(Madera::class);
+        return $this->belongsTo(Madera::class,'idMadera');
     }
 }

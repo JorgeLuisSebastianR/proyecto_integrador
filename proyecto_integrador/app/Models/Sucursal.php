@@ -17,10 +17,10 @@ class Sucursal extends Model
   ];
   public function Herramientas()
  {
-     return $this->belongsTo(Herramienta::class);
+     return $this->hasMany(Herramienta::class,'id');
  }
  public function Pedidos()
 {
-    return $this->hasMany(Pedido::class);
+    return $this->hasMany(Pedido::class,'id');
 }
 }
