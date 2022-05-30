@@ -18,9 +18,7 @@
                       <select name ="idSucursal" class="column is-one-quarter">
                           @forelse($sucursals as $sucursal)
                         <option value="{{$sucursal['id']}}">
-                            {{$sucursal->Calle}}
-                            {{$sucursal->Colonia}}
-                            {{$sucursal->Municipio}}
+                            {{$sucursal->Calle}}, {{$sucursal->Colonia}}, {{$sucursal->Municipio}}
                         </option>
                         @empty
                         <p>no hay Sucursal</p>

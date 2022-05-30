@@ -18,11 +18,13 @@
               <div>
                 <label for=""><b>Sucursal<font color="red">*</font>: </b></label>
                   <select name ="idCustomer" class="input is-large">
-                      @forelse($herramientas as $herramienta)
-                    <option value="{{$herramienta['id']}}">      {{$herramienta->Sucursal->Calle}} {{$herramienta->Sucursal->Colonia}} {{$herramienta->Sucursal->Municipio}}</option>
-                    @empty
-                    <p>no hay sucursal Existente</p>
-                @endforelse
+                  @forelse($sucursals as $sucursal)
+                        <option value="{{$sucursal['id']}}">
+                            {{$sucursal->Calle}}, {{$sucursal->Colonia}}, {{$sucursal->Municipio}}
+                        </option>
+                        @empty
+                        <p>no hay Sucursal</p>
+                    @endforelses
                   </select>
 
               </div>
