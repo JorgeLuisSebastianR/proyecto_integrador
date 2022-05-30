@@ -17,7 +17,8 @@ class HerramientaController extends Controller
 
     public function create()
     {
-        return view('herramientas.create')->with('herramientas', Herramienta::all());;
+        return view('herramientas.create')->with('herramientas', Herramienta::all())
+        ->with('sucursals', Sucursal::all());
     }
 
     public function store(StoreHerramientaRequest $request)

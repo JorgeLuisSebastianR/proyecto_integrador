@@ -2,6 +2,7 @@
 //gfgfgf
 namespace App\Http\Controllers;
 use App\Models\Sucursal;
+use App\Models\Articulo;
 use App\Models\Customer;
 use App\Models\Pedido;
 use App\Http\Controllers\Controller;
@@ -13,7 +14,10 @@ class PedidoController extends Controller
 {
     public function index()
     {
-      return view('pedidos.index')->with('pedidos', Pedido::all());
+
+      return view('pedidos.index')
+          ->with('pedidos', Pedido::all())
+          ->with('articulos', Articulo::all());
     }
 
     public function create()
