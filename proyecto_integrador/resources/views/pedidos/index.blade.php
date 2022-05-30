@@ -23,7 +23,8 @@
             <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
                 <thead>
                 <tr align="center">
-                    <th>Fecha</th>
+                  <th>Cliente</th>
+                    <th>Fecha de entra</th>
                     <th>Hora de registro</th>
                       <th>Artículo</th>
                     <th>Acciones</th>
@@ -32,7 +33,8 @@
 
                 <tfoot>
                   <tr align="center">
-                      <th>Fecha</th>
+                    <th>Cliente</th>
+                      <th>Fecha de entra</th>
                       <th>Hora de registro</th>
                       <th>Artículo</th>
                     <th>Acciones</th>
@@ -42,11 +44,15 @@
                 <tbody>
                 @forelse($pedidos as $pedido)
                     <tr align="center">
-                        <td>{{ $pedido->Fecha}}</td>
+                        <td>{{$pedido->Customer->nombre}}</td>
+                        <td>{{$pedido->Fecha}}</td>
                      <!--comulma para mostrar la hora de registro-->
                         <td>{{ $pedido->Hora }}</td>
                         <td align="center">
-                        <a class="button is-success is-small" href="/pedido_articulos/index">Agregar</a>
+
+
+                        <a class="button is-success is-small" href="/pedidoarticulos">Agregar</a>
+
                         <td align="center">
                            <form action="{{route('pedidos.destroy',$pedido->id)}}" method="POST">
                                 <a class="button is-success is-small" href="{{route('pedidos.show',$pedido->id)}}">Ver</a>

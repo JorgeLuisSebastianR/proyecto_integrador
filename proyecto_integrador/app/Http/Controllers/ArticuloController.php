@@ -22,22 +22,23 @@ class ArticuloController extends Controller
     public function store(StoreArticuloRequest $request)
     {
     $request->validate([
-          'Nombre' => 'required',
-          'Tamaño' => 'required',
-          'Color' => 'required',
-          'Precio' => 'required',
-          'Tipo' => 'required'
-          
+          'Nombre'      => 'required',
+          'Tamaño'      => 'required',
+          'Color'       => 'required',
+          'Precio'      => 'required',
+          'Descripcion' => 'required',
+          'Tipo'        => 'required'
+
       ]);
       Articulo::create([
-          'Nombre' => $request->Nombre,
-          'Tamaño' => $request->Tamaño,
-          'Color' => $request->Color,
-          'Precio'=> $request->Precio,
+          'Nombre'      => $request->Nombre,
+          'Tamaño'      => $request->Tamaño,
+          'Color'       => $request->Color,
+          'Precio'      => $request->Precio,
           'Descripcion' => $request->Descripcion,
-          'Tipo' => $request->Tipo
-          
-          
+          'Tipo'        => $request->Tipo
+
+
       ]);
       return redirect()->route('articulos.index');
     }
@@ -55,11 +56,12 @@ class ArticuloController extends Controller
     public function update(UpdateArticuloRequest $request, Articulo $articulo)
     {
       $request->validate([
-          'Nombre'        => 'required',
-          'Tamaño'           => 'required',
-          'Color'         => 'required',
-          'Precio'       => 'required',
-          'Tipo' => 'required'
+          'Nombre'      => 'required',
+          'Tamaño'      => 'required',
+          'Color'       => 'required',
+          'Precio'      => 'required',
+          'Descripcion' => 'required',
+          'Tipo'        => 'required'
       ]);
       $articulo->update($request->all());
       return redirect()->route('articulos.index');
@@ -70,7 +72,7 @@ class ArticuloController extends Controller
       $articulo->delete();
       return redirect()->route('articulos.index');
     }
-    
+
     public function databable(){
        $Articulos = Articulo::all();
        return view('articulos.datatable',compact('Articulos'));

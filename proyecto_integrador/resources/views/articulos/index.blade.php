@@ -16,7 +16,7 @@
 </section>
 
 <section class="section">
-    
+
 <div align="right">
         <a href="{{ route('exportToPDFArticulos') }}" class="button is-danger is-outlined">Descargar Reporte en PDF</a>
 </div><br><br>
@@ -42,7 +42,6 @@
                     <tr>
                         <td>{{ $articulo->Nombre}}</td>
                         <td>{{ $articulo->Precio}}</td>
-                       
                         <td>
                            <form action="{{route('articulos.destroy',$articulo->id)}}" method="POST">
                                 <a class="button is-success is-small" href="{{route('articulos.show',$articulo->id)}}">Ver</a>
@@ -50,13 +49,9 @@
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="button is-danger is-small">Eliminar</button>
-
-
                             </form>
                         </td>
-
                 </tbody>
-
                 @empty
                     <font size="5">
                         <div class="notification is-warning is-small is-with"><br>

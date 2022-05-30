@@ -10,11 +10,11 @@ class Articulo extends Model
     use HasFactory;
 
     protected $fillable =[
-'Nombre','Tamaño','Color','Descripcion','Precio','Tipo'
+'Nombre','Tamaño','Color','Precio','Descripcion','Tipo'
     ];
-    public function pedido_articulos()
+    public function PedidoArticulos()
    {
-       return $this->hasMany(pedido_articulo::class);
+       return $this->hasMany(PedidoArticulo::class);
    }
     public function Madera()
     {
