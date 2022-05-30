@@ -47,7 +47,7 @@
                         <td>{{ $pedido->Hora }}</td>
                         <td align="center">
 
-                            <a class="button is-success is-small" href="{{route('pedidos.index',$pedido->id)}}">Agregar</a>
+                            <a class="button is-success is-small" href="{{route('pedidoarticulos.index',$pedido->id)}}">Agregar</a>
 
 
                         <td align="center">

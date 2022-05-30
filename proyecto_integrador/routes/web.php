@@ -19,7 +19,7 @@ Route::resources([
     'herramientas'=> HerramientaController :: class,
     'pedidos' => PedidoController :: class,
     'modulos' => ModuloController :: class,
-    'pedido_articulos' => PedidoArticuloController :: class,
+    'pedidoarticulos' => PedidoArticuloController :: class,
 ]);
 // transforasdfamasdfadf
 
