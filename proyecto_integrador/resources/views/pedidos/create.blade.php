@@ -27,7 +27,6 @@
                     @endforelse
                       </select>
                   </div>
-
                 <div>
                     <label for="">Cliente: </label>
                         <select name ="idCustomer" class="column is-one-quarter">

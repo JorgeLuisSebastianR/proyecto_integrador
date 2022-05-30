@@ -48,7 +48,7 @@ class PedidoController extends Controller
 
     public function edit(Pedido $pedido)
     {
-      return view('pedidos.edit', compact('pedido'));
+      return view('pedidos.edit', compact('pedido'))->with('customers', Customer::all())->with('sucursals', Sucursal::all());
     }
 
       public function update(UpdatePedidoRequest $request, Pedido $pedido)
