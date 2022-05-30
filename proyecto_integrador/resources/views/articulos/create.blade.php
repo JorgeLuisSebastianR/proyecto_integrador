@@ -1,4 +1,4 @@
-<!--codigo para botón crear-->
+<!--codigo para botón crear asdfa-->
 @extends('layout.layout')
 @section('content')
     <section class="hero is-black">
@@ -16,8 +16,14 @@
             <div class="columns">
 
                 <div class="column">
+
+                <div>
+                        <label for="">Nombre<font color="red">*</font>: </label>
+                        <input class="input is-large" type="text" name="Nombre" >
+                    </div>
+
                   <div>
-                      <label for="">Madera: </label><br>
+                      <label for="">Madera<font color="red">*</font>: </label><br>
                       <select name ="idMadera" class="input is-large">
                         @forelse($maderas as $madera)
                         <option value="{{$madera['id']}}">
@@ -28,14 +34,10 @@
                         @endforelse
                       </select>
                   </div>
-                    <div>
-                        <label for="">Nombre<font color="red">*</font>: </label>
-                        <input class="input is-large" type="text" name="Nombre" >
-                    </div>
 
                     <div>
                         <label for="">Tamaño (en formato Alto x Ancho. Ej: "1.2x2")<font color="red">*</font>: </label>
-                        <input class="input is-large" type="decimal" name="Tamaño" >
+                        <input class="input is-large" type="text" name="Tamaño" >
                     </div>
 
                     <div>

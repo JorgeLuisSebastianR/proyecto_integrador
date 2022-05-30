@@ -23,6 +23,8 @@
                     <label for="">Nombre </label>
                     <input class="input is-large" type="text" value=" {{ $articulo->Nombre }}" name="Nombre" id="">
                 </div>
+
+
                 <div>
                     <label for="">Tamaño </label>
                     <input class="input is-large" type="text" value=" {{ $articulo->Tamaño }}" name="Tamaño" id="">
