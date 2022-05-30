@@ -17,7 +17,6 @@
           <div class="column">
               <div>
                 <label for=""><b>Sucursal<font color="red">*</font>: </b></label>
-<<<<<<< HEAD
                   <select name ="idCustomer" class="input is-large">
                   @forelse($sucursals as $sucursal)
                         <option value="{{$sucursal['id']}}">
@@ -26,14 +25,6 @@
                         @empty
                         <p>no hay Sucursal</p>
                     @endforelses
-=======
-                  <select name ="idSucursal" class="input is-large">
-                      @forelse($sucursals as $sucursal)
-                    <option value="{{$sucursal['id']}}">{{$sucursal->Calle}} {{$sucursal->Colonia}} {{$sucursal->Municipio}}</option>
-                    @empty
-                    <p>no hay sucursal Existente</p>
-                @endforelse
->>>>>>> df056d572078d44333b75a0d0b0b87d8ca7c7844
                   </select>
 
               </div>
