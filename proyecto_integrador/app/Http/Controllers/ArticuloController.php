@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Articulo;
+use App\Models\Madera;
 use App\Http\Requests\StoreArticuloRequest;
 use App\Http\Requests\UpdateArticuloRequest;
 use PDF;
@@ -16,12 +17,13 @@ class ArticuloController extends Controller
 
     public function create()
     {
-        return view('articulos.create');
+        return view('articulos.create')->with('maderas', Madera::all());;
     }
 
     public function store(StoreArticuloRequest $request)
     {
     $request->validate([
+          'idMadera'    => 'required',
           'Nombre'      => 'required',
           'Tamaño'      => 'required',
           'Color'       => 'required',
@@ -31,6 +33,7 @@ class ArticuloController extends Controller
 
       ]);
       Articulo::create([
+          'idMadera'    => $request->idMadera,
           'Nombre'      => $request->Nombre,
           'Tamaño'      => $request->Tamaño,
           'Color'       => $request->Color,
@@ -56,6 +59,7 @@ class ArticuloController extends Controller
     public function update(UpdateArticuloRequest $request, Articulo $articulo)
     {
       $request->validate([
+          'idMadera'    => 'required',
           'Nombre'      => 'required',
           'Tamaño'      => 'required',
           'Color'       => 'required',

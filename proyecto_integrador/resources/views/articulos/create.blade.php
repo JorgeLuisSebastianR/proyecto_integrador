@@ -11,13 +11,28 @@
     <section class="section">
         <form action="{{ route('articulos.store') }}" method="POST">
             @csrf
+
+
             <div class="columns">
+
                 <div class="column">
+                  <div>
+                      <label for="">Madera: </label><br>
+                      <select name ="idMadera" class="input is-large">
+                        @forelse($maderas as $madera)
+                        <option value="{{$madera['id']}}">
+                          {{$madera->Nombre}}
+                        </option>
+                        @empty
+                        <p>no hay Sucursal</p>
+                        @endforelse
+                      </select>
+                  </div>
                     <div>
                         <label for="">Nombre<font color="red">*</font>: </label>
                         <input class="input is-large" type="text" name="Nombre" >
                     </div>
-                    
+
                     <div>
                         <label for="">Tamaño<font color="red">*</font>: </label>
                         <input class="input is-large" type="decimal" name="Tamaño" >
@@ -33,7 +48,7 @@
                         <label for="">Precio<font color="red">*</font>: </label>
                         <input class="input is-large" type="decimal" name="Precio" >
                     </div>
-                    
+
                     <div>
                         <label for="">Descripcion: </label>
                         <input class="input is-large" type="text" name="Descripcion" >
@@ -44,7 +59,7 @@
                         <select class="input is-large" name="Tipo" id="">
                             <option value="Campestre">Campestre</option>
                             <option value="Minimalista">Minimalista</option>
-                            <option value="Rustico">Rustico</option> 
+                            <option value="Rustico">Rustico</option>
                         </select>
                     </div>
                    <!--Apartado para botones guardar, cancelar y limpiar -->
