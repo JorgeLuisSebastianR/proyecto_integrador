@@ -29,7 +29,6 @@
                     <th>Acciones</th>
                 </tr>
                 </thead>
-
                 <tfoot>
                   <tr align="center">
                     <th>Cliente</th>
@@ -39,7 +38,6 @@
                     <th>Acciones</th>
                   </tr>
                 </tfoot>
-
                 <tbody>
                 @forelse($pedidos as $pedido)
                     <tr align="center">
@@ -49,20 +47,7 @@
                         <td>{{ $pedido->Hora }}</td>
                         <td align="center">
 
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Agregar</button>
-
-                            <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                              <div class="modal-dialog modal-lg">
-                                <div class="modal-content">
-
-
-
-                                  fdks;f'
-
-                                  sd;f'
-                                </div>
-                              </div>
-                            </div>
+                            <a class="button is-success is-small" href="{{route('pedidos.index',$pedido->id)}}">Agregar</a>
 
                         <td align="center">
                            <form action="{{route('pedidos.destroy',$pedido->id)}}" method="POST">

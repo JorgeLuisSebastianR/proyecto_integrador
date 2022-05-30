@@ -12,7 +12,6 @@ use App\Http\Controllers\PedidoArticuloController;
 
 
 Route::resources([
-    ////
     'sucursals' => SucursalController::class,
     'customers' => CustomerController::class,
     'articulos'=> ArticuloController :: class,
