@@ -21,7 +21,7 @@ return new class extends Migration
             //campos
             $table->text('Nombre',20);
             $table->string('Tamaño',15);
-            $table->text('Color',20);
+            $table->string('Color',20);
             $table->decimal('Precio', 8, 2, true)->default(0.00);
             $table->text('Descripcion',50)->nullable();
             $table->string('Tipo', 20) ;
