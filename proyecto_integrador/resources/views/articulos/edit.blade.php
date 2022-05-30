@@ -19,6 +19,12 @@
         @method('PUT')
             <div class="column">
               <div class="column">
+                
+                <div>
+                    <label for="">Nombre </label>
+                    <input class="input is-large" type="text" value=" {{ $articulo->Nombre }}" name="Nombre" id="">
+                </div>
+
                 <div>
                     <label for="">Madera: </label><br>
                     <select name ="idMadera" class="input is-large">
@@ -30,11 +36,7 @@
                       <p>no hay Sucursal</p>
                       @endforelse
                     </select>
-                <div>
-                    <label for="">Nombre </label>
-                    <input class="input is-large" type="text" value=" {{ $articulo->Nombre }}" name="Nombre" id="">
-                </div>
-
+                    </div>
 
                 <div>
                     <label for="">Tamaño </label>
