@@ -43,7 +43,7 @@
                 @forelse($articulos as $articulo)
                     <tr>
                         <td>{{ $articulo->Nombre}}</td>
-                        <td>{{ $articulo->Madera->Nombre}}</td>
+                        <td>{{ $articulo->Madera->Nombre}}</ td>
                         <td>{{ $articulo->Precio}}</td>
                         <td>
                            <form action="{{route('articulos.destroy',$articulo->id)}}" method="POST">
