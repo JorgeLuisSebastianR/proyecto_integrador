@@ -15,12 +15,28 @@
                 <div class="column">
                   <div>
                       <label for="">Sucursal: </label><br>
-                      <input class="column is-one-quarter" type="number" name="idSucursal" >
+                      <select name ="idSucursal" class="column is-one-quarter">
+                          @forelse($sucursals as $sucursal)
+                        <option value="{{$sucursal['id']}}">
+                            {{$sucursal->Calle}}
+                            {{$sucursal->Colonia}}
+                            {{$sucursal->Municipio}}
+                        </option>
+                        @empty
+                        <p>no hay Sucursal</p>
+                    @endforelse
+                      </select>
                   </div>
-                  
+
                 <div>
                     <label for="">Cliente: </label>
-                    <input class="column is-one-quarter" type="number" name="idCustomer" >
+                        <select name ="idCustomer" class="column is-one-quarter">
+                            @forelse($customers as $customer)
+                          <option value="{{$customer['id']}}">{{$customer->nombre}}</option>
+                          @empty
+                          <p>no hay Cliente</p>
+                      @endforelse
+                        </select>
                 </div>
 
                     <div>

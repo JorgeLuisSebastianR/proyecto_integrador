@@ -1,6 +1,5 @@
 @extends('layout.layout')
 @section('content')
-
 <section class="hero is-black">
     <div class="hero-body">
         <center>
@@ -50,8 +49,7 @@
                         <td>{{ $pedido->Hora }}</td>
                         <td align="center">
 
-
-                        <a class="button is-success is-small" href="/pedidoarticulos">Agregar</a>
+                          <a class="button is-success is-small">Agregar</a>
 
                         <td align="center">
                            <form action="{{route('pedidos.destroy',$pedido->id)}}" method="POST">

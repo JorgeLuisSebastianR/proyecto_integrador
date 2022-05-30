@@ -1,9 +1,9 @@
 <?php
 //gfgfgf
 namespace App\Http\Controllers;
-
-use App\Models\Pedido;
+use App\Models\Sucursal;
 use App\Models\Customer;
+use App\Models\Pedido;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StorePedidoRequest;
 use App\Http\Requests\UpdatePedidoRequest;
@@ -18,8 +18,8 @@ class PedidoController extends Controller
 
     public function create()
     {
-      //$customers = $Customer::all();compact(customers)
-      return view('pedidos.create');
+      //$customers = $Customer::all();compact(customers);
+      return view('pedidos.create')->with('customers', Customer::all())->with('sucursals', Sucursal::all());
     }
 
     public function store(StorePedidoRequest $request)

@@ -19,6 +19,6 @@ class Herramienta extends Model
     ];
     public function Sucursal()
     {
-        return $this->belongsTo(Sucursal::class);
+        return $this->belongsTo(Sucursal::class,'idSucursal');
     }
 }
