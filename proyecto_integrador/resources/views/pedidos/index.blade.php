@@ -1,4 +1,5 @@
 @extends('layout.layout')
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 @section('content')
 <section class="hero is-black">
     <div class="hero-body">
@@ -49,7 +50,15 @@
                         <td>{{ $pedido->Hora }}</td>
                         <td align="center">
 
-                          <a class="button is-success is-small">Agregar</a>
+                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Agregar</button>
+
+                            <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                              <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                  hola
+                                </div>
+                              </div>
+                            </div>
 
                         <td align="center">
                            <form action="{{route('pedidos.destroy',$pedido->id)}}" method="POST">
