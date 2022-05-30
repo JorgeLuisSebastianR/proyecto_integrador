@@ -77,3 +77,4 @@ class HerramientaController extends Controller
         return $pdf->download('Reporte de Herramientas.pdf');
     }
 }
+//3
