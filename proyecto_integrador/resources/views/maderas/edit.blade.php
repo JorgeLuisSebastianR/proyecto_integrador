@@ -23,7 +23,7 @@
                     <input class="input is-large" type="text" value="{{$madera->Color}}" name="Color" >
                 </div>
                 <div>
-                    <label for="">Pulgadas: </label>
+                    <label for="">Pulgadas cuadradas: </label>
                     <input class="input is-large" type="text" value="{{$madera->Pulgada}}" name="Pulgada" >
                 </div>
                 <div>

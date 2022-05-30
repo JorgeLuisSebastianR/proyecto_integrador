@@ -19,7 +19,7 @@
                     </div>
                     
                     <div>
-                        <label for="">Tamaño<font color="red">*</font>: </label>
+                        <label for="">Tamaño (en formato Alto x Ancho. Ej: "1.2x2")<font color="red">*</font>: </label>
                         <input class="input is-large" type="decimal" name="Tamaño" >
                     </div>
 
