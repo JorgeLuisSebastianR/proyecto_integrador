@@ -18,6 +18,6 @@ class Articulo extends Model
    }
     public function Madera()
     {
-        return $this->hasOne(Madera::class);
+        return $this->belongsTo(Madera::class);
     }
 }

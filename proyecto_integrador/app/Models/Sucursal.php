@@ -17,7 +17,7 @@ class Sucursal extends Model
   ];
   public function Herramientas()
  {
-     return $this->hasMany(Herramienta::class);
+     return $this->belongsTo(Herramienta::class);
  }
  public function Pedidos()
 {

@@ -17,7 +17,7 @@ class Pedido extends Model
 
     public function Sucursal()
     {
-        return $this->belongsTo(Sucursal::class);
+        return $this->hasMany(Sucursal::class);
     }
     public function Customer()
     {
