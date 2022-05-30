@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Sucursal;
+use App\Models\Herramienta;
+use App\Models\Pedido;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreSucursalRequest;
 use App\Http\Requests\UpdateSucursalRequest;

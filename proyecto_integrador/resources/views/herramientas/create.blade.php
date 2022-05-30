@@ -16,8 +16,12 @@
       @csrf
           <div class="column">
               <div>
-                  <label for=""><b>Sucursal<font color="red">*</font>: </b></label>
-                  <input class="input is-large" type="text" name="idSucursal" id="" value="1">
+                <label for=""><b>Sucursal<font color="red">*</font>: </b></label>
+                  @forelse($herramientas as $herramienta)
+                      <h5>{{$herramienta->Sucursal->Calle}} {{$herramienta->Sucursal->Colonia}} {{$herramienta->Sucursal->Municipio}}</h5>
+                  @empty
+                      <p>no hay sucursal Existente</p>
+                  @endforelse
               </div>
                 <div>
                     <label for=""><b>Nombre<font color="red">*</font>: </b></label>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Herramienta;
+use App\Models\Sucursal;
 use App\Http\Requests\StoreHerramientaRequest;
 use App\Http\Requests\UpdateHerramientaRequest;
 use PDF;
@@ -26,7 +27,7 @@ class HerramientaController extends Controller
      */
     public function create()
     {
-        return view('herramientas.create');
+        return view('herramientas.create')->with('herramientas', Herramienta::all());;
     }
 
     /**
