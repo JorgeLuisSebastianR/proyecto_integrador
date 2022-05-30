@@ -17,7 +17,7 @@ class ArticuloController extends Controller
 
     public function create()
     {
-        return view('articulos.create')->with('maderas', Madera::all());;
+        return view('articulos.create')->with('maderas', Madera::all());
     }
 
     public function store(StoreArticuloRequest $request)
@@ -53,7 +53,7 @@ class ArticuloController extends Controller
 // funcion para el boton editar
     public function edit(Articulo $articulo)
     {
-        return view('articulos.edit', compact('articulo'));
+        return view('articulos.edit', compact('articulo'))->with('maderas', Madera::all());;
     }
 
     public function update(UpdateArticuloRequest $request, Articulo $articulo)

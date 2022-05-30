@@ -18,7 +18,18 @@
         @csrf
         @method('PUT')
             <div class="column">
-
+              <div class="column">
+                <div>
+                    <label for="">Madera: </label><br>
+                    <select name ="idMadera" class="input is-large">
+                      @forelse($maderas as $madera)
+                      <option value="{{$madera['id']}}">
+                        {{$madera->Nombre}}
+                      </option>
+                      @empty
+                      <p>no hay Sucursal</p>
+                      @endforelse
+                    </select>
                 <div>
                     <label for="">Nombre </label>
                     <input class="input is-large" type="text" value=" {{ $articulo->Nombre }}" name="Nombre" id="">

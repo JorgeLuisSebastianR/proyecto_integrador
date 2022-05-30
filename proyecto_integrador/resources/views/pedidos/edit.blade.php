@@ -3,7 +3,7 @@
 <section class="hero is-black">
     <div class="hero-body">
         <font size="6">
-            Formulario para editar la información del pedido 
+            Formulario para editar la información del pedido
     </font>
     </div>
 </section>
@@ -12,6 +12,33 @@
         @csrf
         @method('PUT')
             <div class="column">
+
+              <div>
+                  <label for="">Sucursal: </label><br>
+                  <select name ="idSucursal" class="column is-one-quarter">
+                      @forelse($sucursals as $sucursal)
+                    <option value="{{$sucursal['id']}}">
+                        {{$sucursal->Calle}}
+                        {{$sucursal->Colonia}}
+                        {{$sucursal->Municipio}}
+                    </option>
+                    @empty
+                    <p>no hay Sucursal</p>
+                @endforelse
+                  </select>
+              </div>
+
+              <div>
+                  <label for="">Cliente: </label>
+                      <select name ="idCustomer" class="column is-one-quarter">
+                          @forelse($customers as $customer)
+                        <option value="{{$customer['id']}}">{{$customer->nombre}}</option>
+                        @empty
+                        <p>no hay Cliente</p>
+                    @endforelse
+                      </select>
+              </div>
+
                 <div>
                     <label for="">Fecha: </label>
                     <input class="column is-one-quarter" type="date" value="{{$pedido->Fecha}}" name="Fecha" >
