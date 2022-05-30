@@ -1,4 +1,3 @@
-
 @extends('layout.layout')
 @section('content')
 
@@ -11,7 +10,6 @@
         </center>
     </div>
 </section>
-
 <section class="section">
     <form action="{{ route('herramientas.store') }}" method="post">
       @csrf
@@ -27,7 +25,6 @@
                         <p>no hay Sucursal</p>
                     @endforelses
                   </select>
-
               </div>
                 <div>
                     <label for=""><b>Nombre<font color="red">*</font>: </b></label>
@@ -51,7 +48,6 @@
                 </div>
             </div>
         </div>
-
         <div>
             <div class="is-flex is-justify-content-space-around">
                 <a href="{{ url('herramientas/') }}" class="button is-danger is-large">X Cancelar</a>
