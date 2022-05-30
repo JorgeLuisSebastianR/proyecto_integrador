@@ -10,7 +10,7 @@ class Articulo extends Model
     use HasFactory;
 
     protected $fillable =[
-'Nombre','Tamaño','Color','Precio','Descripcion','Tipo'
+'idMadera','Nombre','Tamaño','Color','Precio','Descripcion','Tipo'
     ];
     public function PedidoArticulos()
    {

@@ -17,11 +17,14 @@
           <div class="column">
               <div>
                 <label for=""><b>Sucursal<font color="red">*</font>: </b></label>
-                  @forelse($herramientas as $herramienta)
-                      <h5>{{$herramienta->Sucursal->Calle}} {{$herramienta->Sucursal->Colonia}} {{$herramienta->Sucursal->Municipio}}</h5>
-                  @empty
-                      <p>no hay sucursal Existente</p>
-                  @endforelse
+                  <select name ="idCustomer" class="input is-large">
+                      @forelse($herramientas as $herramienta)
+                    <option value="{{$herramienta['id']}}">      {{$herramienta->Sucursal->Calle}} {{$herramienta->Sucursal->Colonia}} {{$herramienta->Sucursal->Municipio}}</option>
+                    @empty
+                    <p>no hay sucursal Existente</p>
+                @endforelse
+                  </select>
+
               </div>
                 <div>
                     <label for=""><b>Nombre<font color="red">*</font>: </b></label>
