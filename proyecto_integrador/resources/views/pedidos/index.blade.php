@@ -1,16 +1,5 @@
 @extends('layout.layout')
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 @section('content')
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-                                rel="stylesheet" />
-
-                            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-
-                            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js">
-                            </script>
-
-                            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
-                            </script>
 <section class="hero is-black">
     <div class="hero-body">
         <center>
