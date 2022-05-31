@@ -63,3 +63,5 @@ class PedidoArticuloController extends Controller
       return redirect()->route('pedidoarticulos.index');
     }
 }
+
+//asdfa
