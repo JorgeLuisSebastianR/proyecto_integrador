@@ -10,10 +10,10 @@ class PedidoArticulo extends Model
     use HasFactory;
     public function Pedido()
    {
-       return $this->belongsTo(Pedido::class);
+       return $this->belongsTo(Pedido::class,'idPedido');
    }
    public function Articulo()
   {
-      return $this->belongsTo(Articulo::class);
+      return $this->belongsTo(Articulo::class,'idArticulo');
   }
 }

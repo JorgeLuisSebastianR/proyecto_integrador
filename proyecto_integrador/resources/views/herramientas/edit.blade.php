@@ -18,9 +18,17 @@
         <div class="columns">
 
             <div class="column">
+
               <div>
-                  <label for=""><b>Sucursal<font color="red">*</font>: </b></label>
-                  <input class="input is-large" type="text" value=" {{ $herramienta->idSucursal }}" name="idSucursal" id="">
+                <label for=""><b>Sucursal<font color="red">*</font>: </b></label>
+                  <select name ="idSucursal" class="input is-large">
+                      @forelse($herramientas as $herramienta)
+                    <option value="{{$herramienta['id']}}">      {{$herramienta->Sucursal->Calle}} {{$herramienta->Sucursal->Colonia}} {{$herramienta->Sucursal->Municipio}}</option>
+                    @empty
+                    <p>no hay sucursal Existente</p>
+                @endforelse
+                  </select>
+
               </div>
                 <div>
                     <label for=""><b>Nombre<font color="red">*</font>: </b></label>
@@ -36,11 +44,7 @@
                 </div>
                 <div>
                     <label for=""><b>Descripción: </b></label>
-<<<<<<< HEAD
-                    <textarea class="input is-large" value="{{ $herramienta->descripcion }}" name="descripcion" id=""rows="5"></textarea>
-=======
                     <input class="input is-large" type="text" value=" {{ $herramienta->descripcion }}" name="descripcion" id="">
->>>>>>> 403b60468d657e9b1e1e30a7320c28170a72f37c
                 </div>
                 <div>
                     <label for=""><b>Cantidad<font color="red">*</font>: </b></label>

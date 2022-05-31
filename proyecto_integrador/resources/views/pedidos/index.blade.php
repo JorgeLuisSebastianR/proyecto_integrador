@@ -1,6 +1,5 @@
 @extends('layout.layout')
 @section('content')
-
 <section class="hero is-black">
     <div class="hero-body">
         <center>
@@ -14,7 +13,6 @@
 </section>
 
 <section class="section">
-
     <div align="right">
         <a href="#" class="button is-danger is-outlined">Descargar Reporte en PDF (aún no jala xd)</a>
     </div><br><br>
@@ -30,7 +28,6 @@
                     <th>Acciones</th>
                 </tr>
                 </thead>
-
                 <tfoot>
                   <tr align="center">
                     <th>Cliente</th>
@@ -40,7 +37,6 @@
                     <th>Acciones</th>
                   </tr>
                 </tfoot>
-
                 <tbody>
                 @forelse($pedidos as $pedido)
                     <tr align="center">
@@ -50,8 +46,8 @@
                         <td>{{ $pedido->Hora }}</td>
                         <td align="center">
 
+                            <a class="button is-success is-small" href="{{route('pedidoarticulos.index',$pedido->id)}}">Agregar</a>
 
-                        <a class="button is-success is-small" href="/pedidoarticulos">Agregar</a>
 
                         <td align="center">
                            <form action="{{route('pedidos.destroy',$pedido->id)}}" method="POST">

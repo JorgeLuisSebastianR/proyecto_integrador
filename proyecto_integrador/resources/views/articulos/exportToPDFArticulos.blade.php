@@ -18,6 +18,7 @@
                             <tr>
                                 <th scope="col">#</th>
                                 <th scope="col">Nombre</th>
+                                <th scope="col">Madera</th>
                                 <th scope="col">Tamaño</th>
                                 <th scope="col">Color</th>
                                 <th scope="col">Precio</th>
@@ -31,6 +32,7 @@
                                 <tr>
                                     <td>{{ $articulo->id }}</td>
                                     <td>{{ $articulo->Nombre }}</td>
+                                    <td>{{ $articulo->madera->Nombre}}</td>
                                     <td>{{ $articulo->Tamaño }}</td>
                                     <td>{{ $articulo->Color }}</td>
                                     <td>${{ $articulo->Precio }} MXN</td>

@@ -10,14 +10,21 @@
         </center>
     </div>
 </section>
-
 <section class="section">
     <form action="{{ route('herramientas.store') }}" method="post">
       @csrf
           <div class="column">
               <div>
-                  <label for=""><b>Sucursal<font color="red">*</font>: </b></label>
-                  <input class="input is-large" type="text" name="idSucursal" id="" value="1">
+                <label for=""><b>Sucursal<font color="red">*</font>: </b></label>
+                  <select name ="idSucursal" class="input is-large">
+                  @forelse($sucursals as $sucursal)
+                        <option value="{{$sucursal['id']}}">
+                            {{$sucursal->Calle}}, {{$sucursal->Colonia}}, {{$sucursal->Municipio}}
+                        </option>
+                        @empty
+                        <p>no hay Sucursal</p>
+                    @endforelse
+                  </select>
               </div>
                 <div>
                     <label for=""><b>Nombre<font color="red">*</font>: </b></label>
@@ -41,7 +48,6 @@
                 </div>
             </div>
         </div>
-
         <div>
             <div class="is-flex is-justify-content-space-around">
                 <a href="{{ url('herramientas/') }}" class="button is-danger is-large">X Cancelar</a>

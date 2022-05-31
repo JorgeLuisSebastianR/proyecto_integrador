@@ -12,7 +12,6 @@ use App\Http\Controllers\PedidoArticuloController;
 
 
 Route::resources([
-    ////
     'sucursals' => SucursalController::class,
     'customers' => CustomerController::class,
     'articulos'=> ArticuloController :: class,
@@ -20,9 +19,9 @@ Route::resources([
     'herramientas'=> HerramientaController :: class,
     'pedidos' => PedidoController :: class,
     'modulos' => ModuloController :: class,
-    'pedido_articulos' => PedidoArticuloController :: class,
+    'pedidoarticulos' => PedidoArticuloController :: class,
 ]);
-// transforasdfamasdfadf
+// transforasdfamasdfadfajlsdfjalsdjf
 
 Route::get('/', function () {
     return view('welcome');

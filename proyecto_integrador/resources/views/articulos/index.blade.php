@@ -24,15 +24,17 @@
             <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
                 <thead>
                 <tr>
-                    <th>Nombre</th>
+                    <th>Nombre del articulo</th>
+                    <th>Madera</th>
                     <th>Precio de venta</th>
                     <th>Acciones</th>
                 </tr>
                 </thead>
                 <tfoot>
                 <tr>
-                    <th>Nombre</th>
+                    <th>Nombre del articulo</th>
                     <th>Precio de venta</th>
+                    <th>Madera</th>
                     <th>Acciones</th>
                 </tr>
                 </tfoot>
@@ -41,6 +43,7 @@
                 @forelse($articulos as $articulo)
                     <tr>
                         <td>{{ $articulo->Nombre}}</td>
+                        <td>{{ $articulo->Madera->Nombre}}</ td>
                         <td>{{ $articulo->Precio}}</td>
                         <td>
                            <form action="{{route('articulos.destroy',$articulo->id)}}" method="POST">

@@ -26,13 +26,13 @@
       </div>
 
       <div class="">
-        <label for=""><b>Pulgadas<font color="red">*</font>: </b></label>
+        <label for=""><b>Pulgadas cuadradas<font color="red">*</font>: </b></label>
         <input class="input is-large" type="text" name="Pulgada">
       </div>
 
       <div class="">
         <label for=""><b>Cantidad<font color="red">*</font>: </b></label>
-        <input class="input is-large" type="text" name="Cantidad">
+        <input class="input is-large" type="number" name="Cantidad" step="1" min="1">
       </div>
     </div>
 

@@ -1,9 +1,11 @@
 <?php
 //gfgfgf
 namespace App\Http\Controllers;
-
-use App\Models\Pedido;
+use App\Models\Sucursal;
+use App\Models\Articulo;
 use App\Models\Customer;
+use App\Models\Pedido;
+use App\Models\PedidoArticulo;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StorePedidoRequest;
 use App\Http\Requests\UpdatePedidoRequest;
@@ -13,22 +15,30 @@ class PedidoController extends Controller
 {
     public function index()
     {
-      return view('pedidos.index')->with('pedidos', Pedido::all());
+      return view('pedidos.index')
+          ->with('pedidos', Pedido::all())
+          ->with('articulos', Articulo::all());
+    }
+
+    public function pedidoArticulo()
+    {
+      return view('pedidos.pedidoArticulo')
+          ->with('pedidos', Pedido::all())
+          ->with('articulos', Articulo::all());
     }
 
     public function create()
     {
-      //$customers = $Customer::all();compact(customers)
-      return view('pedidos.create');
+      return view('pedidos.create')->with('customers', Customer::all())->with('sucursals', Sucursal::all());
     }
 
     public function store(StorePedidoRequest $request)
     {
       $request->validate([
-        'idSucursal' => 'required',
+        'idSucursal'  => 'required',
         'idCustomer'  => 'required',
-        'Fecha' => 'required',
-        'Hora'  => 'required'
+        'Fecha'       => 'required',
+        'Hora'        => 'required'
       ]);
 
       Pedido::create([
@@ -48,16 +58,16 @@ class PedidoController extends Controller
 
     public function edit(Pedido $pedido)
     {
-      return view('pedidos.edit', compact('pedido'));
+      return view('pedidos.edit', compact('pedido'))->with('customers', Customer::all())->with('sucursals', Sucursal::all());
     }
 
       public function update(UpdatePedidoRequest $request, Pedido $pedido)
     {
       $request->validate([
-        'idSucursal' => 'required',
+        'idSucursal'  => 'required',
         'idCustomer'  => 'required',
-        'Fecha' => 'required',
-        'Hora'  => 'required'
+        'Fecha'       => 'required',
+        'Hora'        => 'required'
       ]);
       $pedido->update($request->all());
       return redirect()->route('pedidos.index');
