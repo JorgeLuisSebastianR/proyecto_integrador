@@ -16,7 +16,7 @@
           <div class="column">
               <div>
                 <label for=""><b>Sucursal<font color="red">*</font>: </b></label>
-                  <select name ="idCustomer" class="input is-large">
+                  <select name ="idSucursal" class="input is-large">
                   @forelse($sucursals as $sucursal)
                         <option value="{{$sucursal['id']}}">
                             {{$sucursal->Calle}}, {{$sucursal->Colonia}}, {{$sucursal->Municipio}}
