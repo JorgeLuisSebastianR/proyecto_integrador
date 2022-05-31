@@ -21,7 +21,7 @@ Route::resources([
     'modulos' => ModuloController :: class,
     'pedidoarticulos' => PedidoArticuloController :: class,
 ]);
-// transforasdfamasdfadf
+// transforasdfamasdfadfajlsdfjalsdjf
 
 Route::get('/', function () {
     return view('welcome');
