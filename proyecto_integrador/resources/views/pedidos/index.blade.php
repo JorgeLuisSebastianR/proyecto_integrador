@@ -48,7 +48,6 @@
                              <form action="{{route('pedidoarticulos.index',$pedido->id)}}" method="POST">
                                <a class="button is-success is-small" href="{{route('pedidoarticulos.index',$pedido->id)}}">Agregar</a>
                             </form>
-
                         <td align="center">
                            <form action="{{route('pedidos.destroy',$pedido->id)}}" method="POST">
                                 <a class="button is-success is-small" href="{{route('pedidos.show',$pedido->id)}}">Ver</a>
