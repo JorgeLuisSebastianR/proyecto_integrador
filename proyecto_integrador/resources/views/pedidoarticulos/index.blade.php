@@ -4,7 +4,7 @@
     <div class="hero-body">
         <center>
             <font size="6">
-                lista de articulo del pedido
+                Lista de artículos del pedido
             </font>
         </center>
         <a href="/pedidos" class="button is-danger">Regresar</a>
@@ -13,7 +13,6 @@
 </section>
 <section class="section">
     <div align="right">
-        <a href="#" class="button is-danger is-outlined">Descargar Reporte en PDF (aún no jala xd)</a>
     </div><br><br>
 
         <div class="table-container">
