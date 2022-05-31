@@ -21,7 +21,8 @@ class PedidoArticuloController extends Controller
     public function create()
     {
       return view('pedidoarticulos.create')
-      ->with('articulos', Articulo::all());
+      ->with('articulos', Articulo::all())
+      ->with('pedidos', Pedido::all());
     }
 
     public function store(StorePedidoArticuloRequest $request)
@@ -39,12 +40,12 @@ class PedidoArticuloController extends Controller
 
     public function show(PedidoArticulo $pedidoArticulo)
     {
-        return view('pedidoarticulos.show',compact('pedidoarticulo'));
+        //
     }
 
     public function edit(PedidoArticulo $pedidoArticulo)
     {
-        return view('pedidos.edit', compact('pedido'));
+        //
     }
 
     public function update(UpdatePedidoArticuloRequest $request, PedidoArticulo $pedidoArticulo)
@@ -54,12 +55,14 @@ class PedidoArticuloController extends Controller
         'idArticulo'  => 'required',
       ]);
       $pedido->update($request->all());
-      return redirect()->route('pedidos.index');
+      return redirect()->route('pedidoarticulos.index');
     }
 
-    public function destroy(PedidoArticulo $pedidoArticulo)
+    public function destroy(PedidoArticulo $pedidoarticulo)
     {
-      $pedidoArticulo->delete();
+      $pedidoarticulo->delete();
       return redirect()->route('pedidoarticulos.index');
     }
 }
+
+//asdfa
