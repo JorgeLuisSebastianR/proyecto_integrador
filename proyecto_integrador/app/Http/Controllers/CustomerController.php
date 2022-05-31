@@ -83,12 +83,6 @@ class CustomerController extends Controller
         return redirect()->route('customers.index');
     }
 
-    /*public function exportToPDF(){
-        $customers = Customer::get();
-        $pdf = PDF::loadView('customers.exportToPDF', compact('customers'));
-        return $pdf->download('ListadoClientes.pdf');
-    }*/
-
     public function exportToPDFCustomers()
     {
         $customers = Customer::all();
