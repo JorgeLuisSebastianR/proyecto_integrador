@@ -18,9 +18,9 @@ return new class extends Migration
             //llave foranea
             $table->unsignedBigInteger('idMadera');
             $table->foreign('idMadera')->references('id')->on('maderas');
-            //campos
+            //campos.
             $table->text('Nombre',20);
-            $table->decimal('Tamaño', 8, 2, true);
+            $table->string('Tamaño', 20);
             $table->text('Color',20);
             $table->decimal('Precio', 8, 2, true)->default(0.00);
             $table->text('Descripcion',50)->nullable();
