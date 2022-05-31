@@ -13,7 +13,6 @@
 </section>
 
 <section class="section">
-
     <div align="right">
         <a href="#" class="button is-danger is-outlined">Descargar Reporte en PDF (aún no jala xd)</a>
     </div><br><br>
