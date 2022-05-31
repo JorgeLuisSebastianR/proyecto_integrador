@@ -10,21 +10,29 @@
 
     <section class="section">
 
-        <form action="{{ route('pedidos.store') }}" method="POST">
+        <form action="{{ route('pedidoarticulos.store') }}" method="POST">
             @csrf
                 <div class="column">
                   <div>
-                    <label for="">Articulos: </label><br>
-                    <select name ="idArticulo" class="column is-one-quarter">
-                        @forelse($articulos as $articulo)
-                      <option value="{{$articulo['id']}}">{{$articulo->Nombre}}</option>
+                    <label for="">Pedido: </label><br>
+                    <select name ="idPedido" class="column is-one-quarter">
+                        @forelse($pedidos as $pedido)
+                      <option value="{{$pedido['id']}}">{{$pedido->Fecha}}</option>
                       @empty
                       <p>no hay Sucursal</p>
                   @endforelse
                     </select>
-                  <div>
-
                   </div>
+
+                  <div>
+                  <label for="">Articulos: </label><br>
+                  <select name ="idArticulo" class="column is-one-quarter">
+                      @forelse($articulos as $articulo)
+                    <option value="{{$articulo['id']}}">{{$articulo->Nombre}}</option>
+                    @empty
+                    <p>no hay Sucursal</p>
+                @endforelse
+                  </select>
                   </div>
 
             <div>
