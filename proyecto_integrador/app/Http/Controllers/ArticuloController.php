@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Pedido;
 use App\Models\Articulo;
 use App\Models\Madera;
 use App\Http\Requests\StoreArticuloRequest;
@@ -48,8 +48,8 @@ class ArticuloController extends Controller
 //funcion para el boton ver
     public function show(Articulo $articulo)
     {
-        // return view('articulos.show',compact('articulo'))->with('maderas', Madera::all());  
-        return view('articulos.show',compact('articulo'));  
+        // return view('articulos.show',compact('articulo'))->with('maderas', Madera::all());
+        return view('articulos.show',compact('articulo'));
 
     }
 // funcion para el boton editar

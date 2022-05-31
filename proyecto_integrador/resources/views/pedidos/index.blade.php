@@ -13,7 +13,6 @@
 </section>
 
 <section class="section">
-
     <div align="right">
         <a href="#" class="button is-danger is-outlined">Descargar Reporte en PDF (aún no jala xd)</a>
     </div><br><br>
@@ -46,7 +45,7 @@
                      <!--comulma para mostrar la hora de registro-->
                         <td>{{ $pedido->Hora }}</td>
                         <td align="center">
-                             <form action="{{route('pedidos.destroy',$pedido->id)}}" method="POST">
+                             <form action="{{route('pedidoarticulos.index',$pedido->id)}}" method="POST">
                                <a class="button is-success is-small" href="{{route('pedidoarticulos.index',$pedido->id)}}">Agregar</a>
                             </form>
 

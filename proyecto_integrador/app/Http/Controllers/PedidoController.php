@@ -27,7 +27,6 @@ class PedidoController extends Controller
           ->with('articulos', Articulo::all());
     }
 
-
     public function create()
     {
       return view('pedidos.create')->with('customers', Customer::all())->with('sucursals', Sucursal::all());
