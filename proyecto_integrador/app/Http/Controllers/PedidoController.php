@@ -5,6 +5,7 @@ use App\Models\Sucursal;
 use App\Models\Articulo;
 use App\Models\Customer;
 use App\Models\Pedido;
+use App\Models\PedidoArticulo;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StorePedidoRequest;
 use App\Http\Requests\UpdatePedidoRequest;

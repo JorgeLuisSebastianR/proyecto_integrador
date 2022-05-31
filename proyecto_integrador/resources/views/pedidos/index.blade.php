@@ -46,9 +46,9 @@
                      <!--comulma para mostrar la hora de registro-->
                         <td>{{ $pedido->Hora }}</td>
                         <td align="center">
-
-                            <a class="button is-success is-small" href="{{route('pedidoarticulos.index',$pedido->id)}}">Agregar</a>
-
+                             <form action="{{route('pedidos.destroy',$pedido->id)}}" method="POST">
+                               <a class="button is-success is-small" href="{{route('pedidoarticulos.index',$pedido->id)}}">Agregar</a>
+                            </form>
 
                         <td align="center">
                            <form action="{{route('pedidos.destroy',$pedido->id)}}" method="POST">

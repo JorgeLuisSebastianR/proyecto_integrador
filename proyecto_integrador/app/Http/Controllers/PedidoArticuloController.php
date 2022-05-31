@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\PedidoArticulo;
+use App\Models\Pedido;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StorePedidoArticuloRequest;
 use App\Http\Requests\UpdatePedidoArticuloRequest;
@@ -12,7 +13,7 @@ class PedidoArticuloController extends Controller
 
     public function index()
     {
-          return view('pedidoarticulos.index');
+          return view('pedidoarticulos.index')->with('pedidos', Pedido::all());
     }
 
     public function create()
@@ -24,8 +25,7 @@ class PedidoArticuloController extends Controller
     {
         //
     }
-turn \Illuminate\Http\Response
-     */
+
     public function show(PedidoArticulo $pedidoArticulo)
     {
         //
