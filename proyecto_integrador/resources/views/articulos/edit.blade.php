@@ -21,7 +21,7 @@
               <div class="column">
                 
                 <div>
-                    <label for="">Nombre </label>
+                    <label for="">Nombre: </label>
                     <input class="input is-large" type="text" value=" {{ $articulo->Nombre }}" name="Nombre" id="">
                 </div>
 
@@ -39,21 +39,21 @@
                     </div>
 
                 <div>
-                    <label for="">Tamaño </label>
+                    <label for="">Tamaño: </label>
                     <input class="input is-large" type="text" value=" {{ $articulo->Tamaño }}" name="Tamaño" id="">
                 </div>
                 <div>
-                    <label for="">Color</label>
+                    <label for="">Color:</label>
                     <input class="input is-large" type="text" value=" {{ $articulo->Color }}" name="Color" id="">
                 </div>
             </div>
             <div class="column">
                 <div>
-                    <label for="">Precio </label>
+                    <label for="">Precio: </label>
                     <input class="input is-large" type="text" value=" {{ $articulo->Precio }}" name="Precio" id="">
                 </div>
                 <div>
-                    <label for="">Descripcion </label>
+                    <label for="">Descripción: </label>
                     <input class="input is-large" type="text" value=" {{ $articulo->Descripcion }}" name="Descripcion" id="">
                 </div>
 
