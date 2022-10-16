@@ -91,3 +91,5 @@ class CustomerController extends Controller
         return $pdf->download('Reporte de Clientes.pdf');
     }
 }
+
+#prueba para ver si me jala xd 
